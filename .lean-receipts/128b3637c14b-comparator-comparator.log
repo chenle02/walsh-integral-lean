@@ -1,0 +1,234 @@
+== unit: slots 1 (1 names)
+skipping lake exe cache get (VERIFY_COMPARATOR_SKIP_CACHE_GET=1: no Mathlib dependency)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/8dd6d40791f74138.json
+Resolving dependencies
+Building Challenge
+⚠ [9047/9055] Replayed Challenge.Reference.WalshIntegral.GaussianSeries
+warning: Challenge/Reference/WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9055] Replayed Challenge.Reference.WalshIntegral.WhiteNoise
+warning: Challenge/Reference/WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9055] Replayed Challenge.Reference.WalshIntegral.Predictable
+warning: Challenge/Reference/WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9055] Replayed Challenge.Reference.WalshIntegral.Rio
+warning: Challenge/Reference/WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9055] Replayed Challenge.Reference.WalshIntegral.MomentBound
+warning: Challenge/Reference/WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9055 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.WhiteNoise.exists_completed_whiteNoise, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9047/9056] Replayed WalshIntegral.GaussianSeries
+warning: WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9056] Replayed WalshIntegral.WhiteNoise
+warning: WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9056] Replayed WalshIntegral.Predictable
+warning: WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9056] Replayed WalshIntegral.Rio
+warning: WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9056] Replayed WalshIntegral.MomentBound
+warning: WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9056 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.WhiteNoise.exists_completed_whiteNoise, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 55540 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 2 (1 names)
+skipping lake exe cache get (VERIFY_COMPARATOR_SKIP_CACHE_GET=1: no Mathlib dependency)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/2c8bd8a146446912.json
+Resolving dependencies
+Building Challenge
+⚠ [9047/9055] Replayed Challenge.Reference.WalshIntegral.GaussianSeries
+warning: Challenge/Reference/WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9055] Replayed Challenge.Reference.WalshIntegral.WhiteNoise
+warning: Challenge/Reference/WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9055] Replayed Challenge.Reference.WalshIntegral.Predictable
+warning: Challenge/Reference/WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9055] Replayed Challenge.Reference.WalshIntegral.Rio
+warning: Challenge/Reference/WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9055] Replayed Challenge.Reference.WalshIntegral.MomentBound
+warning: Challenge/Reference/WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9055 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.integral_sq_walshL2, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9047/9056] Replayed WalshIntegral.GaussianSeries
+warning: WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9056] Replayed WalshIntegral.WhiteNoise
+warning: WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9056] Replayed WalshIntegral.Predictable
+warning: WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9056] Replayed WalshIntegral.Rio
+warning: WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9056] Replayed WalshIntegral.MomentBound
+warning: WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9056 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.integral_sq_walshL2, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 49384 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 3 (1 names)
+skipping lake exe cache get (VERIFY_COMPARATOR_SKIP_CACHE_GET=1: no Mathlib dependency)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/934c9bf4e28cf8c7.json
+Resolving dependencies
+Building Challenge
+⚠ [9047/9055] Replayed Challenge.Reference.WalshIntegral.GaussianSeries
+warning: Challenge/Reference/WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9055] Replayed Challenge.Reference.WalshIntegral.WhiteNoise
+warning: Challenge/Reference/WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9055] Replayed Challenge.Reference.WalshIntegral.Predictable
+warning: Challenge/Reference/WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9055] Replayed Challenge.Reference.WalshIntegral.Rio
+warning: Challenge/Reference/WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9055] Replayed Challenge.Reference.WalshIntegral.MomentBound
+warning: Challenge/Reference/WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9055 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.walshL2_unique, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9047/9056] Replayed WalshIntegral.GaussianSeries
+warning: WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9056] Replayed WalshIntegral.WhiteNoise
+warning: WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9056] Replayed WalshIntegral.Predictable
+warning: WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9056] Replayed WalshIntegral.Rio
+warning: WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9056] Replayed WalshIntegral.MomentBound
+warning: WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9056 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.walshL2_unique, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 49384 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 4 (1 names)
+skipping lake exe cache get (VERIFY_COMPARATOR_SKIP_CACHE_GET=1: no Mathlib dependency)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/334acda1c14090db.json
+Resolving dependencies
+Building Challenge
+⚠ [9047/9055] Replayed Challenge.Reference.WalshIntegral.GaussianSeries
+warning: Challenge/Reference/WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9055] Replayed Challenge.Reference.WalshIntegral.WhiteNoise
+warning: Challenge/Reference/WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9055] Replayed Challenge.Reference.WalshIntegral.Predictable
+warning: Challenge/Reference/WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9055] Replayed Challenge.Reference.WalshIntegral.Rio
+warning: Challenge/Reference/WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9055] Replayed Challenge.Reference.WalshIntegral.MomentBound
+warning: Challenge/Reference/WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9055 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Rio.eLpNorm_sum_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9047/9056] Replayed WalshIntegral.GaussianSeries
+warning: WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9056] Replayed WalshIntegral.WhiteNoise
+warning: WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9056] Replayed WalshIntegral.Predictable
+warning: WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9056] Replayed WalshIntegral.Rio
+warning: WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9056] Replayed WalshIntegral.MomentBound
+warning: WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9056 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Rio.eLpNorm_sum_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 41734 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 5 (1 names)
+skipping lake exe cache get (VERIFY_COMPARATOR_SKIP_CACHE_GET=1: no Mathlib dependency)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/56c6a6aee31cde28.json
+Resolving dependencies
+Building Challenge
+⚠ [9047/9055] Replayed Challenge.Reference.WalshIntegral.GaussianSeries
+warning: Challenge/Reference/WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9055] Replayed Challenge.Reference.WalshIntegral.WhiteNoise
+warning: Challenge/Reference/WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9055] Replayed Challenge.Reference.WalshIntegral.Predictable
+warning: Challenge/Reference/WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9055] Replayed Challenge.Reference.WalshIntegral.Rio
+warning: Challenge/Reference/WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9055] Replayed Challenge.Reference.WalshIntegral.MomentBound
+warning: Challenge/Reference/WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9055 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.MomentBound.eLpNorm_walshT_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9047/9056] Replayed WalshIntegral.GaussianSeries
+warning: WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9056] Replayed WalshIntegral.WhiteNoise
+warning: WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9056] Replayed WalshIntegral.Predictable
+warning: WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9056] Replayed WalshIntegral.Rio
+warning: WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9056] Replayed WalshIntegral.MomentBound
+warning: WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9056 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.MomentBound.eLpNorm_walshT_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 51897 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 6 (1 names)
+skipping lake exe cache get (VERIFY_COMPARATOR_SKIP_CACHE_GET=1: no Mathlib dependency)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/e6ca5ee495a37eaf.json
+Resolving dependencies
+Building Challenge
+⚠ [9047/9055] Replayed Challenge.Reference.WalshIntegral.GaussianSeries
+warning: Challenge/Reference/WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9055] Replayed Challenge.Reference.WalshIntegral.WhiteNoise
+warning: Challenge/Reference/WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9055] Replayed Challenge.Reference.WalshIntegral.Predictable
+warning: Challenge/Reference/WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9055] Replayed Challenge.Reference.WalshIntegral.Rio
+warning: Challenge/Reference/WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9055] Replayed Challenge.Reference.WalshIntegral.MomentBound
+warning: Challenge/Reference/WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9055 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Modification.exists_predictable_modification, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9047/9056] Replayed WalshIntegral.GaussianSeries
+warning: WalshIntegral/GaussianSeries.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9048/9056] Replayed WalshIntegral.WhiteNoise
+warning: WalshIntegral/WhiteNoise.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9049/9056] Replayed WalshIntegral.Predictable
+warning: WalshIntegral/Predictable.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9051/9056] Replayed WalshIntegral.Rio
+warning: WalshIntegral/Rio.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9052/9056] Replayed WalshIntegral.MomentBound
+warning: WalshIntegral/MomentBound.lean: imports `Mathlib.Order.Interval.Set.Union` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (9056 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Modification.exists_predictable_modification, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 49558 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
