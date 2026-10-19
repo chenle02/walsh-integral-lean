@@ -19,3 +19,5 @@ Required context:
 
 Use lean-toolchain and lake-manifest.json unchanged in a frozen replay.
 Do not infer full-paper SPDE well-posedness or remove theorem hypotheses.
+
+Historical attribution: [Earlier development resources](docs/citation.html#historical-compute). Current release executors and checked scope are recorded by the source-bound receipts.

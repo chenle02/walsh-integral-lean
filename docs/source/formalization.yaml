@@ -1,3 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# Rendered by `lean-pkg formalization <name>` from the lean-pkg registry and the package
+# repository at HEAD (formalization.yaml v0.4, mathlib-initiative). Paths are
+# repository-relative. Derived keys are regenerated on every run: version, project.name,
+# project.license, automation.notes, status.sorry_count, status.axioms, status.evidence,
+# status.main_results, and alignment when claims.yaml is tracked. Every other key is kept
+# from this file. A value starting "[PLACEHOLDER]" is data the registry does not hold:
+# fill it in by hand (it is kept) or set the registry field it names.
+version: v0.4
 project:
   name: walsh-integral
   description: Constructed space-time white noise and predictable Walsh integration with real-p moment
@@ -15,23 +24,106 @@ related_formalizations:
   relationship: builds-on
   note: pinned in lake-manifest.json
 status:
-  scope: Completed countable Gaussian-product white noise; genuine predictable L2 isometric integral
-    and unique extension; real-p moment bounds with explicit quadratic-growth squared-norm coefficient;
-    predictable convolution modifications on the full pointwise finite-variance domain. Equality is
-    almost sure separately at each output. Excludes a common uncountable exceptional set, sample continuity,
-    sharp linear-in-p squared-norm bounds, general Ito theory and SPDE well-posedness.
+  scope: Completed countable Gaussian-product white noise; genuine predictable L2 isometric integral and
+    unique extension; real-p moment bounds with explicit quadratic-growth squared-norm coefficient; predictable
+    convolution modifications on the full pointwise finite-variance domain. Equality is almost sure separately
+    at each output. Excludes a common uncountable exceptional set, sample continuity, sharp linear-in-p
+    squared-norm bounds, general Ito theory and SPDE well-posedness.
+  sorry_count: 0
+  axioms:
+  - Classical.choice
+  - Quot.sound
+  - propext
+  evidence:
+    commit: 128b3637c14bd164108b6c10fd3a49fe19d793f2
+    gate_receipt: .lean-receipts/128b3637c14b-systemd-user-walsh-final-cold-official2-20261019.service-9e3b6f62ab46485ca497dbb0b7ea9799-h-24e00fc5da6c.json
+    comparator_receipt: .lean-receipts/128b3637c14b-comparator.json
+  main_results:
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.Integral.integral_sq_walshL2
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.Integral.walshL2_unique
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.Rio.eLpNorm_sum_sq_le
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.Modification.exists_predictable_modification
+    file: Solution.lean
+    challenge_file: Challenge.lean
 automation:
   methods:
   - method: other
-  notes: Development and release preparation used AI assistance under the author’s direction. Exact
-    source-bound mechanical verification is recorded in canonical receipts; this metadata does not
-    assert independent human review.
+  notes: Development and release preparation used AI assistance under Le Chen’s direction. Source-bound
+    receipts record mechanical verification; no independent human review is asserted.
 review:
   status: unchecked
   notes: No independent human review is asserted. Mechanical verification and AI-assisted source review
     are distinct forms of evidence.
-version: v0.4
+alignment:
+  generated_from: claims.yaml
+  statements:
+  - source: null
+    lean: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
+    module: WalshIntegral/WhiteNoise.lean
+    kind: theorem
+    claim: walsh-integral/completed-white-noise
+    status: reusable
+    note: Existence of compatible space-time white noise with completed natural filtration on the completed
+      countable Gaussian product space.
+  - source: null
+    lean: WalshIntegral.Integral.integral_sq_walshL2
+    module: WalshIntegral/Integral.lean
+    kind: theorem
+    claim: walsh-integral/ito-isometry
+    status: reusable
+    note: For every predictable L² integrand class, the squared Walsh integral has expectation equal to
+      its positive-time space-sample squared integral.
+  - source: null
+    lean: WalshIntegral.Integral.walshL2_unique
+    module: WalshIntegral/Integral.lean
+    kind: theorem
+    claim: walsh-integral/integral-unique
+    status: reusable
+    note: Every continuous linear map agreeing with the Walsh integral on all bounded random elementary
+      integrands equals its isometric extension.
+  - source: null
+    lean: WalshIntegral.Rio.eLpNorm_sum_sq_le
+    module: WalshIntegral/Rio.lean
+    kind: theorem
+    claim: walsh-integral/rio-moment
+    status: reusable
+    note: For real p≥2, adapted Lᵖ martingale differences obey the squared Lᵖ sum bound with factor p−1
+      and explicit conditional-centering hypotheses.
+  - source: null
+    lean: WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
+    module: WalshIntegral/MomentBound.lean
+    kind: theorem
+    claim: walsh-integral/walsh-real-p
+    status: reusable
+    note: For real p≥2 and predictable input with finite mixed norm, the squared Lᵖ Walsh norm is bounded
+      by (p−1)·gaussianMoment(p)² times that mixed norm.
+  - source: null
+    lean: WalshIntegral.Modification.exists_predictable_modification
+    module: WalshIntegral/Modification.lean
+    kind: theorem
+    claim: walsh-integral/predictable-modification
+    status: reusable
+    note: For a causal L²-regular deterministic kernel and predictable input with finite variance at every
+      output, the stochastic convolution has a predictable version, equal almost surely separately at
+      each output.
 acknowledgements: Developed and verified with lean-pkg (https://github.com/lean-pkg/lean-pkg, doi:10.5281/zenodo.23272098).
-  This work was completed in part with resources provided by the Auburn University Easley Cluster
-  (https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html). Historical verification
-  used Easley; current release execution is identified by its own receipts.
+  This work was completed in part with resources provided by the Auburn University Easley Cluster (https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html).
+  Historical verification used Easley; current release execution is identified by its own receipts.

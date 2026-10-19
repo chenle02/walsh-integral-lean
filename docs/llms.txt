@@ -25,3 +25,5 @@ Required context:
 - [Clone contract](source/AGENTS.md)
 - [Claims](source/claims.yaml)
 - [Contribution guidance](source/CONTRIBUTING.md)
+
+Historical attribution: [Earlier development resources](citation.html#historical-compute). Current release executors and checked scope are recorded by the source-bound receipts.
