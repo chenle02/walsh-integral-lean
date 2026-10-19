@@ -1,0 +1,15 @@
+import WalshIntegralTest.NegRioConstantWitness
+
+noncomputable section
+open MeasureTheory ProbabilityTheory Set Filter
+open scoped NNReal ENNReal Topology
+
+open WalshIntegralTest.NegRioConstant
+open scoped WalshIntegralTest.NegRioConstant
+
+-- All martingale difference premises above hold, but the smaller constant fails.
+example :
+    eLpNorm (fun ω => ∑ k ∈ Finset.range 1, d k ω) (ENNReal.ofReal 2) P ^ 2 ≤
+      ENNReal.ofReal (2 - 2) *
+        ∑ k ∈ Finset.range 1, eLpNorm (d k) (ENNReal.ofReal 2) P ^ 2 := by
+  rw [smaller_constant_iff_false]

@@ -1,0 +1,8 @@
+import WalshIntegralTest.NegBdgConstZeroWitness
+
+open WalshIntegral.MomentBound WalshIntegralTest.NegBdgConstZero
+
+-- The actual Gaussian positivity result rules out a zero constant at p = 2.
+example (h : bdgConst 2 = 0) : False := by
+  have hpositive := constant_positive
+  rw [h] at hpositive

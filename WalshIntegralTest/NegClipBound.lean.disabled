@@ -1,0 +1,7 @@
+import WalshIntegralTest.NegClipBoundWitness
+
+open WalshIntegral.Modification WalshIntegralTest.NegClipBound
+
+-- Clipping a constant at its own level cannot improve the bound by one.
+example (h : |clipField 2 (fun _ _ (_ : Unit) => 2) 0 0 ()| ≤ (2 : ℝ) - 1) : False := by
+  rw [clip_value, smaller_bound] at h

@@ -1,0 +1,13 @@
+import WalshIntegralTest.NegPredictableMeasurableWitness
+
+open MeasureTheory Set WalshIntegral.Predictable
+open scoped NNReal
+
+open WalshIntegralTest.NegPredictableMeasurable
+open scoped WalshIntegralTest.NegPredictableMeasurable
+
+-- Ambient measurability cannot replace predictability.
+example : Measurable[predictableSigma F]
+    (fun q : ℝ × ℝ × Bool => if q.2.2 then (1 : ℝ) else 0) := by
+  have hm := ambient_measurable
+  rw [iff_false_intro not_predictable]

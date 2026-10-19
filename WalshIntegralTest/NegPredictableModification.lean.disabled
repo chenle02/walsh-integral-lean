@@ -1,0 +1,15 @@
+import WalshIntegralTest.NegPredictableModificationWitness
+
+noncomputable section
+open MeasureTheory ProbabilityTheory Set Filter
+open WalshIntegral.Predictable
+open scoped NNReal ENNReal Topology
+
+open WalshIntegralTest.NegPredictableModification
+open scoped WalshIntegralTest.NegPredictableModification
+
+-- L² continuity and vanishing at nonpositive times do not supply adaptedness.
+example : ∃ U : ℝ → ℝ → Bool → ℝ,
+    Measurable[predictableSigma F] (fun q : ℝ × ℝ × Bool => U q.1 q.2.1 q.2.2) ∧
+      ∀ t x, X t x =ᵐ[P] U t x := by
+  rw [iff_false_intro no_modification]

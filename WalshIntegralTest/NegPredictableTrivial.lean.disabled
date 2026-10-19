@@ -1,0 +1,10 @@
+import WalshIntegralTest.NegPredictableTrivialWitness
+
+open MeasureTheory WalshIntegral.Predictable
+open scoped NNReal
+
+open WalshIntegralTest.NegPredictableTrivial
+
+example (hfalse : predictableSigma (Filtration.const ℝ≥0 (inferInstance : MeasurableSpace Unit)
+    le_rfl) = ⊥) : False := by
+  rw [sigma_correct] at hfalse

@@ -1,0 +1,11 @@
+import WalshIntegralTest.NegCovarianceSignWitness
+
+open MeasureTheory ProbabilityTheory WalshIntegral.WhiteNoise
+
+open WalshIntegralTest.NegCovarianceSign
+
+example {Ω : Type*} {mΩ : MeasurableSpace Ω} {P : Measure Ω} [IsProbabilityMeasure P]
+    {F : Filtration NNReal mΩ} {W : H →L[ℝ] Lp ℝ 2 P} (hW : IsWhiteNoise P F W)
+    : ∀ h g : H,
+      covariance (fun ω => W h ω) (fun ω => W g ω) P = -inner ℝ h g := by
+  rw [iff_false_intro (not_negative_covariance hW)]

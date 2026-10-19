@@ -1,0 +1,46 @@
+schema: coverage/1
+package: walsh-integral
+kind: library
+summary: Space-time white noise, predictable L² Walsh integration, explicit real-p
+  moment bounds and predictable convolution modifications. Exact hypotheses and separate
+  almost-sure equality are retained.
+rows:
+- title: White noise exists on the completed Gaussian product
+  claims:
+  - walsh-integral/completed-white-noise
+  statement: There exist a compatible isonormal Gaussian white noise, its completed
+    natural filtration, and a countable orthonormal-series representation on the completed
+    product of standard Gaussian laws.
+- title: The Walsh integral satisfies the Itô isometry
+  claims:
+  - walsh-integral/ito-isometry
+  statement: For every compatible white noise and predictable square-integrable input
+    class, the expected square of its Walsh integral equals its squared time-space-sample
+    norm.
+- title: Elementary agreement determines the integral uniquely
+  claims:
+  - walsh-integral/integral-unique
+  statement: A continuous linear map from predictable L² classes to sample L² that
+    agrees with integration on every bounded random elementary integrand equals the
+    constructed Walsh integral.
+- title: Real-p martingale differences satisfy Rio’s inequality
+  claims:
+  - walsh-integral/rio-moment
+  statement: Let p≥2 be real. For a finite adapted Lᵖ martingale-difference sequence
+    centered conditionally on the preceding filtration, the squared Lᵖ norm of its
+    sum is at most p−1 times the sum of its squared Lᵖ norms.
+- title: The Walsh integral has an explicit real-p mixed-norm estimate
+  claims:
+  - walsh-integral/walsh-real-p
+  statement: For real p≥2, a predictable input with finite mixed norm belongs to the
+    genuine L² integration domain. Its squared Lᵖ Walsh norm is bounded by bdgConst(p)
+    times mixedNormSq, where bdgConst(p)=(p−1)·gaussianMoment(p)². This constant grows
+    quadratically in p.
+- title: Finite-variance convolutions admit predictable modifications
+  claims:
+  - walsh-integral/predictable-modification
+  statement: For a jointly measurable causal kernel with deterministic L² membership
+    and L² continuity at every real output, every predictable input with finite kernel
+    variance at every output has a predictable stochastic-convolution version. Equality
+    holds almost surely separately at each output; no common exceptional set or sample
+    continuity is asserted.

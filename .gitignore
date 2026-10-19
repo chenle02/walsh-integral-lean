@@ -1,0 +1,11 @@
+.lake/
+__pycache__/
+.lean-pkg-private-patterns
+verification.log
+
+# Canonical verification evidence is versioned.
+!.lean-receipts/
+!.lean-receipts/*.json
+!.lean-receipts/*.log
+!.lean-receipts/*.log.gz
+!.lean-receipts/*.json.gz

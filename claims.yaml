@@ -1,0 +1,52 @@
+schema: claims/1
+package: walsh-integral
+claims:
+- id: walsh-integral/completed-white-noise
+  decl: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
+  kind: theorem
+  summary: Existence of compatible space-time white noise with completed natural filtration
+    on the completed countable Gaussian product space.
+  file: WalshIntegral/WhiteNoise.lean
+  status: reusable
+  citation: null
+- id: walsh-integral/ito-isometry
+  decl: WalshIntegral.Integral.integral_sq_walshL2
+  kind: theorem
+  summary: For every predictable L² integrand class, the squared Walsh integral has
+    expectation equal to its positive-time space-sample squared integral.
+  file: WalshIntegral/Integral.lean
+  status: reusable
+  citation: null
+- id: walsh-integral/integral-unique
+  decl: WalshIntegral.Integral.walshL2_unique
+  kind: theorem
+  summary: Every continuous linear map agreeing with the Walsh integral on all bounded
+    random elementary integrands equals its isometric extension.
+  file: WalshIntegral/Integral.lean
+  status: reusable
+  citation: null
+- id: walsh-integral/rio-moment
+  decl: WalshIntegral.Rio.eLpNorm_sum_sq_le
+  kind: theorem
+  summary: For real p≥2, adapted Lᵖ martingale differences obey the squared Lᵖ sum
+    bound with factor p−1 and explicit conditional-centering hypotheses.
+  file: WalshIntegral/Rio.lean
+  status: reusable
+  citation: null
+- id: walsh-integral/walsh-real-p
+  decl: WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
+  kind: theorem
+  summary: For real p≥2 and predictable input with finite mixed norm, the squared
+    Lᵖ Walsh norm is bounded by (p−1)·gaussianMoment(p)² times that mixed norm.
+  file: WalshIntegral/MomentBound.lean
+  status: reusable
+  citation: null
+- id: walsh-integral/predictable-modification
+  decl: WalshIntegral.Modification.exists_predictable_modification
+  kind: theorem
+  summary: For a causal L²-regular deterministic kernel and predictable input with
+    finite variance at every output, the stochastic convolution has a predictable
+    version, equal almost surely separately at each output.
+  file: WalshIntegral/Modification.lean
+  status: reusable
+  citation: null

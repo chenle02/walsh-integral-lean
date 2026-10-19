@@ -1,0 +1,21 @@
+# WalshIntegral
+
+Source API 0.6.0. Public repository interface:
+https://github.com/chenle02/walsh-integral-lean
+
+Read the exact Lean statement before using a result. The source declaration
+determines every hypothesis and quantifier; each receipt covers only its named
+scientific content. A version number alone does not establish verification.
+
+Required context:
+- [README and verification authority](README.md#verification-at-a-glance)
+- [Clone contract](AGENTS.md)
+- [Mathematical scope](docs/status.html)
+- [Exact reusable API](docs/api.html)
+- [Trust model](docs/trust.html)
+- [Claims](claims.yaml)
+- [Public theorem inventory](THEOREM_INVENTORY.txt)
+- [Contribution guidance](CONTRIBUTING.md)
+
+Use lean-toolchain and lake-manifest.json unchanged in a frozen replay.
+Do not infer full-paper SPDE well-posedness or remove theorem hypotheses.

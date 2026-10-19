@@ -1,0 +1,14 @@
+import WalshIntegralTest.NegRectangleVarianceWitness
+
+open MeasureTheory ProbabilityTheory WalshIntegral.WhiteNoise
+open scoped ENNReal NNReal
+
+open WalshIntegralTest.NegRectangleVariance
+
+example {Ω : Type*} {mΩ : MeasurableSpace Ω} {P : Measure Ω} [IsProbabilityMeasure P]
+    {F : Filtration ℝ≥0 mΩ} {W : H →L[ℝ] Lp ℝ 2 P} (hW : IsWhiteNoise P F W)
+    : ∀ (s t : ℝ≥0) (_hst : s < t) (A : Set ℝ)
+        (hA : MeasurableSet A) (hAfin : volume A ≠ ∞),
+      P.map (fun ω => W (rectangle s t A hA hAfin) ω) =
+        gaussianReal 0 (2 * (t - s) * (volume A).toNNReal) := by
+  rw [iff_false_intro (not_doubled_rectangle_law hW)]

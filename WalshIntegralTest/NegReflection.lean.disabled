@@ -1,0 +1,23 @@
+import WalshIntegralTest.NegReflectionWitness
+
+noncomputable section
+
+open MeasureTheory WalshIntegral.WhiteNoise WalshIntegral.Integral
+open scoped NNReal ENNReal
+
+open WalshIntegralTest.NegReflection
+
+variable {Ω : Type*} [mΩ : MeasurableSpace Ω] {P : Measure Ω}
+  [IsProbabilityMeasure P] {F : Filtration ℝ≥0 mΩ}
+  {W : H →L[ℝ] Lp ℝ 2 P}
+
+-- The coefficient is bounded and past-measurable by Elementary, centred by hc,
+-- and takes only the values ±1. The nonzero rectangle excludes degenerate noise.
+example (hW : IsWhiteNoise P F W) (e : Elementary F)
+    (hc : ∫ ω, e.coeff ω ∂P = 0)
+    (hsign : ∀ ω, e.coeff ω = 1 ∨ e.coeff ω = -1)
+    (hr : rectangle e.s e.t e.A e.measurableSet_A e.volume_A_ne_top ≠ 0) :
+    walshT hW (meanReflect (P := P) e.field) =ᵐ[P]
+      fun ω => e.coeff ω *
+        W (rectangle e.s e.t e.A e.measurableSet_A e.volume_A_ne_top) ω := by
+  rw [iff_false_intro (reflected_disagrees hW e hc hsign hr)]

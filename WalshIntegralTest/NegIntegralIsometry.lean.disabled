@@ -1,0 +1,13 @@
+import WalshIntegralTest.NegIntegralIsometryWitness
+
+open MeasureTheory WalshIntegral.WhiteNoise WalshIntegral.Integral
+open WalshIntegralTest.NegIntegralIsometry
+open scoped ENNReal NNReal
+
+-- The unit rectangle has norm one, so doubling the isometry constant is false.
+example {Ω : Type*} [mΩ : MeasurableSpace Ω] {P : Measure Ω}
+    [IsProbabilityMeasure P] {F : Filtration ℝ≥0 mΩ}
+    {W : H →L[ℝ] Lp ℝ 2 P} (hW : IsWhiteNoise P F W)
+    (h : ‖walshL2 hW (elementaryClass P (unitElementary F))‖ =
+      2 * ‖elementaryClass P (unitElementary F)‖) : False := by
+  rw [integral_norm hW, unitElementary_norm, mul_one] at h

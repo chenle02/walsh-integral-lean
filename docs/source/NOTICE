@@ -1,0 +1,8 @@
+WalshIntegral
+Copyright (c) 2026 Le Chen
+
+Licensed under the Apache License, Version 2.0; see LICENSE.
+
+This library depends on Lean and Mathlib, whose source and licenses are maintained by their respective upstream projects. No claim of authorship of upstream Lean or Mathlib material is made.
+
+Bundled audit tooling includes Apache-2.0 code from leanprover-community/axiom-audit (v0.1.2, commit 46024e005996495c65ef609368e11ab39c4222e3) and the byte-exact Lake hygiene parser from lean-pkg 0.18.0. Their licenses and provenance are retained under tools/axiom-audit/ and scripts/_vendor/.

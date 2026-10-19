@@ -1,0 +1,37 @@
+project:
+  name: walsh-integral
+  description: Constructed space-time white noise and predictable Walsh integration with real-p moment
+    estimates.
+  authors:
+  - Le Chen
+  license: Apache-2.0
+sources:
+- title: Space-time Gaussian white noise, Walsh integration and martingale moment estimates
+  relationship: formalizes
+  note: Formalization of known mathematical results with explicit hypotheses; no mathematical novelty
+    is asserted.
+related_formalizations:
+- id: https://github.com/leanprover-community/mathlib4
+  relationship: builds-on
+  note: pinned in lake-manifest.json
+status:
+  scope: Completed countable Gaussian-product white noise; genuine predictable L2 isometric integral
+    and unique extension; real-p moment bounds with explicit quadratic-growth squared-norm coefficient;
+    predictable convolution modifications on the full pointwise finite-variance domain. Equality is
+    almost sure separately at each output. Excludes a common uncountable exceptional set, sample continuity,
+    sharp linear-in-p squared-norm bounds, general Ito theory and SPDE well-posedness.
+automation:
+  methods:
+  - method: other
+  notes: Development and release preparation used AI assistance under the author’s direction. Exact
+    source-bound mechanical verification is recorded in canonical receipts; this metadata does not
+    assert independent human review.
+review:
+  status: unchecked
+  notes: No independent human review is asserted. Mechanical verification and AI-assisted source review
+    are distinct forms of evidence.
+version: v0.4
+acknowledgements: Developed and verified with lean-pkg (https://github.com/lean-pkg/lean-pkg, doi:10.5281/zenodo.23272098).
+  This work was completed in part with resources provided by the Auburn University Easley Cluster
+  (https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html). Historical verification
+  used Easley; current release execution is identified by its own receipts.
