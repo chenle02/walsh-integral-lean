@@ -1,0 +1,115 @@
+{
+  "schema": "supplementary-native-evidence/1",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "scope": "Actual cold complete owned-declaration audit of production/positive-test and proved-reference cones, plus exact selected-module LeanChecker replay. Supplementary evidence, not a canonical lower receipt or independent comparator certificate.",
+  "strict_diagnostics_publication": "Raw strict compiler streams are retained privately and independently reparsed; public summary records outcomes only.",
+  "limitations": [
+    "High-trust compiled environment inspection checks the project-wide forbidden-axiom union. Per-declaration axiom lists may undercount cyclic dependency clusters and are not canonical individual fingerprints.",
+    "Serialized type expressions are full elaborated Lean types, not proof-body equivalence certificates or validation of explanatory prose.",
+    "LeanChecker replays modules with the pinned Lean implementation; independent supported comparator evidence is separate.",
+    "Negative escape fixtures deliberately contain rejected escapes; zero-hole claims apply to production/reference/positive cones, not the raw fixture syntax."
+  ],
+  "scientific_commit": "128b3637c14bd164108b6c10fd3a49fe19d793f2",
+  "canonical_lower_receipt_report_sha256": "df1ba578e111320250bf558793e6de71c001f55d0593aceb108ff24e79c195f7",
+  "native_reports": {
+    "production": {
+      "file": "production.json.gz",
+      "compressed_bytes": 6834993,
+      "compressed_sha256": "0ba4f558d3322b65907c1a92e57b7f6c6ed7e7fbdcb18b7a5cdb957fc1d851a2",
+      "uncompressed_bytes": 333681169,
+      "uncompressed_sha256": "f16f4670a9c72ce127fc5d51670bd34aa4330adc9770c784f6cc2f4e1498c605",
+      "owned_declarations": 544,
+      "module_count": 24,
+      "exact_leanchecker_modules": [
+        "WalshIntegral.GaussianSeries",
+        "WalshIntegral.Integral",
+        "WalshIntegral.Modification",
+        "WalshIntegral.MomentBound",
+        "WalshIntegral.Predictable",
+        "WalshIntegral.Rio",
+        "WalshIntegral.WhiteNoise",
+        "WalshIntegralTest.AxiomCheck",
+        "WalshIntegralTest.CompletedConsumer",
+        "WalshIntegralTest.Examples",
+        "WalshIntegralTest.NegBdgConstZeroWitness",
+        "WalshIntegralTest.NegClipBoundWitness",
+        "WalshIntegralTest.NegCovarianceSignWitness",
+        "WalshIntegralTest.NegIntegralIsometryWitness",
+        "WalshIntegralTest.NegPredictableMeasurableWitness",
+        "WalshIntegralTest.NegPredictableModificationWitness",
+        "WalshIntegralTest.NegPredictableTrivialWitness",
+        "WalshIntegralTest.NegRectangleVarianceWitness",
+        "WalshIntegralTest.NegReflectionWitness",
+        "WalshIntegralTest.NegRioConstantWitness",
+        "WalshIntegralTest.TypeCheck"
+      ],
+      "zero_owned_import_only_modules": [
+        "Solution",
+        "WalshIntegral",
+        "WalshIntegralTest"
+      ],
+      "axiom_union": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "compression_ratio": 48.819533392353144,
+      "gzip_decoded_identity_verified": true
+    },
+    "reference": {
+      "file": "reference.json.gz",
+      "compressed_bytes": 6091771,
+      "compressed_sha256": "9c5c52a2c4cdb8d8801f72733191c1c203833916499ef2ec4c2d494a479fb0d4",
+      "uncompressed_bytes": 296922699,
+      "uncompressed_sha256": "03fbe5595699dc85d30a8041ae6b14b21c3be7c3334bbbcd61c7cd22b4f8370b",
+      "owned_declarations": 448,
+      "module_count": 8,
+      "exact_leanchecker_modules": [
+        "Challenge.Reference.WalshIntegral.GaussianSeries",
+        "Challenge.Reference.WalshIntegral.Integral",
+        "Challenge.Reference.WalshIntegral.Modification",
+        "Challenge.Reference.WalshIntegral.MomentBound",
+        "Challenge.Reference.WalshIntegral.Predictable",
+        "Challenge.Reference.WalshIntegral.Rio",
+        "Challenge.Reference.WalshIntegral.WhiteNoise"
+      ],
+      "zero_owned_import_only_modules": [
+        "Challenge"
+      ],
+      "axiom_union": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "compression_ratio": 48.741605519971124,
+      "gzip_decoded_identity_verified": true
+    }
+  },
+  "compiled_escape_controls": [
+    {
+      "module": "EscapePositive",
+      "compile_exit": 0,
+      "audit_exit": 0,
+      "forbidden_axioms": []
+    },
+    {
+      "module": "EscapeNegative",
+      "compile_exit": 0,
+      "audit_exit": 1,
+      "forbidden_axioms": [
+        "EscapeNegative.injected",
+        "sorryAx"
+      ]
+    },
+    {
+      "module": "EscapeNative",
+      "compile_exit": 0,
+      "audit_exit": 1,
+      "forbidden_axioms": [
+        "EscapeNative.nativeTrue._native.native_decide.ax_1_1"
+      ]
+    }
+  ],
+  "strict_control_pairs": 10
+}
