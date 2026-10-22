@@ -1,4 +1,6 @@
 import Challenge.Reference.WalshIntegral.GaussianSeries
+import Challenge.Reference.WalshIntegral.GaussianStein
+import Challenge.Reference.WalshIntegral.GaussianStep
 import Challenge.Reference.WalshIntegral.Integral
 import Challenge.Reference.WalshIntegral.Modification
 import Challenge.Reference.WalshIntegral.MomentBound

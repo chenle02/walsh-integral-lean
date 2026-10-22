@@ -1,9 +1,10 @@
 import Challenge.Reference.WalshIntegral.Rio
 import Challenge.Reference.WalshIntegral.Integral
+import Challenge.Reference.WalshIntegral.GaussianStep
 import Mathlib.Order.Interval.Set.Union
 
 /-!
-# Mixed-norm moment estimates for every real p ≥ 2. The explicit squared-norm constant is `(p - 1) * gaussianMoment p ^ 2` and grows quadratically in p. No sharp linear-in-p bound is claimed.
+# Mixed-norm moment estimates for every real p ≥ 2. The explicit squared-norm constant is `bdgConst p = p - 1`, linear in p, obtained from the Gaussian slab step (Stein's identity on each time slab).
 -/
 
 noncomputable section
@@ -22,9 +23,17 @@ Only positive p is used as a norm; outside that range this is a total formula. -
 def gaussianMoment (p : ℝ) : ℝ :=
   (∫ x : ℝ, |x| ^ p ∂gaussianReal 0 1) ^ (1 / p)
 
-/-- The finite real constant supplied by the Rio and Gaussian slab argument. -/
+/-- The squared-norm constant supplied by the Gaussian slab step: `p - 1`, linear in `p`. -/
 def bdgConst (p : ℝ) : ℝ :=
-  (p - 1) * gaussianMoment p ^ 2
+  p - 1
+
+/-- The value of the constant. -/
+theorem bdgConst_eq (p : ℝ) : bdgConst p = p - 1 := rfl
+
+/-- Linear growth: `bdgConst p ≤ p`. -/
+theorem bdgConst_le_self (p : ℝ) : bdgConst p ≤ p := by
+  rw [bdgConst_eq]
+  linarith
 
 /-- Gaussian absolute moments are integrable for every nonnegative real power. -/
 theorem integrable_gaussianMoment_integrand {p : ℝ} (hp : 0 ≤ p) :
@@ -59,7 +68,8 @@ theorem gaussianMoment_pos {p : ℝ} (hp : 0 < p) : 0 < gaussianMoment p := by
 
 /-- Nonnegativity on the whole exponent range required by the corresponding interface. -/
 theorem bdgConst_nonneg {p : ℝ} (hp : 2 ≤ p) : 0 ≤ bdgConst p := by
-  exact mul_nonneg (by linarith) (sq_nonneg _)
+  rw [bdgConst_eq]
+  linarith
 
 variable {Ω : Type*} [mΩ : MeasurableSpace Ω]
 
@@ -228,35 +238,6 @@ private theorem gaussian_lintegral {p : ℝ} (hp : 0 < p) (v : ℝ≥0) :
   rw [← ofReal_norm, Real.norm_eq_abs, abs_of_nonneg (Real.sqrt_nonneg _), Real.sqrt_eq_rpow,
     ← ENNReal.ofReal_rpow_of_nonneg v.coe_nonneg (by norm_num), ← ENNReal.rpow_mul]
   simp [div_eq_mul_inv, mul_comm]
-private theorem slab_gram {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
-    (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A)) (a : Fin n → ℝ) :
-    ‖∑ j, a j • rectangle s t (e j).A (e j).measurableSet_A (e j).volume_A_ne_top‖ ^ 2 =
-      ((t : ℝ) - (s : ℝ)) * ∑ j, (volume (e j).A).toReal * a j ^ 2 := by
-  classical
-  have hfin (j : Fin n) : timeSpaceVolume (Ioc (s : ℝ) (t : ℝ) ×ˢ (e j).A) ≠ ∞ := by
-    rw [timeSpaceVolume, Measure.prod_prod]
-    exact ENNReal.mul_ne_top
-      (ne_of_lt ((Measure.restrict_apply_le _ _).trans_lt (by simp))) (e j).volume_A_ne_top
-  have hinner (i j : Fin n) : inner ℝ
-      (rectangle s t (e i).A (e i).measurableSet_A (e i).volume_A_ne_top)
-      (rectangle s t (e j).A (e j).measurableSet_A (e j).volume_A_ne_top) =
-      if i = j then ((t : ℝ) - (s : ℝ)) * (volume (e i).A).toReal else 0 := by
-    unfold rectangle
-    rw [L2.real_inner_indicatorConstLp_one_indicatorConstLp_one _ _ (hfin i) (hfin j)]
-    by_cases hij : i = j
-    · subst j
-      simp only [ite_true, inter_self, Measure.real, timeSpaceVolume, Measure.prod_prod,
-        ENNReal.toReal_mul, Measure.restrict_apply measurableSet_Ioc, Ioc_inter_Ioi,
-        max_eq_left s.coe_nonneg, Real.volume_Ioc,
-        ENNReal.toReal_ofReal (sub_nonneg.mpr (NNReal.coe_le_coe.mpr hst.le))]
-    · simp [hij, prod_inter_prod, Disjoint.inter_eq (hdisj hij), Measure.real]
-  rw [← real_inner_self_eq_norm_sq]
-  simp only [sum_inner, inner_sum, inner_smul_left, inner_smul_right, hinner,
-    conj_trivial, mul_ite, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, ite_true]
-  rw [Finset.mul_sum]
-  apply Finset.sum_congr rfl
-  intro j _
-  ring
 
 /-- The Gaussian slab estimate, the moment identity obtained from the conditional Gaussian law.
 Whole-future independence in `hW` and pairwise disjoint cells are essential.
@@ -302,7 +283,7 @@ theorem eLpNorm_slab_sq_eq (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
     congr 2
     rw [← ENNReal.ofReal_coe_nnreal]
     congr 1
-    simpa only [NNReal.coe_pow, coe_nnnorm, r, V] using slab_gram e s t hst hdisj a
+    simpa only [NNReal.coe_pow, coe_nnnorm, r, V] using GaussianStep.slab_gram_eq e s t hst hdisj a
   have hmPair : Measurable (fun q : (Fin n → ℝ) × (Fin n → ℝ) =>
       ‖∑ j, q.1 j * q.2 j‖ₑ ^ p) := by fun_prop
   have hmSum : Measurable (fun ω => ∑ j, C ω j * Z ω j) := by fun_prop
@@ -342,19 +323,17 @@ theorem eLpNorm_slab_sq_eq (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
   rw [hcancel, hcancel', ENNReal.rpow_two,
     ENNReal.ofReal_pow (le_of_lt (gaussianMoment_pos hp0))]
 
-/-- The disjoint-cell slab bound: m_p² times the slab duration times the sum
-of cell volumes weighted by squared coefficient L^p norms. -/
-theorem eLpNorm_slab_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
-    {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
-    (hs : ∀ j, (e j).s = s) (ht : ∀ j, (e j).t = t)
-    (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A)) :
-    eLpNorm (elementarySumIntegral W e) (ENNReal.ofReal p) P ^ 2 ≤
-      ENNReal.ofReal (gaussianMoment p ^ 2) * ENNReal.ofReal ((t : ℝ) - (s : ℝ)) *
+omit [IsProbabilityMeasure P] in
+/-- Minkowski for the slab variance: `‖slabVariance s t e‖_{p/2}` is at most the slab duration
+times the sum of cell volumes weighted by squared coefficient `L^p` norms. -/
+theorem eLpNorm_slabVariance_le {p : ℝ} (hp : 2 ≤ p)
+    {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s ≤ t) :
+    eLpNorm (slabVariance s t e) (ENNReal.ofReal (p / 2)) P ≤
+      ENNReal.ofReal ((t : ℝ) - (s : ℝ)) *
         ∑ j, volume (e j).A * eLpNorm (e j).coeff (ENNReal.ofReal p) P ^ 2 := by
-  rw [eLpNorm_slab_sq_eq hW hp e s t hst hs ht hdisj]
-  have hdt : 0 ≤ (t : ℝ) - (s : ℝ) := sub_nonneg.mpr (by exact_mod_cast hst.le)
+  have hdt : 0 ≤ (t : ℝ) - (s : ℝ) := sub_nonneg.mpr (by exact_mod_cast hst)
   have hexp : ENNReal.ofReal (p / 2) * ENNReal.ofReal 2 = ENNReal.ofReal p := by
-    rw [← ENNReal.ofReal_mul (by positivity)]
+    rw [← ENNReal.ofReal_mul (by linarith)]
     congr 1
     ring
   have hcoeff (j : Fin n) :
@@ -376,7 +355,7 @@ theorem eLpNorm_slab_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
         (∑ j : Fin n, fun ω => (volume (e j).A).toReal * (e j).coeff ω ^ 2) by
     ext ω
     simp]
-  rw [eLpNorm_const_smul, hdt', ← mul_assoc]
+  rw [eLpNorm_const_smul, hdt']
   refine mul_le_mul le_rfl ?_ zero_le zero_le
   calc
     eLpNorm (∑ j : Fin n, fun ω => (volume (e j).A).toReal * (e j).coeff ω ^ 2)
@@ -389,6 +368,31 @@ theorem eLpNorm_slab_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
       intro j _
       change eLpNorm ((volume (e j).A).toReal • (fun ω => (e j).coeff ω ^ 2)) _ _ = _
       rw [eLpNorm_const_smul, hvol, hcoeff]
+
+/-- The disjoint-cell slab bound: m_p² times the slab duration times the sum
+of cell volumes weighted by squared coefficient L^p norms. -/
+theorem eLpNorm_slab_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
+    {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
+    (hs : ∀ j, (e j).s = s) (ht : ∀ j, (e j).t = t)
+    (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A)) :
+    eLpNorm (elementarySumIntegral W e) (ENNReal.ofReal p) P ^ 2 ≤
+      ENNReal.ofReal (gaussianMoment p ^ 2) * ENNReal.ofReal ((t : ℝ) - (s : ℝ)) *
+        ∑ j, volume (e j).A * eLpNorm (e j).coeff (ENNReal.ofReal p) P ^ 2 := by
+  rw [eLpNorm_slab_sq_eq hW hp e s t hst hs ht hdisj, mul_assoc]
+  exact mul_le_mul le_rfl (eLpNorm_slabVariance_le hp e s t hst.le) zero_le zero_le
+
+/-- The Gaussian slab step with the linear constant `p - 1`: for `X` measurable for the past `F s`
+and in `L^p`, `‖X + ∑ⱼ ∫ eⱼ dW‖_p² ≤ ‖X‖_p² + (p - 1) ‖slabVariance s t e‖_{p/2}`.
+This is `GaussianStep.eLpNorm_add_gaussian_slab_sq_le` stated with this module's definitions. -/
+theorem eLpNorm_add_slab_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
+    {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
+    (hs : ∀ j, (e j).s = s) (ht : ∀ j, (e j).t = t)
+    (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A))
+    {X : Ω → ℝ} (hX : StronglyMeasurable[F s] X) (hXLp : MemLp X (ENNReal.ofReal p) P) :
+    eLpNorm (fun ω => X ω + elementarySumIntegral W e ω) (ENNReal.ofReal p) P ^ 2 ≤
+      eLpNorm X (ENNReal.ofReal p) P ^ 2 +
+        ENNReal.ofReal (p - 1) * eLpNorm (slabVariance s t e) (ENNReal.ofReal (p / 2)) P :=
+  GaussianStep.eLpNorm_add_gaussian_slab_sq_le hW hp e s t hst hs ht hdisj hX hXLp
 
 private theorem elementaryIntegral_memLp_real (hW : IsWhiteNoise P F W)
     (p : ℝ) (e : Elementary F) :
@@ -822,32 +826,61 @@ private theorem grid_refinement_disjoint {m r : ℕ} (τ : ℕ → ℝ≥0) (hmo
   · simp only [hs, ht] at hza hzb
     exact disjoint_left.mp (grid_slab_disjoint τ hmono (Fin.val_ne_of_ne hk)) hza hzb
 
-private theorem grid_rio_bound (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
+private theorem grid_gaussian_bound (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
     {m r : ℕ} (τ : ℕ → ℝ≥0) (hmono : Monotone τ)
+    (hstrict : ∀ k, k < m → τ k < τ (k + 1))
     (f : Fin m → Fin r → Elementary F)
-    (hs : ∀ k j, (f k j).s = τ k) (ht : ∀ k j, (f k j).t = τ (k + 1)) :
+    (hs : ∀ k j, (f k j).s = τ k) (ht : ∀ k j, (f k j).t = τ (k + 1))
+    (hd : ∀ k, Pairwise (fun i j => Disjoint (f k i).A (f k j).A)) :
     eLpNorm (fun ω => ∑ k, elementarySumIntegral W (f k) ω) (ENNReal.ofReal p) P ^ 2 ≤
-      ENNReal.ofReal (p - 1) * ∑ k, eLpNorm (elementarySumIntegral W (f k)) (ENNReal.ofReal p) P ^ 2 := by
+      ENNReal.ofReal (p - 1) *
+        ∑ k : Fin m, eLpNorm (slabVariance (τ k) (τ (k + 1)) (f k)) (ENNReal.ofReal (p / 2)) P := by
   classical
   choose D hDm hDae hDLp hDc using fun k =>
     exists_slab_adapted_rep hW hp (f k) (τ k) (τ (k + 1)) (hs k) (ht k)
-  let ℱ : Filtration ℕ mΩ := ⟨fun k => F (τ k), F.mono'.comp hmono, fun k => F.le _⟩
   let d : ℕ → Ω → ℝ := fun k => if hk : k < m then D ⟨k, hk⟩ else 0
-  have hadapted (k : ℕ) : StronglyMeasurable[ℱ (k + 1)] (d k) := by
+  let V : ℕ → ℝ≥0∞ := fun k => if hk : k < m then
+    eLpNorm (slabVariance (τ k) (τ (k + 1)) (f ⟨k, hk⟩)) (ENNReal.ofReal (p / 2)) P else 0
+  have hdm (k : ℕ) : StronglyMeasurable[F (τ (k + 1))] (d k) := by
     by_cases hk : k < m
     · simpa only [d, dite_eq_left hk] using hDm ⟨k, hk⟩
     · simp only [d, dite_eq_right hk]
       exact stronglyMeasurable_zero
-  have hLp (k : ℕ) : MemLp (d k) (ENNReal.ofReal p) P := by
+  have hdLp (k : ℕ) : MemLp (d k) (ENNReal.ofReal p) P := by
     by_cases hk : k < m
     · simpa only [d, dite_eq_left hk] using hDLp ⟨k, hk⟩
     · simp only [d, dite_eq_right hk]
       exact MemLp.zero
-  have hc (k : ℕ) : P[d k | ℱ k] =ᵐ[P] (0 : Ω → ℝ) := by
-    by_cases hk : k < m
-    · simpa only [d, dite_eq_left hk] using hDc ⟨k, hk⟩
-    · simp [d, hk]
-  have hr := Rio.eLpNorm_sum_sq_le P ℱ hp d hadapted hLp hc m
+  have key : ∀ k ≤ m, eLpNorm (fun ω => ∑ i ∈ Finset.range k, d i ω) (ENNReal.ofReal p) P ^ 2 ≤
+      ENNReal.ofReal (p - 1) * ∑ i ∈ Finset.range k, V i := by
+    intro k
+    induction k with
+    | zero => intro _; simp
+    | succ k ih =>
+      intro hk
+      have hkm : k < m := by omega
+      have hX : StronglyMeasurable[F (τ k)] (fun ω => ∑ i ∈ Finset.range k, d i ω) := by
+        convert (Finset.range k).stronglyMeasurable_sum (fun i hi => (hdm i).mono
+          (F.mono (hmono (show i + 1 ≤ k from Finset.mem_range.mp hi)))) using 1
+        ext ω
+        simp
+      have hXLp : MemLp (fun ω => ∑ i ∈ Finset.range k, d i ω) (ENNReal.ofReal p) P :=
+        memLp_finsetSum _ (fun i _ => hdLp i)
+      have hstep := eLpNorm_add_slab_sq_le hW hp (f ⟨k, hkm⟩) (τ k) (τ (k + 1)) (hstrict k hkm)
+        (hs ⟨k, hkm⟩) (ht ⟨k, hkm⟩) (hd ⟨k, hkm⟩) hX hXLp
+      have hae : (fun ω => ∑ i ∈ Finset.range (k + 1), d i ω) =ᵐ[P]
+          (fun ω => (∑ i ∈ Finset.range k, d i ω) + elementarySumIntegral W (f ⟨k, hkm⟩) ω) := by
+        filter_upwards [hDae ⟨k, hkm⟩] with ω hω
+        rw [Finset.sum_range_succ]
+        simp only [d, dite_eq_left hkm]
+        rw [hω]
+      rw [eLpNorm_congr_ae hae, Finset.sum_range_succ, mul_add]
+      calc
+        _ ≤ _ := hstep
+        _ ≤ _ := by
+          simp only [V, dite_eq_left hkm]
+          exact add_le_add (ih hkm.le) le_rfl
+  have hfinal := key m le_rfl
   have heq : (fun ω => ∑ k ∈ Finset.range m, d k ω) =ᵐ[P]
       (fun ω => ∑ k, elementarySumIntegral W (f k) ω) := by
     filter_upwards [ae_all_iff.mpr hDae] with ω hω
@@ -855,14 +888,13 @@ private theorem grid_rio_bound (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p
     apply Finset.sum_congr rfl
     intro k _
     simpa only [d, dite_eq_left k.isLt] using hω k
-  rw [eLpNorm_congr_ae heq] at hr
-  convert hr using 1
+  rw [eLpNorm_congr_ae heq] at hfinal
+  refine hfinal.trans (le_of_eq ?_)
   congr 1
   rw [← Fin.sum_univ_eq_sum_range]
   apply Finset.sum_congr rfl
   intro k _
-  simp only [d, dite_eq_left k.isLt, eLpNorm_congr_ae (hDae k)]
-
+  simp only [V, dite_eq_left k.isLt]
 
 end Refinement
 
@@ -902,20 +934,17 @@ theorem eLpNorm_elementarySumIntegral_sq_le (hW : IsWhiteNoise P F W)
   rw [eLpNorm_congr_ae hint]
   calc
     _ ≤ ENNReal.ofReal (p - 1) *
-        ∑ k, eLpNorm (elementarySumIntegral W (f k)) (ENNReal.ofReal p) P ^ 2 :=
-      grid_rio_bound hW hp τ hmono f hfs hft
+        ∑ k : Fin m, eLpNorm (slabVariance (τ k) (τ (k + 1)) (f k)) (ENNReal.ofReal (p / 2)) P :=
+      grid_gaussian_bound hW hp τ hmono hstrict f hfs hft hfd
     _ ≤ ENNReal.ofReal (p - 1) *
-        ∑ k : Fin m, ENNReal.ofReal (gaussianMoment p ^ 2) *
-          ENNReal.ofReal ((τ (k + 1) : ℝ) - τ k) *
+        ∑ k : Fin m, ENNReal.ofReal ((τ (k + 1) : ℝ) - τ k) *
           ∑ j, volume (f k j).A * eLpNorm (f k j).coeff (ENNReal.ofReal p) P ^ 2 := by
       refine mul_le_mul le_rfl ?_ zero_le zero_le
       apply Finset.sum_le_sum
       intro k _
-      exact eLpNorm_slab_sq_le hW hp (f k) (τ k) (τ (k + 1))
-        (hstrict k k.isLt) (hfs k) (hft k) (hfd k)
+      exact eLpNorm_slabVariance_le hp (f k) (τ k) (τ (k + 1)) (hstrict k k.isLt).le
     _ = _ := by
-      rw [hbudget, bdgConst, ENNReal.ofReal_mul (by linarith : 0 ≤ p - 1)]
-      simp only [Finset.mul_sum, mul_assoc]
+      rw [hbudget, bdgConst]
 
 private theorem bounded_box_inDomain (G : ℝ → ℝ → Ω → ℝ)
     (hG : Measurable[predictableSigma F]
