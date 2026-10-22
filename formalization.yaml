@@ -25,10 +25,10 @@ related_formalizations:
   note: pinned in lake-manifest.json
 status:
   scope: Completed countable Gaussian-product white noise; genuine predictable L2 isometric integral and
-    unique extension; real-p moment bounds with explicit quadratic-growth squared-norm coefficient; predictable
+    unique extension; real-p moment bounds with the linear squared-norm coefficient p−1; predictable
     convolution modifications on the full pointwise finite-variance domain. Equality is almost sure separately
-    at each output. Excludes a common uncountable exceptional set, sample continuity, sharp linear-in-p
-    squared-norm bounds, general Ito theory and SPDE well-posedness.
+    at each output. Excludes a common uncountable exceptional set, sample continuity, general Ito theory
+    and SPDE well-posedness.
   sorry_count: 0
   axioms:
   - Classical.choice
@@ -114,7 +114,7 @@ alignment:
     claim: walsh-integral/walsh-real-p
     status: reusable
     note: For real p≥2 and predictable input with finite mixed norm, the squared Lᵖ Walsh norm is bounded
-      by (p−1)·gaussianMoment(p)² times that mixed norm.
+      by p−1 times that mixed norm.
   - source: null
     lean: WalshIntegral.Modification.exists_predictable_modification
     module: WalshIntegral/Modification.lean

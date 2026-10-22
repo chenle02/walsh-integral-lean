@@ -10,13 +10,13 @@
 
 A Lean 4 library for space-time white noise, predictable integration, real-p moment estimates and predictable versions of stochastic convolutions. It depends on Mathlib and has no paper-specific dependency.
 
-**Source API 0.6.0.** This source contains 110 inventoried public theorems across seven library modules, including 12 implementation lemmas used by the isometric extension. It exposes 6 curated reusable claims. The generated verification record below identifies actual source-bound evidence.
+**Source API 0.6.0.** This source contains 140 inventoried public theorems across nine library modules, including 12 implementation lemmas used by the isometric extension. It exposes 6 curated reusable claims. The generated verification record below identifies actual source-bound evidence.
 
 ## Mathematical scope
 
 - Construct isonormal space-time white noise on a countable Gaussian product probability space and its completion, with adapted representatives and independence of the whole future from the past.
 - Construct the Walsh integral as the unique linear isometry from predictable L² classes that agrees with bounded random elementary integrands. Prove its Itô isometry and almost-sure congruence and causality laws.
-- Bound the Lᵖ norm for every real p≥2 with finite mixed norm. The squared-norm bound uses the explicit constant `(p - 1) * gaussianMoment p ^ 2`, which grows quadratically in p. The sharp linear growth bound is outside this release's scope.
+- Bound the Lᵖ norm for every real p≥2 with finite mixed norm. The squared-norm bound uses the constant `bdgConst p = p - 1`, which grows linearly in p. It comes from a Gaussian slab step (one-dimensional Gaussian integration by parts on each time slab) in place of the discrete Rio inequality.
 - Construct predictable modifications of stochastic convolutions for deterministic causal kernels with the stated L² regularity, on the full finite-variance domain. Equality holds almost surely separately at each output point. Sample continuity, indistinguishability and a common exceptional set over all output points require additional results.
 
 `walshT` is zero outside its predictable finite-variance domain. Its substantive integration theorems state the hypotheses that place their inputs in that domain. Chosen representatives of L² classes are treated modulo almost-everywhere equality.
@@ -31,7 +31,9 @@ The current source pins Lean `v4.35.0` and Mathlib `56a005855ea17e0b0958f73ec801
 | `WalshIntegral.WhiteNoise` | `IsWhiteNoise`, Gaussian rectangle laws and existence |
 | `WalshIntegral.Predictable` | `predictableSigma` and predictable causal parametric integration |
 | `WalshIntegral.Integral` | `InDomain`, `PredL2`, `walshL2`, `walshT`, Itô isometry and uniqueness |
-| `WalshIntegral.Rio` | Real-p martingale-difference moment inequality |
+| `WalshIntegral.Rio` | Real-p martingale-difference moment inequality and a first-order comparison |
+| `WalshIntegral.GaussianStein` | One-dimensional Gaussian integration by parts (Stein's identity) |
+| `WalshIntegral.GaussianStep` | Gaussian slab step `‖X + D‖_p² ≤ ‖X‖_p² + (p - 1)‖V‖_{p/2}` |
 | `WalshIntegral.MomentBound` | `mixedNormSq` and `eLpNorm_walshT_sq_le` |
 | `WalshIntegral.Modification` | `CausalKernel` and `exists_predictable_modification` |
 
