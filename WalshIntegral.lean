@@ -3,5 +3,7 @@ import WalshIntegral.WhiteNoise
 import WalshIntegral.Predictable
 import WalshIntegral.Integral
 import WalshIntegral.Rio
+import WalshIntegral.GaussianStein
+import WalshIntegral.GaussianStep
 import WalshIntegral.MomentBound
 import WalshIntegral.Modification
