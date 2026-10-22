@@ -1,0 +1,17 @@
+import WalshIntegral.GaussianStep
+
+#print axioms WalshIntegral.Rio.hasDerivAt_weight_of_two_le
+#print axioms WalshIntegral.Rio.moment_hasDerivAt_of_two_le
+#print axioms WalshIntegral.Rio.regularized_first_order_bound
+#print axioms WalshIntegral.Rio.first_order_power_bound
+#print axioms WalshIntegral.Rio.eLpNorm_add_sq_le_of_deriv_le
+#print axioms WalshIntegral.Rio.eLpNorm_sum_sq_le
+#print axioms WalshIntegral.GaussianStep.steinIdentity
+#print axioms WalshIntegral.GaussianStep.integral_weight_mul_gaussian_of_stein
+#print axioms WalshIntegral.GaussianStep.integral_indep_eq_integral_integral
+#print axioms WalshIntegral.GaussianStep.integral_map_linear_combination
+#print axioms WalshIntegral.GaussianStep.integral_weight_mul_eq_of_stein
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_sq_le_of_stein
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_sq_le
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_slab_sq_le_of_stein
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_slab_sq_le
