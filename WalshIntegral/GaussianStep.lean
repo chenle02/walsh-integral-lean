@@ -1,4 +1,5 @@
-import WalshIntegral.MomentBound
+import WalshIntegral.Rio
+import WalshIntegral.Integral
 import WalshIntegral.GaussianStein
 
 /-!
@@ -30,7 +31,6 @@ open scoped ENNReal NNReal Topology BigOperators
 namespace WalshIntegral.GaussianStep
 
 open WalshIntegral.WhiteNoise WalshIntegral.Predictable WalshIntegral.Integral
-  WalshIntegral.MomentBound
 
 /-- One-dimensional Gaussian integration by parts, in the exact form of the statement of
 `GaussianStein.integral_mul_eq_variance_mul_integral_deriv`, packaged as a proposition. -/
@@ -360,9 +360,8 @@ section Slab
 variable {Ω : Type*} [mΩ : MeasurableSpace Ω] {P : Measure Ω} [IsProbabilityMeasure P]
   {F : Filtration ℝ≥0 mΩ} {W : H →L[ℝ] Lp ℝ 2 P}
 
-/- A copy of the private `MomentBound.slab_gram`: the squared norm of a combination of disjoint
-rectangles on a common slab. It is repeated here because `MomentBound.lean` is not edited. -/
-private theorem slab_gram_eq {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
+/-- The squared norm of a combination of disjoint rectangles on a common slab `(s, t]`. -/
+theorem slab_gram_eq {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
     (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A)) (a : Fin n → ℝ) :
     ‖∑ j, a j • rectangle s t (e j).A (e j).measurableSet_A (e j).volume_A_ne_top‖ ^ 2 =
       ((t : ℝ) - (s : ℝ)) * ∑ j, (volume (e j).A).toReal * a j ^ 2 := by
@@ -394,17 +393,19 @@ private theorem slab_gram_eq {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ�
 
 /-- The Gaussian slab step with the linear constant `p - 1` (Stein's identity as a hypothesis).
 For a past-measurable `X ∈ L^p` and a slab sum on `(s, t]` with disjoint cells,
-`‖X + ∑ⱼ ∫ eⱼ dW‖_p² ≤ ‖X‖_p² + (p - 1) ‖slabVariance s t e‖_{p/2}` for every real `p ≥ 2`.
-Compare `MomentBound.eLpNorm_slab_sq_eq`, whose constant for `X = 0` is `gaussianMoment p ^ 2`. -/
+`‖X + ∑ⱼ ∫ eⱼ dW‖_p² ≤ ‖X‖_p² + (p - 1) ‖V‖_{p/2}` for every real `p ≥ 2`, where
+`V = (t - s) ∑ⱼ |Aⱼ| coeffⱼ²` is the slab variance (`MomentBound.slabVariance s t e`, written out
+here because `MomentBound` imports this module). -/
 theorem eLpNorm_add_gaussian_slab_sq_le_of_stein (hstein : SteinIdentity)
     (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
     {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
     (hs : ∀ j, (e j).s = s) (ht : ∀ j, (e j).t = t)
     (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A))
     {X : Ω → ℝ} (hX : StronglyMeasurable[F s] X) (hXLp : MemLp X (ENNReal.ofReal p) P) :
-    eLpNorm (fun ω => X ω + elementarySumIntegral W e ω) (ENNReal.ofReal p) P ^ 2 ≤
+    eLpNorm (fun ω => X ω + ∑ j, elementaryIntegral W (e j) ω) (ENNReal.ofReal p) P ^ 2 ≤
       eLpNorm X (ENNReal.ofReal p) P ^ 2 +
-        ENNReal.ofReal (p - 1) * eLpNorm (slabVariance s t e) (ENNReal.ofReal (p / 2)) P := by
+        ENNReal.ofReal (p - 1) * eLpNorm (fun ω => ((t : ℝ) - (s : ℝ)) *
+          ∑ j, (volume (e j).A).toReal * (e j).coeff ω ^ 2) (ENNReal.ofReal (p / 2)) P := by
   classical
   let r (j : Fin n) := rectangle s t (e j).A (e j).measurableSet_A (e j).volume_A_ne_top
   let C : Ω → Fin n → ℝ := fun ω j => (e j).coeff ω
@@ -429,10 +430,10 @@ theorem eLpNorm_add_gaussian_slab_sq_le_of_stein (hstein : SteinIdentity)
   have hgram (c : Fin n → ℝ) :
       (q c : ℝ) = ((t : ℝ) - (s : ℝ)) * ∑ j, (volume (e j).A).toReal * c j ^ 2 := by
     simpa only [q, NNReal.coe_pow, coe_nnnorm, r] using slab_gram_eq e s t hst hdisj c
-  have hV : (fun ω => (q (C ω) : ℝ)) = slabVariance s t e := by
+  have hV : (fun ω => (q (C ω) : ℝ)) = fun ω => ((t : ℝ) - (s : ℝ)) *
+      ∑ j, (volume (e j).A).toReal * (e j).coeff ω ^ 2 := by
     funext ω
     rw [hgram]
-    rfl
   choose M hM using fun j => (e j).bounded_coeff
   have hMC (ω : Ω) (j : Fin n) : |C ω j| ≤ ∑ i, |M i| := by
     calc
@@ -455,10 +456,9 @@ theorem eLpNorm_add_gaussian_slab_sq_le_of_stein (hstein : SteinIdentity)
     hW.linear_combination_law r c
   have hmain := eLpNorm_add_gaussian_sq_le_of_stein hstein hp hXm hC hZ hqc.measurable
     ⟨_, hMC⟩ ⟨_, hqb⟩ hXLp hind hlaw
-  have hae : (fun ω => X ω + elementarySumIntegral W e ω) =ᵐ[P]
+  have hae : (fun ω => X ω + ∑ j, elementaryIntegral W (e j) ω) =ᵐ[P]
       (fun ω => X ω + ∑ j, C ω j * Z ω j) := by
     filter_upwards [ae_all_iff.mpr (fun j => elementaryIntegral_ae W (e j))] with ω hω
-    simp only [elementarySumIntegral]
     congr 1
     apply Finset.sum_congr rfl
     intro j _
@@ -467,16 +467,18 @@ theorem eLpNorm_add_gaussian_slab_sq_le_of_stein (hstein : SteinIdentity)
   exact hmain
 
 /-- **The Gaussian slab step** with the linear constant `p - 1`, for every real `p ≥ 2`:
-`‖X + ∑ⱼ ∫ eⱼ dW‖_p² ≤ ‖X‖_p² + (p - 1) ‖slabVariance s t e‖_{p/2}` for `X` measurable for the
-past `F s`. Stein's identity is supplied by `GaussianStein`. -/
+`‖X + ∑ⱼ ∫ eⱼ dW‖_p² ≤ ‖X‖_p² + (p - 1) ‖V‖_{p/2}` for `X` measurable for the past `F s`, with
+`V = (t - s) ∑ⱼ |Aⱼ| coeffⱼ²` (`MomentBound.slabVariance s t e`). Stein's identity is supplied
+by `GaussianStein`. -/
 theorem eLpNorm_add_gaussian_slab_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
     {n : ℕ} (e : Fin n → Elementary F) (s t : ℝ≥0) (hst : s < t)
     (hs : ∀ j, (e j).s = s) (ht : ∀ j, (e j).t = t)
     (hdisj : Pairwise (fun i j => Disjoint (e i).A (e j).A))
     {X : Ω → ℝ} (hX : StronglyMeasurable[F s] X) (hXLp : MemLp X (ENNReal.ofReal p) P) :
-    eLpNorm (fun ω => X ω + elementarySumIntegral W e ω) (ENNReal.ofReal p) P ^ 2 ≤
+    eLpNorm (fun ω => X ω + ∑ j, elementaryIntegral W (e j) ω) (ENNReal.ofReal p) P ^ 2 ≤
       eLpNorm X (ENNReal.ofReal p) P ^ 2 +
-        ENNReal.ofReal (p - 1) * eLpNorm (slabVariance s t e) (ENNReal.ofReal (p / 2)) P :=
+        ENNReal.ofReal (p - 1) * eLpNorm (fun ω => ((t : ℝ) - (s : ℝ)) *
+          ∑ j, (volume (e j).A).toReal * (e j).coeff ω ^ 2) (ENNReal.ofReal (p / 2)) P :=
   eLpNorm_add_gaussian_slab_sq_le_of_stein steinIdentity hW hp e s t hst hs ht hdisj hX hXLp
 
 end Slab
