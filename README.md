@@ -14,12 +14,14 @@ A Lean 4 library for space-time white noise, predictable integration, real-p mom
 
 **Source API 0.8.0.** Version 0.8.0 adds, with every 0.7.0 statement unchanged: mean zero of the Walsh integral (`integral_walshL2` on predictable L² classes, `integral_elementaryIntegral` on elementary integrands, and `integral_walshT` for the totalized integral and every field), and adaptedness of predictable fields (`measurable_timeSection`, `measurable_timeSection_of_le`: sample sections at time t ≥ 0 are `F t`-measurable; `exists_adapted_representative`: every predictable L² class has such an adapted predictable representative). Scientific source `35bc9935bea9` (0.8.0) passed both verification tiers; receipts for 0.7.0 and earlier remain historical. Version 0.7.0 ported every file to the Lean module system (`module` headers, `public import`, `@[expose]` on definitions), so a downstream `module` file can `public import WalshIntegral`.
 
+**Unreleased (after 0.9.0).** The real-p moment constant is now linear: `WalshIntegral.MomentBound.bdgConst p = p - 1` (`bdgConst_eq`), in place of `(p - 1) * gaussianMoment p ^ 2`. Every earlier public statement keeps its form; only the value of the constant changes. New modules `WalshIntegral.GaussianStein` and `WalshIntegral.GaussianStep` supply it; the public inventory is 152 theorems across eleven library modules. These unreleased changes are not covered by the verification records below.
+
 ## Mathematical scope
 
 - Construct isonormal space-time white noise on a countable Gaussian product probability space and its completion, with adapted representatives and independence of the whole future from the past.
 - Construct the Walsh integral as the unique linear isometry from predictable L² classes that agrees with bounded random elementary integrands. Prove its Itô isometry and almost-sure congruence and causality laws.
 - Added in 0.8.0 (verified at `35bc9935bea9`): the Walsh integral has mean zero on predictable L² classes, and the totalized integral `walshT` has mean zero for every field. Predictable fields are adapted: at every time t ≥ 0 and space point x the sample section is `F t`-measurable, and every predictable L² class has an adapted predictable representative.
-- Bound the Lᵖ norm for every real p≥2 with finite mixed norm. The squared-norm bound uses the explicit constant `(p - 1) * gaussianMoment p ^ 2`, which grows quadratically in p. The sharp linear growth bound is outside this release's scope.
+- Bound the Lᵖ norm for every real p≥2 with finite mixed norm. The squared-norm bound uses the constant `bdgConst p = p - 1`, which grows linearly in p. It comes from a Gaussian slab step (one-dimensional Gaussian integration by parts on each time slab) in place of the discrete Rio inequality.
 - Construct predictable modifications of stochastic convolutions for deterministic causal kernels with the stated L² regularity, on the full finite-variance domain. Equality holds almost surely separately at each output point. Sample continuity, indistinguishability and a common exceptional set over all output points require additional results.
 
 `walshT` is zero outside its predictable finite-variance domain. Its substantive integration theorems state the hypotheses that place their inputs in that domain. Chosen representatives of L² classes are treated modulo almost-everywhere equality.
@@ -34,7 +36,9 @@ The current source pins Lean `v4.35.0` and Mathlib `56a005855ea17e0b0958f73ec801
 | `WalshIntegral.WhiteNoise` | `IsWhiteNoise`, Gaussian rectangle laws and existence |
 | `WalshIntegral.Predictable` | `predictableSigma`, predictable causal parametric integration and adapted time sections |
 | `WalshIntegral.Integral` | `InDomain`, `PredL2`, `walshL2`, `walshT`, Itô isometry, uniqueness and mean zero |
-| `WalshIntegral.Rio` | Real-p martingale-difference moment inequality |
+| `WalshIntegral.Rio` | Real-p martingale-difference moment inequality and a first-order comparison |
+| `WalshIntegral.GaussianStein` | One-dimensional Gaussian integration by parts (Stein's identity) |
+| `WalshIntegral.GaussianStep` | Gaussian slab step `‖X + D‖_p² ≤ ‖X‖_p² + (p - 1)‖V‖_{p/2}` |
 | `WalshIntegral.MomentBound` | `mixedNormSq` and `eLpNorm_walshT_sq_le` |
 | `WalshIntegral.Modification` | `CausalKernel` and `exists_predictable_modification` |
 
