@@ -107,7 +107,8 @@ private theorem weight_memLp {Ω : Type*} [MeasurableSpace Ω]
     rw [← Real.rpow_add_one' (abs_nonneg _) (by linarith : p - 2 + 1 ≠ 0)]
     rw [show p - 2 + 1 = p - 1 by ring]
 
-private theorem weight_integrable_mul {Ω : Type*} [MeasurableSpace Ω]
+/-- Hölder integrability of the weighted product `(|X|^(p-2) X) Y` for `X, Y ∈ L^p`, `2 ≤ p`. -/
+theorem weight_integrable_mul {Ω : Type*} [MeasurableSpace Ω]
     {P : Measure Ω} {p : ℝ} (hp : 2 ≤ p) {X Y : Ω → ℝ}
     (hX : MemLp X (ENNReal.ofReal p) P) (hY : MemLp Y (ENNReal.ofReal p) P) :
     Integrable (fun ω => (|X ω| ^ (p - 2) * X ω) * Y ω) P := by
@@ -141,7 +142,8 @@ private theorem weighted_centering {Ω : Type*} [mΩ : MeasurableSpace Ω]
       simp only [hω, Pi.mul_apply, hzero, Pi.zero_apply, mul_zero]
     _ = 0 := integral_zero _ _
 
-private theorem curvature_integral_le {Ω : Type*} [MeasurableSpace Ω]
+/-- Hölder bound for the curvature integral `∫ |X|^(p-2) Y²` when `2 < p`. -/
+theorem curvature_integral_le {Ω : Type*} [MeasurableSpace Ω]
     {P : Measure Ω} {p : ℝ} (hp : 2 < p) {X Y : Ω → ℝ}
     (hX : MemLp X (ENNReal.ofReal p) P) (hY : MemLp Y (ENNReal.ofReal p) P) :
     (∫ ω, |X ω| ^ (p - 2) * Y ω ^ 2 ∂P) ≤
@@ -178,7 +180,8 @@ private theorem curvature_integral_le {Ω : Type*} [MeasurableSpace Ω]
     ring
   simpa only [hpowX, hpowY, one_div, inv_div] using h
 
-private theorem hasDerivAt_weight {p : ℝ} (hp : 2 < p) (x : ℝ) :
+/-- The derivative of the weight `u ↦ |u|^(p-2) u` is `(p-1)|u|^(p-2)` when `2 < p`. -/
+theorem hasDerivAt_weight {p : ℝ} (hp : 2 < p) (x : ℝ) :
     HasDerivAt (fun u : ℝ => |u| ^ (p - 2) * u) ((p - 1) * |x| ^ (p - 2)) x := by
   by_cases hx : x = 0
   · subst x
@@ -216,7 +219,8 @@ private theorem hasDerivAt_abs_rpow_line {p : ℝ} (hp : 2 < p) (x y a : ℝ) :
     (((hasDerivAt_id a).mul_const y).const_add x)
   convert h using 1 <;> first | rfl | ring
 
-private theorem hasDerivAt_abs_rpow_line_derivative {p : ℝ} (hp : 2 < p) (x y a : ℝ) :
+/-- Pointwise second derivative along the line `t ↦ |x + t y|^p` when `2 < p`. -/
+theorem hasDerivAt_abs_rpow_line_derivative {p : ℝ} (hp : 2 < p) (x y a : ℝ) :
     HasDerivAt (fun t : ℝ => p * (|x + t * y| ^ (p - 2) * (x + t * y) * y))
       (p * (p - 1) * (|x + a * y| ^ (p - 2) * y ^ 2)) a := by
   have h := (((hasDerivAt_weight hp (x + a * y)).comp a
@@ -237,7 +241,8 @@ private theorem rpow_mul_mul_le {p u v w B : ℝ} (hp : 2 < p)
       congr 1
       ring
 
-private theorem moment_derivatives {Ω : Type*} [MeasurableSpace Ω]
+/-- First and second derivatives of `t ↦ ∫ |X + t Y|^p` for `X, Y ∈ L^p` and `2 < p`. -/
+theorem moment_derivatives {Ω : Type*} [MeasurableSpace Ω]
     {P : Measure Ω} {p : ℝ} (hp : 2 < p) {X Y : Ω → ℝ}
     (hX : MemLp X (ENNReal.ofReal p) P) (hY : MemLp Y (ENNReal.ofReal p) P) (a : ℝ) :
     HasDerivAt (fun t : ℝ => ∫ ω, |X ω + t * Y ω| ^ p ∂P)
@@ -388,7 +393,8 @@ private theorem power_bound {f f' f'' : ℝ → ℝ} {q C : ℝ}
   filter_upwards [self_mem_nhdsWithin] with ε hε
   exact regularized_power_bound hq0 hq1 hC hε hf0 hf hf' hzero hbound
 
-private theorem eLpNorm_sq_eq_moment {Ω : Type*} [MeasurableSpace Ω]
+/-- The squared `L^p` norm as the real moment `(∫ |X|^p)^(2/p)`, for `0 < p`. -/
+theorem eLpNorm_sq_eq_moment {Ω : Type*} [MeasurableSpace Ω]
     {P : Measure Ω} {p : ℝ} (hp : 0 < p) {X : Ω → ℝ}
     (hX : MemLp X (ENNReal.ofReal p) P) :
     eLpNorm X (ENNReal.ofReal p) P ^ 2 =
@@ -476,5 +482,193 @@ theorem eLpNorm_sum_sq_le {Ω : Type*} [mΩ : MeasurableSpace Ω]
     norm_num at hXLp hYLp ⊢
     exact (eLpNorm_add_two_sq P hm hX hXLp hYLp hzero).le
   · exact eLpNorm_add_sq_le_of_two_lt P hm hp hX hXLp hYLp hzero
+
+/-! ## First-order comparison for the Gaussian slab step
+
+The lemmas below are additive. They extend the first moment derivative to `p = 2` and replace
+the second-order comparison `power_bound` by a first-order one, which is what a conditionally
+Gaussian increment needs: there the first derivative of `a ↦ ∫ |X + a Y|^p` is computed exactly
+by Gaussian integration by parts, and no centring at `a = 0` is used. -/
+
+/-- The weight `u ↦ |u|^(p-2) u` has derivative `(p-1)|u|^(p-2)` for every `2 ≤ p`.
+At `p = 2` the weight is the identity, since `|u|^0 = 1` for every real `u`. -/
+theorem hasDerivAt_weight_of_two_le {p : ℝ} (hp : 2 ≤ p) (x : ℝ) :
+    HasDerivAt (fun u : ℝ => |u| ^ (p - 2) * u) ((p - 1) * |x| ^ (p - 2)) x := by
+  rcases eq_or_lt_of_le hp with hp | hp
+  · subst p
+    convert hasDerivAt_id x using 1
+    · ext u
+      simp
+    · norm_num
+  · exact hasDerivAt_weight hp x
+
+private theorem rpow_mul_mul_le_of_two_le {p u v w B : ℝ} (hp : 2 ≤ p)
+    (hu : 0 ≤ u) (hv : 0 ≤ v) (hw : 0 ≤ w)
+    (huB : u ≤ B) (hvB : v ≤ B) (hwB : w ≤ B) :
+    u ^ (p - 2) * v * w ≤ B ^ p := by
+  have hB : 0 ≤ B := hu.trans huB
+  have hp2 : 0 ≤ p - 2 := by linarith
+  have h1 : u ^ (p - 2) ≤ B ^ (p - 2) := Real.rpow_le_rpow hu huB hp2
+  have h2 : u ^ (p - 2) * v ≤ B ^ (p - 2) * B :=
+    mul_le_mul h1 hvB hv (Real.rpow_nonneg hB _)
+  calc
+    u ^ (p - 2) * v * w ≤ B ^ (p - 2) * B * B :=
+      mul_le_mul h2 hwB hw (mul_nonneg (Real.rpow_nonneg hB _) hB)
+    _ = B ^ p := by
+      rw [mul_assoc, ← pow_two, ← Real.rpow_two,
+        ← Real.rpow_add' hB (by linarith : p - 2 + 2 ≠ 0)]
+      congr 1
+      ring
+
+/-- First derivative of `t ↦ ∫ |X + t Y|^p` for `X, Y ∈ L^p` and every `2 ≤ p`.
+This is the first half of `moment_derivatives`, extended to `p = 2`. -/
+theorem moment_hasDerivAt_of_two_le {Ω : Type*} [MeasurableSpace Ω]
+    {P : Measure Ω} {p : ℝ} (hp : 2 ≤ p) {X Y : Ω → ℝ}
+    (hX : MemLp X (ENNReal.ofReal p) P) (hY : MemLp Y (ENNReal.ofReal p) P) (a : ℝ) :
+    HasDerivAt (fun t : ℝ => ∫ ω, |X ω + t * Y ω| ^ p ∂P)
+      (∫ ω, p * (|X ω + a * Y ω| ^ (p - 2) * (X ω + a * Y ω) * Y ω) ∂P) a := by
+  have hp0 : 0 < p := by linarith
+  let B : Ω → ℝ := fun ω => |X ω| + (|a| + 1) * |Y ω|
+  have hB (ω : Ω) : 0 ≤ B ω := by dsimp [B]; positivity
+  have hBp : MemLp B (ENNReal.ofReal p) P :=
+    hX.norm.add (hY.norm.const_mul (|a| + 1))
+  have hBi : Integrable (fun ω => B ω ^ p) P := by
+    simpa only [ENNReal.toReal_ofReal hp0.le, Real.norm_eq_abs, abs_of_nonneg (hB _)] using
+      hBp.integrable_norm_rpow (ne_of_gt (ENNReal.ofReal_pos.mpr hp0)) ENNReal.ofReal_ne_top
+  have hYB (ω : Ω) : |Y ω| ≤ B ω := by
+    dsimp [B]
+    nlinarith [abs_nonneg (X ω), abs_nonneg (Y ω), abs_nonneg a]
+  have hZB (t : ℝ) (ht : t ∈ Metric.ball a 1) (ω : Ω) : |X ω + t * Y ω| ≤ B ω := by
+    have hta : |t - a| < 1 := by simpa only [Metric.mem_ball, Real.dist_eq] using ht
+    have htB : |t| ≤ |a| + 1 := by
+      have h := abs_add_le (t - a) a
+      rw [sub_add_cancel] at h
+      linarith
+    calc
+      |X ω + t * Y ω| ≤ |X ω| + |t| * |Y ω| := by
+        simpa only [abs_mul] using abs_add_le (X ω) (t * Y ω)
+      _ ≤ B ω := by dsimp [B]; gcongr
+  have hmeas (t : ℝ) : AEStronglyMeasurable (fun ω => |X ω + t * Y ω| ^ p) P :=
+    ((hX.aestronglyMeasurable.add (hY.aestronglyMeasurable.const_mul t)).norm.aemeasurable.pow_const
+      _).aestronglyMeasurable
+  have hmeas' (t : ℝ) : AEStronglyMeasurable
+      (fun ω => p * (|X ω + t * Y ω| ^ (p - 2) * (X ω + t * Y ω) * Y ω)) P := by
+    have hz := hX.aestronglyMeasurable.add (hY.aestronglyMeasurable.const_mul t)
+    exact ((((hz.norm.aemeasurable.pow_const _).mul hz.aemeasurable).mul
+      hY.aestronglyMeasurable.aemeasurable).const_mul p).aestronglyMeasurable
+  have hZa := hX.add (hY.const_mul a)
+  have hint : Integrable (fun ω => |X ω + a * Y ω| ^ p) P := by
+    simpa only [ENNReal.toReal_ofReal hp0.le, Real.norm_eq_abs, Pi.add_apply] using
+      hZa.integrable_norm_rpow (ne_of_gt (ENNReal.ofReal_pos.mpr hp0)) ENNReal.ofReal_ne_top
+  have hfirst := hasDerivAt_integral_of_dominated_loc_of_deriv_le
+    (F' := fun t ω => p * (|X ω + t * Y ω| ^ (p - 2) * (X ω + t * Y ω) * Y ω))
+    (Metric.ball_mem_nhds a (by norm_num : (0 : ℝ) < 1))
+    (Eventually.of_forall hmeas) hint (hmeas' a)
+    (Eventually.of_forall fun ω t ht => by
+      simp only [Real.norm_eq_abs, abs_mul, abs_of_pos hp0,
+        abs_of_nonneg (Real.rpow_nonneg (abs_nonneg _) _)]
+      exact mul_le_mul_of_nonneg_left (rpow_mul_mul_le_of_two_le hp (abs_nonneg _)
+        (abs_nonneg _) (abs_nonneg _) (hZB t ht ω) (hZB t ht ω) (hYB ω)) hp0.le)
+    (hBi.const_mul p)
+    (Eventually.of_forall fun ω t _ => by
+      have h := (hasDerivAt_abs_rpow (X ω + t * Y ω) (by linarith : 1 < p)).comp t
+        (((hasDerivAt_id t).mul_const (Y ω)).const_add (X ω))
+      convert h using 1 <;> first | rfl | ring)
+  exact hfirst.2
+
+/-- First-order comparison, regularised by `ε > 0`: if `f ≥ 0` and
+`f' a ≤ a K f(a)^(1-q)` on `[0,1]` with `0 < q ≤ 1` and `K ≥ 0`, then
+`(f 1 + ε)^q ≤ (f 0 + ε)^q + q K / 2`. -/
+theorem regularized_first_order_bound {f f' : ℝ → ℝ} {q K ε : ℝ}
+    (hq0 : 0 < q) (hq1 : q ≤ 1) (hK : 0 ≤ K) (hε : 0 < ε)
+    (hf0 : ∀ a, 0 ≤ f a) (hf : ∀ a, HasDerivAt f (f' a) a)
+    (hbound : ∀ a ∈ Icc (0 : ℝ) 1, f' a ≤ a * K * (f a) ^ (1 - q)) :
+    (f 1 + ε) ^ q ≤ (f 0 + ε) ^ q + q * K / 2 := by
+  have hpos (a : ℝ) : 0 < f a + ε := by linarith [hf0 a]
+  have hd (a : ℝ) : HasDerivAt (fun t => q * K / 2 * t ^ 2 - (f t + ε) ^ q)
+      (q * K * a - q * (f a + ε) ^ (q - 1) * f' a) a := by
+    have h := (((hasDerivAt_id a).pow 2).const_mul (q * K / 2)).sub
+      (((hf a).add_const ε).rpow_const (p := q) (Or.inl (hpos a).ne'))
+    convert h using 1
+    · ext t
+      simp
+    · simp only [id_eq]
+      ring
+  have hderiv (a : ℝ) (ha : a ∈ Icc (0 : ℝ) 1) :
+      q * (f a + ε) ^ (q - 1) * f' a ≤ q * K * a := by
+    have hpow : (f a) ^ (1 - q) ≤ (f a + ε) ^ (1 - q) :=
+      Real.rpow_le_rpow (hf0 a) (by linarith) (by linarith)
+    have hprod : (f a + ε) ^ (q - 1) * (f a + ε) ^ (1 - q) = 1 := by
+      rw [← Real.rpow_add (hpos a), show q - 1 + (1 - q) = 0 by ring, Real.rpow_zero]
+    have hw : 0 ≤ q * (f a + ε) ^ (q - 1) :=
+      mul_nonneg hq0.le (Real.rpow_nonneg (hpos a).le _)
+    have haK : 0 ≤ a * K := mul_nonneg ha.1 hK
+    calc
+      q * (f a + ε) ^ (q - 1) * f' a ≤
+          q * (f a + ε) ^ (q - 1) * (a * K * (f a) ^ (1 - q)) :=
+        mul_le_mul_of_nonneg_left (hbound a ha) hw
+      _ ≤ q * (f a + ε) ^ (q - 1) * (a * K * (f a + ε) ^ (1 - q)) :=
+        mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_left hpow haK) hw
+      _ = q * K * a * ((f a + ε) ^ (q - 1) * (f a + ε) ^ (1 - q)) := by ring
+      _ = q * K * a := by rw [hprod, mul_one]
+  have hm : MonotoneOn (fun t => q * K / 2 * t ^ 2 - (f t + ε) ^ q) (Icc 0 1) := by
+    apply monotoneOn_of_hasDerivWithinAt_nonneg (convex_Icc 0 1)
+      (fun a _ => (hd a).continuousAt.continuousWithinAt)
+      (fun a _ => (hd a).hasDerivWithinAt)
+    intro a ha
+    rw [interior_Icc] at ha
+    exact sub_nonneg.mpr (hderiv a (Ioo_subset_Icc_self ha))
+  have h := hm (by simp : (0 : ℝ) ∈ Icc (0 : ℝ) 1) (by simp : (1 : ℝ) ∈ Icc (0 : ℝ) 1)
+    (by norm_num)
+  simp only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, mul_zero, zero_sub,
+    one_pow, mul_one] at h
+  linarith
+
+/-- First-order comparison: if `f ≥ 0` and `f' a ≤ a K f(a)^(1-q)` on `[0,1]` with
+`0 < q ≤ 1` and `K ≥ 0`, then `f(1)^q ≤ f(0)^q + q K / 2`.
+With `q = 2/p` and `K = p(p-1)B` the increment is `(p-1)B`. -/
+theorem first_order_power_bound {f f' : ℝ → ℝ} {q K : ℝ}
+    (hq0 : 0 < q) (hq1 : q ≤ 1) (hK : 0 ≤ K)
+    (hf0 : ∀ a, 0 ≤ f a) (hf : ∀ a, HasDerivAt f (f' a) a)
+    (hbound : ∀ a ∈ Icc (0 : ℝ) 1, f' a ≤ a * K * (f a) ^ (1 - q)) :
+    (f 1) ^ q ≤ (f 0) ^ q + q * K / 2 := by
+  have ht (a : ℝ) : Tendsto (fun ε : ℝ => (f a + ε) ^ q) (𝓝[>] 0) (𝓝 ((f a) ^ q)) := by
+    have hc : ContinuousAt (fun ε : ℝ => (f a + ε) ^ q) 0 :=
+      (continuousAt_const.add continuousAt_id).rpow_const (Or.inr hq0.le)
+    simpa only [add_zero] using hc.tendsto.mono_left (nhdsWithin_le_nhds (s := Ioi 0))
+  apply le_of_tendsto_of_tendsto (ht 1) ((ht 0).add_const (q * K / 2))
+  filter_upwards [self_mem_nhdsWithin] with ε hε
+  exact regularized_first_order_bound hq0 hq1 hK hε hf0 hf hbound
+
+/-- Moment form of the first-order comparison, for every `2 ≤ p`. If the first derivative of
+`φ(a) = ∫ |X + a Y|^p` satisfies `φ'(a) ≤ a · p(p-1)B · φ(a)^(1-2/p)` on `[0,1]` with `B ≥ 0`,
+then `‖X + Y‖_p² ≤ ‖X‖_p² + (p-1)B`. -/
+theorem eLpNorm_add_sq_le_of_deriv_le {Ω : Type*} [MeasurableSpace Ω]
+    {P : Measure Ω} {p : ℝ} (hp : 2 ≤ p) {X Y : Ω → ℝ}
+    (hX : MemLp X (ENNReal.ofReal p) P) (hY : MemLp Y (ENNReal.ofReal p) P)
+    {B : ℝ} (hB : 0 ≤ B)
+    (hderiv : ∀ a ∈ Icc (0 : ℝ) 1,
+      (∫ ω, p * (|X ω + a * Y ω| ^ (p - 2) * (X ω + a * Y ω) * Y ω) ∂P) ≤
+        a * (p * (p - 1) * B) * (∫ ω, |X ω + a * Y ω| ^ p ∂P) ^ (1 - 2 / p)) :
+    eLpNorm (X + Y) (ENNReal.ofReal p) P ^ 2 ≤
+      eLpNorm X (ENNReal.ofReal p) P ^ 2 + ENNReal.ofReal ((p - 1) * B) := by
+  have hp0 : 0 < p := by linarith
+  have hp1 : 0 ≤ p - 1 := by linarith
+  have hφ (a : ℝ) : 0 ≤ ∫ ω, |X ω + a * Y ω| ^ p ∂P :=
+    integral_nonneg fun _ => Real.rpow_nonneg (abs_nonneg _) _
+  have hpow := first_order_power_bound
+    (f := fun a => ∫ ω, |X ω + a * Y ω| ^ p ∂P)
+    (f' := fun a => ∫ ω, p * (|X ω + a * Y ω| ^ (p - 2) * (X ω + a * Y ω) * Y ω) ∂P)
+    (div_pos two_pos hp0) ((div_le_one hp0).mpr hp)
+    (mul_nonneg (mul_nonneg hp0.le hp1) hB) hφ
+    (fun a => moment_hasDerivAt_of_two_le hp hX hY a) hderiv
+  have hc : (2 / p) * (p * (p - 1) * B) / 2 = (p - 1) * B := by
+    field_simp
+  rw [hc] at hpow
+  simp only [zero_mul, add_zero, one_mul] at hpow
+  rw [eLpNorm_sq_eq_moment hp0 (hX.add hY), eLpNorm_sq_eq_moment hp0 hX,
+    ← ENNReal.ofReal_add (Real.rpow_nonneg (integral_nonneg fun _ =>
+      Real.rpow_nonneg (abs_nonneg _) _) _) (mul_nonneg hp1 hB)]
+  exact ENNReal.ofReal_le_ofReal hpow
 
 end WalshIntegral.Rio
