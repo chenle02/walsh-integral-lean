@@ -1,7 +1,11 @@
 # WalshIntegral
 
-Source API 0.7.0. Public repository interface:
+Source API 0.8.0. Public repository interface:
 https://github.com/chenle02/walsh-integral-lean
+
+Added in 0.8.0 (verification pending): mean zero of the Walsh integral and of
+the totalized integral; predictable fields have F t-measurable time sections
+and an adapted representative. Every 0.7.0 statement is unchanged.
 
 Read the exact Lean statement before using a result. The source declaration
 determines every hypothesis and quantifier; each receipt covers only its named

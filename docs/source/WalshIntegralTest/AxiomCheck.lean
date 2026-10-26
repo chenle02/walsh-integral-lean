@@ -17,10 +17,14 @@ public import WalshIntegral
 #print axioms WalshIntegral.Integral.elementary_gram
 #print axioms WalshIntegral.Integral.elementary_gram_ordered
 #print axioms WalshIntegral.Integral.elementary_inner_factor
+#print axioms WalshIntegral.Integral.exists_adapted_representative
 #print axioms WalshIntegral.Integral.exists_walshL2
 #print axioms WalshIntegral.Integral.future_measurable
 #print axioms WalshIntegral.Integral.future_past_indep
+#print axioms WalshIntegral.Integral.integral_elementaryIntegral
 #print axioms WalshIntegral.Integral.integral_sq_walshL2
+#print axioms WalshIntegral.Integral.integral_walshL2
+#print axioms WalshIntegral.Integral.integral_walshT
 #print axioms WalshIntegral.Integral.isClosed_predL2
 #print axioms WalshIntegral.Integral.noise_inner
 #print axioms WalshIntegral.Integral.noise_mean_zero
@@ -72,6 +76,8 @@ public import WalshIntegral
 #print axioms WalshIntegral.MomentBound.truncateField_inDomain_and_tendsto
 #print axioms WalshIntegral.Predictable.isPredictable_parametric_integral
 #print axioms WalshIntegral.Predictable.measurable_coord
+#print axioms WalshIntegral.Predictable.measurable_timeSection
+#print axioms WalshIntegral.Predictable.measurable_timeSection_of_le
 #print axioms WalshIntegral.Predictable.predictableSigma_const_eq
 #print axioms WalshIntegral.Predictable.predictableSigma_le
 #print axioms WalshIntegral.Predictable.predictableSigma_mono

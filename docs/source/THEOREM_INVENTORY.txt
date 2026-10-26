@@ -13,10 +13,14 @@ WalshIntegral.Integral.elementaryIntegral_memLp
 WalshIntegral.Integral.elementary_gram
 WalshIntegral.Integral.elementary_gram_ordered
 WalshIntegral.Integral.elementary_inner_factor
+WalshIntegral.Integral.exists_adapted_representative
 WalshIntegral.Integral.exists_walshL2
 WalshIntegral.Integral.future_measurable
 WalshIntegral.Integral.future_past_indep
+WalshIntegral.Integral.integral_elementaryIntegral
 WalshIntegral.Integral.integral_sq_walshL2
+WalshIntegral.Integral.integral_walshL2
+WalshIntegral.Integral.integral_walshT
 WalshIntegral.Integral.isClosed_predL2
 WalshIntegral.Integral.noise_inner
 WalshIntegral.Integral.noise_mean_zero
@@ -68,6 +72,8 @@ WalshIntegral.MomentBound.ofReal_gaussianMoment_eq_eLpNorm
 WalshIntegral.MomentBound.truncateField_inDomain_and_tendsto
 WalshIntegral.Predictable.isPredictable_parametric_integral
 WalshIntegral.Predictable.measurable_coord
+WalshIntegral.Predictable.measurable_timeSection
+WalshIntegral.Predictable.measurable_timeSection_of_le
 WalshIntegral.Predictable.predictableSigma_const_eq
 WalshIntegral.Predictable.predictableSigma_le
 WalshIntegral.Predictable.predictableSigma_mono

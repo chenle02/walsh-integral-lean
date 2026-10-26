@@ -19,10 +19,14 @@ set_option pp.universes true
 #check @WalshIntegral.Integral.elementary_gram
 #check @WalshIntegral.Integral.elementary_gram_ordered
 #check @WalshIntegral.Integral.elementary_inner_factor
+#check @WalshIntegral.Integral.exists_adapted_representative
 #check @WalshIntegral.Integral.exists_walshL2
 #check @WalshIntegral.Integral.future_measurable
 #check @WalshIntegral.Integral.future_past_indep
+#check @WalshIntegral.Integral.integral_elementaryIntegral
 #check @WalshIntegral.Integral.integral_sq_walshL2
+#check @WalshIntegral.Integral.integral_walshL2
+#check @WalshIntegral.Integral.integral_walshT
 #check @WalshIntegral.Integral.isClosed_predL2
 #check @WalshIntegral.Integral.noise_inner
 #check @WalshIntegral.Integral.noise_mean_zero
@@ -74,6 +78,8 @@ set_option pp.universes true
 #check @WalshIntegral.MomentBound.truncateField_inDomain_and_tendsto
 #check @WalshIntegral.Predictable.isPredictable_parametric_integral
 #check @WalshIntegral.Predictable.measurable_coord
+#check @WalshIntegral.Predictable.measurable_timeSection
+#check @WalshIntegral.Predictable.measurable_timeSection_of_le
 #check @WalshIntegral.Predictable.predictableSigma_const_eq
 #check @WalshIntegral.Predictable.predictableSigma_le
 #check @WalshIntegral.Predictable.predictableSigma_mono

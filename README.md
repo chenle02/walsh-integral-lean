@@ -10,12 +10,13 @@
 
 A Lean 4 library for space-time white noise, predictable integration, real-p moment estimates and predictable versions of stochastic convolutions. It depends on Mathlib and has no paper-specific dependency.
 
-**Source API 0.7.0.** Version 0.7.0 ports every file to the Lean module system (`module` headers, `public import`, `@[expose]` on definitions); all theorem statements, hypotheses and definitions are unchanged from 0.6.0, and a downstream `module` file can now `public import WalshIntegral`. Scientific source `76a84faf9b08` passed both verification tiers; receipts for 0.6.0 and earlier remain historical.
+**Source API 0.8.0.** Version 0.8.0 adds, with every 0.7.0 statement unchanged: mean zero of the Walsh integral (`integral_walshL2` on predictable L² classes, `integral_elementaryIntegral` on elementary integrands, and `integral_walshT` for the totalized integral and every field), and adaptedness of predictable fields (`measurable_timeSection`, `measurable_timeSection_of_le`: sample sections at time t ≥ 0 are `F t`-measurable; `exists_adapted_representative`: every predictable L² class has such an adapted predictable representative). These results are added in 0.8.0 (verification pending): verification of the 0.8.0 source is pending, and the verification record below still describes the 0.7.0 scientific source `76a84faf9b08`. Version 0.7.0 ported every file to the Lean module system (`module` headers, `public import`, `@[expose]` on definitions), so a downstream `module` file can `public import WalshIntegral`.
 
 ## Mathematical scope
 
 - Construct isonormal space-time white noise on a countable Gaussian product probability space and its completion, with adapted representatives and independence of the whole future from the past.
 - Construct the Walsh integral as the unique linear isometry from predictable L² classes that agrees with bounded random elementary integrands. Prove its Itô isometry and almost-sure congruence and causality laws.
+- Added in 0.8.0 (verification pending): the Walsh integral has mean zero on predictable L² classes, and the totalized integral `walshT` has mean zero for every field. Predictable fields are adapted: at every time t ≥ 0 and space point x the sample section is `F t`-measurable, and every predictable L² class has an adapted predictable representative.
 - Bound the Lᵖ norm for every real p≥2 with finite mixed norm. The squared-norm bound uses the explicit constant `(p - 1) * gaussianMoment p ^ 2`, which grows quadratically in p. The sharp linear growth bound is outside this release's scope.
 - Construct predictable modifications of stochastic convolutions for deterministic causal kernels with the stated L² regularity, on the full finite-variance domain. Equality holds almost surely separately at each output point. Sample continuity, indistinguishability and a common exceptional set over all output points require additional results.
 
@@ -29,8 +30,8 @@ The current source pins Lean `v4.35.0` and Mathlib `56a005855ea17e0b0958f73ec801
 |---|---|
 | `WalshIntegral.GaussianSeries` | Gaussian coordinates and orthonormal-series construction |
 | `WalshIntegral.WhiteNoise` | `IsWhiteNoise`, Gaussian rectangle laws and existence |
-| `WalshIntegral.Predictable` | `predictableSigma` and predictable causal parametric integration |
-| `WalshIntegral.Integral` | `InDomain`, `PredL2`, `walshL2`, `walshT`, Itô isometry and uniqueness |
+| `WalshIntegral.Predictable` | `predictableSigma`, predictable causal parametric integration and adapted time sections |
+| `WalshIntegral.Integral` | `InDomain`, `PredL2`, `walshL2`, `walshT`, Itô isometry, uniqueness and mean zero |
 | `WalshIntegral.Rio` | Real-p martingale-difference moment inequality |
 | `WalshIntegral.MomentBound` | `mixedNormSq` and `eLpNorm_walshT_sq_le` |
 | `WalshIntegral.Modification` | `CausalKernel` and `exists_predictable_modification` |
@@ -252,7 +253,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *WalshIntegral*. Version 0.7.0.
+Le Chen. *WalshIntegral*. Version 0.8.0.
 
 See [CITATION.cff](CITATION.cff).
 
