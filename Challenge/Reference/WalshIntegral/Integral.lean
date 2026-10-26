@@ -153,14 +153,14 @@ theorem Elementary.inDomain (e : Elementary F) : InDomain F P e.field := by
     by_cases hzero : (0 : ℝ) ∈ S
     · convert hpre.union hD.compl using 1
       ext q
-      simp only [Set.mem_preimage, hfield, Set.mem_union, Set.mem_compl_iff]
+      simp only [(Set.mem_preimage), hfield, (Set.mem_union), (Set.mem_compl_iff)]
       by_cases hq : q ∈ D
       · simp [hq, hq.1, hq.2.1]
       · simp only [Set.indicator_of_notMem hq, hzero, not_false_eq_true,
           hq, or_true]
     · convert hpre using 1
       ext q
-      simp only [Set.mem_preimage, hfield]
+      simp only [(Set.mem_preimage), hfield]
       by_cases hq : q ∈ D
       · simp [Set.indicator_of_mem hq, hq.1, hq.2.1]
       · simp only [Set.indicator_of_notMem hq, hzero, false_iff]
@@ -183,7 +183,7 @@ theorem Elementary.inDomain (e : Elementary F) : InDomain F P e.field := by
     by_cases hq : q ∈ D
     · simpa only [Set.indicator_of_mem hq, Real.norm_eq_abs] using
         (hC q.2.2).trans (le_abs_self C)
-    · simp only [Set.indicator_of_notMem hq, norm_zero, le_refl]
+    · simp only [Set.indicator_of_notMem hq, norm_zero, (le_refl)]
   exact ⟨hm, (hasFiniteIntegral_iff_ofReal
     (Filter.Eventually.of_forall fun _ => sq_nonneg _)).mp hLp.integrable_sq.2⟩
 
@@ -261,12 +261,12 @@ theorem predictableGenerators_pi (F : Filtration ℝ≥0 mΩ) :
     refine Or.inl ⟨max s u, min t v, A ∩ E, B ∩ D, ?_, hA.inter hE,
       (F.mono (le_max_left _ _) _ hB).inter (F.mono (le_max_right _ _) _ hD), ?_⟩
     · apply NNReal.coe_lt_coe.mp
-      simp only [NNReal.coe_max, NNReal.coe_min, max_lt_iff, lt_min_iff]
+      simp only [NNReal.coe_max, NNReal.coe_min, (max_lt_iff), (lt_min_iff)]
       constructor <;> constructor <;>
         linarith [hq.1.1, hq.1.2, hq'.1.1, hq'.1.2]
     · ext q
-      simp only [Set.mem_inter_iff, Set.mem_prod, Set.mem_Ioc,
-        NNReal.coe_max, NNReal.coe_min, max_lt_iff, le_min_iff]
+      simp only [(Set.mem_inter_iff), (Set.mem_prod), (Set.mem_Ioc),
+        NNReal.coe_max, NNReal.coe_min, (max_lt_iff), (le_min_iff)]
       tauto
   · obtain ⟨q, hq, hq'⟩ := hne
     exact False.elim ((not_lt_of_ge (hC'0 hq'.1)) (lt_of_le_of_lt s.coe_nonneg hq.1.1))
@@ -275,7 +275,7 @@ theorem predictableGenerators_pi (F : Filtration ℝ≥0 mΩ) :
   · refine Or.inr ⟨C ∩ C', A ∩ E, B ∩ D, hC.inter hC',
       fun q hq => hC0 hq.1, hA.inter hE, hB.inter hD, ?_⟩
     ext q
-    simp only [Set.mem_inter_iff, Set.mem_prod]
+    simp only [(Set.mem_inter_iff), (Set.mem_prod)]
     tauto
 
 
@@ -313,7 +313,7 @@ theorem dense_elementary :
       simp only [Elementary.field, e, RCLike.inner_apply, conj_trivial]
       by_cases ht : q.1 ∈ Set.Ioc (s : ℝ) (t : ℝ) <;>
         by_cases hy : q.2.1 ∈ A <;> by_cases hω : q.2.2 ∈ B <;>
-        simp [Set.mem_prod, ht, hy, hω]
+        simp [(Set.mem_prod), ht, hy, hω]
     rw [integral_congr_ae (ae_restrict_of_ae hga), ← he]
     have hem : elementaryClass P e ∈
         Submodule.span ℝ (Set.range (elementaryClass (F := F) P)) :=
@@ -338,7 +338,7 @@ theorem dense_elementary :
     have hm : MeasurableSet[predictableSigma F] {q | ∃ n, q ∈ D n} := by
       convert MeasurableSet.iUnion hDm using 1
       ext q
-      simp only [Set.mem_ofPred_eq, Set.mem_iUnion]
+      simp only [Set.mem_ofPred_eq, (Set.mem_iUnion)]
     rw [trim_measurableSet_eq _ hm.compl]
     have hpos : ∀ᵐ q ∂spaceTimeSample P, 0 < q.1 := by
       apply (Measure.ae_prod_iff_ae_ae
@@ -364,9 +364,9 @@ theorem dense_elementary :
               Set.Ioc (s : ℝ) (min t (n + 1 : ℝ≥0) : ℝ≥0) ×ˢ
                 ((A ∩ Set.Icc (-(n : ℝ)) n) ×ˢ B) := by
             ext q
-            simp only [D, Set.mem_inter_iff, Set.mem_prod, Set.mem_Ioc, Set.mem_Icc,
-              Set.mem_univ, and_true, NNReal.coe_min, NNReal.coe_add,
-              NNReal.coe_natCast, NNReal.coe_one, le_min_iff]
+            simp only [D, (Set.mem_inter_iff), (Set.mem_prod), (Set.mem_Ioc), (Set.mem_Icc),
+              (Set.mem_univ), and_true, NNReal.coe_min, NNReal.coe_add,
+              NNReal.coe_natCast, NNReal.coe_one, (le_min_iff)]
             constructor
             · tauto
             · rintro ⟨⟨hs, htt, htn⟩, ⟨hA, hx⟩, hB⟩
@@ -380,7 +380,7 @@ theorem dense_elementary :
             apply ht
             apply NNReal.coe_lt_coe.mp
             simp only [NNReal.coe_min, NNReal.coe_add, NNReal.coe_natCast,
-              NNReal.coe_one, lt_min_iff]
+              NNReal.coe_one, (lt_min_iff)]
             exact ⟨lt_of_lt_of_le hq.1.1 hq.1.2, lt_of_lt_of_le hq.1.1 hq'.1.2⟩
           simp only [heq, setIntegral_empty]
       · have heq : (C ×ˢ (A ×ˢ B)) ∩ D n = ∅ := by
