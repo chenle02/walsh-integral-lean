@@ -1,4 +1,8 @@
-import Lean
+module
+
+public import Lean
+
+public section
 
 /-!
 # `axiom-audit`: an axiom-allowlist audit for Lean libraries
