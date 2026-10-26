@@ -1,0 +1,116 @@
+{
+  "build_provenance": {
+    "compiled": true,
+    "modules_built": 2,
+    "prebuilt": false,
+    "source": null
+  },
+  "commit": "76a84faf9b08d0ee303e7bbfdfb03906747c6c5d",
+  "configs": [
+    {
+      "challenge_module": "Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/76a84faf9b08-comparator-comparator.log",
+      "log_sha256": "58adf0b4e49c0462279b7ba28f78be3ecf2816e26d59c224ace6c64af7f0941b",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "74d7ec91dd7be69da242f55477d3868b509d1bb60430926fe74e2825366bd56e",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+        "WalshIntegral.Integral.integral_sq_walshL2",
+        "WalshIntegral.Integral.walshL2_unique",
+        "WalshIntegral.Rio.eLpNorm_sum_sq_le",
+        "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+        "WalshIntegral.Modification.exists_predictable_modification"
+      ],
+      "units": [
+        {
+          "log_sha256": "ea6b813a0e82d1e3b7d058a511dda387b7ad5642eee49b221c86415057dae6bc",
+          "slots": [
+            "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+            "WalshIntegral.Integral.integral_sq_walshL2",
+            "WalshIntegral.Integral.walshL2_unique"
+          ]
+        },
+        {
+          "log_sha256": "a99c9623db76c26034299c93ff841749d06759d07540424cc0266b60ab8501bc",
+          "slots": [
+            "WalshIntegral.Rio.eLpNorm_sum_sq_le",
+            "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+            "WalshIntegral.Modification.exists_predictable_modification"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-26T14:32:29+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7: the machine running the command (workstation default: no Slurm here, COMPARATOR_RECEIPT_ALLOWED_HOSTS unset)",
+  "job_id": "local-h-f985343177f7-2205762-20261026T143229Z",
+  "judges": 2,
+  "lean_threads": null,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 51,
+    "lake_manifest_sha256": "4613d80c583a8d8ce1176241cfdc90ca5fcb69677c83cef64d742db8a8e227d8",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "8b12d00c64c7abf666f1c768af602ccaff4ff326acbde4c68ed809e379c84650"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": 8192,
+    "source": "inherited"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "ok",
+      "wall_s": 8.676
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "ok",
+      "wall_s": 3.603
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "ok",
+      "wall_s": 16.094
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 221.511
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}
