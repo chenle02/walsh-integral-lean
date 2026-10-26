@@ -50,3 +50,19 @@ claims:
   file: WalshIntegral/Modification.lean
   status: reusable
   citation: null
+- id: walsh-integral/walsh-mean-zero
+  decl: WalshIntegral.Integral.integral_walshL2
+  kind: theorem
+  summary: For every compatible white noise and predictable L² integrand class, the
+    Walsh integral has expectation zero.
+  file: WalshIntegral/Integral.lean
+  status: reusable
+  citation: null
+- id: walsh-integral/predictable-adapted
+  decl: WalshIntegral.Predictable.measurable_timeSection
+  kind: theorem
+  summary: Every predictable time-space-sample field is adapted; at each time t≥0 and
+    space point x its sample section is F t-measurable.
+  file: WalshIntegral/Predictable.lean
+  status: reusable
+  citation: null

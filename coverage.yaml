@@ -44,3 +44,15 @@ rows:
     variance at every output has a predictable stochastic-convolution version. Equality
     holds almost surely separately at each output; no common exceptional set or sample
     continuity is asserted.
+- title: The Walsh integral has mean zero
+  claims:
+  - walsh-integral/walsh-mean-zero
+  statement: For every compatible white noise and predictable square-integrable input
+    class, the expectation of its Walsh integral is zero. The totalized integral has
+    expectation zero for every field.
+- title: Predictable fields are adapted
+  claims:
+  - walsh-integral/predictable-adapted
+  statement: A field measurable for the predictable sigma-algebra has, at every time
+    t≥0 and space point x, an F t-measurable sample section. Every predictable L² class
+    has such an adapted predictable representative.

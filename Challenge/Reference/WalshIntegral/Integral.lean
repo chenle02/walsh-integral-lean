@@ -776,4 +776,62 @@ theorem walshT_causal_of_supported (hW : IsWhiteNoise P F W) (t : ℝ)
     ((walshT_causal hW t G G' (hG.restrictTime t) (hG'.restrictTime t) heq).trans
       (walshT_restrictTime hW t G' hG' hsupport'))
 
+/-- The elementary stochastic integral is centred: the bounded `F s`-measurable
+coefficient is independent of the increment on `(s,t] × A`, which has mean zero. -/
+theorem integral_elementaryIntegral (hW : IsWhiteNoise P F W) (e : Elementary F) :
+    ∫ ω, elementaryIntegral W e ω ∂P = 0 := by
+  let h := rectangle e.s e.t e.A e.measurableSet_A e.volume_A_ne_top
+  rw [integral_congr_ae (elementaryIntegral_ae W e),
+    (future_past_indep hW e.s e.measurable_coeff
+      (future_measurable e.s h (rectangle_supportedAfter _ _ _ _ _))).integral_fun_mul_eq_mul_integral
+      (coeff_memLp_top e).aestronglyMeasurable (Lp.aestronglyMeasurable _),
+    noise_mean_zero hW h, mul_zero]
+
+set_option linter.unusedSectionVars false in
+/-- On a probability space the expectation of an `L²` class is its inner product
+with the constant one, so it is a continuous linear functional. -/
+private theorem integral_eq_inner_const_one (f : Lp ℝ 2 P) :
+    ∫ ω, f ω ∂P = inner ℝ (Lp.const 2 P (1 : ℝ)) f := by
+  rw [L2.inner_def]
+  apply integral_congr_ae
+  filter_upwards [Lp.coeFn_const 2 P (1 : ℝ)] with ω hω
+  rw [hω, Function.const_apply, RCLike.inner_apply, conj_trivial, mul_one]
+
+/-- The Walsh integral of every predictable L² integrand has mean zero. The
+expectation of the integral is a continuous linear functional on `PredL2`,
+zero on elementary integrands, hence zero by density. -/
+theorem integral_walshL2 (hW : IsWhiteNoise P F W) (G : PredL2 F P) :
+    ∫ ω, walshL2 hW G ω ∂P = 0 := by
+  let φ : PredL2 F P →L[ℝ] ℝ :=
+    (innerSL ℝ (Lp.const 2 P (1 : ℝ))).comp (walshL2 hW).toContinuousLinearMap
+  have hφ (G : PredL2 F P) : φ G = ∫ ω, walshL2 hW G ω ∂P :=
+    (integral_eq_inner_const_one _).symm
+  have hzero : φ = 0 := by
+    apply ContinuousLinearMap.ext_on (dense_elementary (F := F) (P := P))
+    rintro _ ⟨e, rfl⟩
+    rw [hφ, walshL2_elementary hW e, integral_elementaryIntegral hW e,
+      zero_apply]
+  rw [← hφ, hzero, zero_apply]
+
+/-- The totalized Walsh integral has mean zero for every field: on the domain it
+agrees almost surely with `walshL2`, and off the domain it is identically zero. -/
+theorem integral_walshT (hW : IsWhiteNoise P F W) (G : ℝ → ℝ → Ω → ℝ) :
+    ∫ ω, walshT hW G ω ∂P = 0 := by
+  by_cases hG : InDomain F P G
+  · rw [integral_congr_ae (walshT_ae_eq hW G hG)]
+    exact integral_walshL2 hW _
+  · rw [walshT_of_not_inDomain hW G hG]
+    simp
+
+set_option linter.unusedSectionVars false in
+/-- Every predictable L² class has a predictable representative, whose sample
+sections `ω ↦ g (t, x, ω)` are then `F t`-measurable for every `t ≥ 0` and `x`. -/
+theorem exists_adapted_representative (G : PredL2 F P) :
+    ∃ g : ℝ × ℝ × Ω → ℝ, Measurable[predictableSigma F] g ∧
+      (fun q => G.val q) =ᵐ[spaceTimeSample P] g ∧
+      ∀ (t : ℝ≥0) (x : ℝ), Measurable[F t] (fun ω => g ((t : ℝ), x, ω)) := by
+  have h := mem_lpMeas_iff_aestronglyMeasurable.mp G.prop
+  exact ⟨h.mk _, h.stronglyMeasurable_mk.measurable, h.ae_eq_mk,
+    fun t x => measurable_timeSection F h.stronglyMeasurable_mk.measurable t x⟩
+
 end WalshIntegral.Integral

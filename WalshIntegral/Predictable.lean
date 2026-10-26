@@ -130,6 +130,46 @@ theorem predictableSigma_const_eq :
   have h := (measurable_coord F).fst.prodMk ((measurable_coord F).snd.prodMk hω)
   exact h
 
+/-- Predictable fields are adapted, with the time index read through `ℝ≥0`:
+at every real time `r ≤ u` and every space point `x`, the sample section
+`ω ↦ f (r, x, ω)` is `F u`-measurable. A positive-time generator
+`(s,t'] × A × B` meets time `r` only if `s < r ≤ u`, and then `B ∈ F s ≤ F u`;
+a nonpositive-time generator has `B ∈ F 0 ≤ F u`. Nonpositive times `r` are
+allowed with any level `u`. -/
+theorem measurable_timeSection_of_le (F : Filtration ℝ≥0 mΩ)
+    {f : ℝ × ℝ × Ω → ℝ} (hf : Measurable[predictableSigma F] f)
+    (u : ℝ≥0) (r : ℝ) (hr : r ≤ u) (x : ℝ) :
+    Measurable[F u] (fun ω => f (r, x, ω)) := by
+  have hι : Measurable[F u, predictableSigma F] (fun ω : Ω => (r, x, ω)) := by
+    refine @measurable_generateFrom Ω (ℝ × ℝ × Ω) (F u) _ _ ?_
+    rintro S (⟨s, t, A, B, _, _, hB, rfl⟩ | ⟨C, A, B, _, _, _, hB, rfl⟩)
+    · by_cases hrx : r ∈ Ioc (s : ℝ) (t : ℝ) ∧ x ∈ A
+      · have hsu : s ≤ u := NNReal.coe_le_coe.mp (le_trans hrx.1.1.le hr)
+        convert F.mono hsu _ hB using 1
+        ext ω
+        simp [hrx.1, hrx.2]
+      · convert @MeasurableSet.empty Ω (F u) using 1
+        ext ω
+        simp only [mem_preimage, mem_prod, mem_empty_iff_false, iff_false]
+        exact fun h => hrx ⟨h.1, h.2.1⟩
+    · by_cases hrx : r ∈ C ∧ x ∈ A
+      · convert F.mono (show (0 : ℝ≥0) ≤ u from zero_le) _ hB using 1
+        ext ω
+        simp [hrx.1, hrx.2]
+      · convert @MeasurableSet.empty Ω (F u) using 1
+        ext ω
+        simp only [mem_preimage, mem_prod, mem_empty_iff_false, iff_false]
+        exact fun h => hrx ⟨h.1, h.2.1⟩
+  exact hf.comp hι
+
+/-- Predictable fields are adapted: for every time `t ≥ 0` and space point `x`,
+the sample section `ω ↦ f (t, x, ω)` is `F t`-measurable. -/
+theorem measurable_timeSection (F : Filtration ℝ≥0 mΩ)
+    {f : ℝ × ℝ × Ω → ℝ} (hf : Measurable[predictableSigma F] f)
+    (t : ℝ≥0) (x : ℝ) :
+    Measurable[F t] (fun ω => f ((t : ℝ), x, ω)) :=
+  measurable_timeSection_of_le F hf t t le_rfl x
+
 /-- A jointly Borel strictly causal kernel preserves predictability under
 parametric Bochner integration against time-space Lebesgue measure. No
 integrability or moment bound is required: the integral is zero when its

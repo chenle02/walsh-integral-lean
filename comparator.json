@@ -7,7 +7,9 @@
     "WalshIntegral.Integral.walshL2_unique",
     "WalshIntegral.Rio.eLpNorm_sum_sq_le",
     "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
-    "WalshIntegral.Modification.exists_predictable_modification"
+    "WalshIntegral.Modification.exists_predictable_modification",
+    "WalshIntegral.Integral.integral_walshL2",
+    "WalshIntegral.Predictable.measurable_timeSection"
   ],
   "definition_names": [],
   "permitted_axioms": [
