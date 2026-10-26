@@ -1,4 +1,6 @@
-import WalshIntegral
+module
+
+public import WalshIntegral
 
 set_option pp.universes true
 

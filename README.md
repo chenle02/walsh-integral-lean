@@ -10,7 +10,7 @@
 
 A Lean 4 library for space-time white noise, predictable integration, real-p moment estimates and predictable versions of stochastic convolutions. It depends on Mathlib and has no paper-specific dependency.
 
-**Source API 0.6.0.** This source contains 110 inventoried public theorems across seven library modules, including 12 implementation lemmas used by the isometric extension. It exposes 6 curated reusable claims. The generated verification record below identifies actual source-bound evidence.
+**Source API 0.7.0.** Version 0.7.0 ports every file to the Lean module system (`module` headers, `public import`, `@[expose]` on definitions); all theorem statements, hypotheses and definitions are unchanged from 0.6.0, and a downstream `module` file can now `public import WalshIntegral`. Verification of the 0.7.0 source is pending; the verification record below still describes the 0.6.0 scientific source `128b3637c14b`.
 
 ## Mathematical scope
 
@@ -250,7 +250,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *WalshIntegral*. Version 0.6.0.
+Le Chen. *WalshIntegral*. Version 0.7.0.
 
 See [CITATION.cff](CITATION.cff).
 

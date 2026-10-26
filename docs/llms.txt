@@ -1,4 +1,4 @@
-# WalshIntegral — source API 0.6.0
+# WalshIntegral — source API 0.7.0
 
 Constructed space-time white noise, the Walsh L² integral, explicit real-p bounds and predictable convolution versions.
 

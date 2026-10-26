@@ -1,5 +1,9 @@
-import WalshIntegral.WhiteNoise
-import WalshIntegral.Predictable
+module
+
+public import WalshIntegral.WhiteNoise
+public import WalshIntegral.Predictable
+
+@[expose] public section
 
 /-!
 # The Walsh integral on predictable L² classes, its elementary agreement, Itô isometry, uniqueness and totalized representative API.

@@ -1,6 +1,6 @@
 # Citation and provenance
 
-Author: Le Chen, Auburn University. Source API 0.6.0. Use CITATION.cff and record the exact source commit or published tag you use. An API version alone does not certify that a release tag exists. License: Apache-2.0. No software DOI is asserted.
+Author: Le Chen, Auburn University. Source API 0.7.0. Use CITATION.cff and record the exact source commit or published tag you use. An API version alone does not certify that a release tag exists. License: Apache-2.0. No software DOI is asserted.
 
 Development and release preparation used AI assistance under the author's direction. No independent human mathematical review is asserted. Source hypotheses and canonical mechanical evidence remain authoritative within their scope.
 

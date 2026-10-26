@@ -1,6 +1,6 @@
 # WalshIntegral
 
-Source API 0.6.0. Public repository interface:
+Source API 0.7.0. Public repository interface:
 https://github.com/chenle02/walsh-integral-lean
 
 Read the exact Lean statement before using a result. The source declaration

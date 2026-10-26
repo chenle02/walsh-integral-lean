@@ -1,4 +1,8 @@
-import WalshIntegral
+module
+
+public import WalshIntegral
+
+@[expose] public section
 
 /-!
 # A concrete nonzero stochastic-integral consumer.

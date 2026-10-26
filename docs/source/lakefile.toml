@@ -1,5 +1,5 @@
 name = "WalshIntegral"
-version = "0.6.0"
+version = "0.7.0"
 description = "Space-time white noise and the Walsh stochastic integral, for SPDEs with rough initial data."
 keywords = ["white noise", "Walsh integral", "stochastic integral", "SPDE", "Gaussian"]
 license = "Apache-2.0"

@@ -1,5 +1,7 @@
-import WalshIntegral
-import WalshIntegralTest.CompletedConsumer
+module
+
+public import WalshIntegral
+public import WalshIntegralTest.CompletedConsumer
 
 open MeasureTheory WalshIntegral.WhiteNoise
 
