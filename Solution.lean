@@ -1,1 +1,3 @@
-import WalshIntegral
+module
+
+public import WalshIntegral

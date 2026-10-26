@@ -1,7 +1,11 @@
-import Challenge.Reference.WalshIntegral.WhiteNoise
-import Challenge.Reference.WalshIntegral.Predictable
-import Challenge.Reference.WalshIntegral.Integral
-import Challenge.Reference.WalshIntegral.MomentBound
+module
+
+public import Challenge.Reference.WalshIntegral.WhiteNoise
+public import Challenge.Reference.WalshIntegral.Predictable
+public import Challenge.Reference.WalshIntegral.Integral
+public import Challenge.Reference.WalshIntegral.MomentBound
+
+@[expose] public section
 /-!
 # Predictable modifications on the full finite-variance domain for regular causal kernels. Equality holds almost surely separately at each output point; sample continuity and a common exceptional set are not asserted.
 -/

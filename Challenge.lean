@@ -1,7 +1,9 @@
-import Challenge.Reference.WalshIntegral.GaussianSeries
-import Challenge.Reference.WalshIntegral.Integral
-import Challenge.Reference.WalshIntegral.Modification
-import Challenge.Reference.WalshIntegral.MomentBound
-import Challenge.Reference.WalshIntegral.Predictable
-import Challenge.Reference.WalshIntegral.Rio
-import Challenge.Reference.WalshIntegral.WhiteNoise
+module
+
+public import Challenge.Reference.WalshIntegral.GaussianSeries
+public import Challenge.Reference.WalshIntegral.Integral
+public import Challenge.Reference.WalshIntegral.Modification
+public import Challenge.Reference.WalshIntegral.MomentBound
+public import Challenge.Reference.WalshIntegral.Predictable
+public import Challenge.Reference.WalshIntegral.Rio
+public import Challenge.Reference.WalshIntegral.WhiteNoise

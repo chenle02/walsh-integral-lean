@@ -1,5 +1,9 @@
-import Challenge.Reference.WalshIntegral.WhiteNoise
-import Challenge.Reference.WalshIntegral.Predictable
+module
+
+public import Challenge.Reference.WalshIntegral.WhiteNoise
+public import Challenge.Reference.WalshIntegral.Predictable
+
+@[expose] public section
 /-!
 # The Walsh integral on predictable L² classes, its elementary agreement, Itô isometry, uniqueness and totalized representative API.
 -/

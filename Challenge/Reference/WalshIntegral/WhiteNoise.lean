@@ -1,5 +1,9 @@
-import Mathlib
-import Challenge.Reference.WalshIntegral.GaussianSeries
+module
+
+public import Mathlib
+public import Challenge.Reference.WalshIntegral.GaussianSeries
+
+@[expose] public section
 /-!
 # Space-time white noise relative to a filtration, Gaussian rectangle laws, and existence on raw and completed Gaussian product spaces.
 -/
@@ -29,6 +33,7 @@ def SupportedBefore (t : ℝ≥0) (h : H) : Prop :=
 def SupportedAfter (s : ℝ≥0) (h : H) : Prop :=
   ∀ᵐ z ∂timeSpaceVolume, z.1 ≤ (s : ℝ) → h z = 0
 
+set_option backward.proofsInPublic true in
 /-- The elementary deterministic rectangle as an actual `Lp` class.
 No positivity or ordering assumption is needed to define the empty rectangle. -/
 def rectangle (s t : ℝ≥0) (A : Set ℝ) (hA : MeasurableSet A)
@@ -287,6 +292,7 @@ theorem rectangle_supportedAfter (s t : ℝ≥0) (A : Set ℝ) (hA : MeasurableS
   rw [hz, Set.indicator_of_notMem]
   exact fun hmem => (not_lt_of_ge hzs) hmem.1.1
 
+set_option backward.proofsInPublic true in
 /-- Unit time-space blocks form an infinite orthonormal sequence. -/
 theorem orthonormal_unitRectangles : Orthonormal ℝ (fun n : ℕ =>
     rectangle n (n + 1) (Set.Ioc 0 1) measurableSet_Ioc (by simp)) := by

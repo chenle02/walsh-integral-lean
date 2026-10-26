@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+public section
 
 /-!
 # Rio’s real-p martingale-difference moment inequality.

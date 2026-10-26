@@ -1,6 +1,10 @@
-import WalshIntegral.Rio
-import WalshIntegral.Integral
-import Mathlib.Order.Interval.Set.Union
+module
+
+public import WalshIntegral.Rio
+public import WalshIntegral.Integral
+public import Mathlib.Order.Interval.Set.Union
+
+@[expose] public section
 
 /-!
 # Mixed-norm moment estimates for every real p ≥ 2. The explicit squared-norm constant is `(p - 1) * gaussianMoment p ^ 2` and grows quadratically in p. No sharp linear-in-p bound is claimed.
