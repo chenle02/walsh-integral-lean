@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Constructed space-time white noise, the Walsh L² integral, explicit real-p bounds and predictable convolution versions."><title>Reproduce the verification checks · WalshIntegral</title><link rel="stylesheet" href="assets/site.css"><link rel="icon" href="assets/mark.svg"></head><body class="walsh"><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html"><img src="assets/mark.svg" alt=""><span>WalshIntegral</span></a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="getting-started.html">Start</a><a href="status.html">Status</a><a href="api.html">API</a><a href="trust.html">Trust</a><a href="agents.html">For agents</a><a href="contributing.html">Contribute</a><a href="citation.html">Cite</a></nav></header><main id="content"><h1>Reproduce the verification checks</h1>
+<p>Use Linux with Bash, Git, Python 3, GNU coreutils, a C toolchain, and the pinned
+Lean installation. Keep lean-toolchain and lake-manifest.json unchanged. Obtain
+public dependency artifacts with <code>lake exe cache get</code> before the verification
+run. Never run <code>lake update</code> during a frozen replay.</p>
+<p>From the repository root, make the pinned toolchain's native checker available
+and choose a fresh external directory. The <code>native</code> directory below must not
+already exist; the verification scripts create and retain it.</p>
+<pre><code class="language-sh">export PATH=&quot;$(dirname &quot;$(elan which lean)&quot;):$PATH&quot;
+export LEAN_NUM_THREADS=1
+verification_dir=$(mktemp -d)
+export VERIFY_ARTIFACTS_DIR=&quot;$verification_dir/checks&quot;
+export LIBRARY_AUDIT_DIR=&quot;$verification_dir/native&quot;
+bash verify.sh &quot;$verification_dir/verify.log&quot; \
+  &gt; &quot;$verification_dir/wrapper.stdout&quot; \
+  2&gt; &quot;$verification_dir/wrapper.stderr&quot;
+</code></pre>
+<p>The script rebuilds the package's own production, reference and test cones
+from fresh own outputs. Public Mathlib dependency artifacts may be reused.
+It checks the inventory, elaborated types, standard-axiom closures, examples,
+strict expected-reason negatives, all compiler-owned private/generated helpers,
+compiled escape controls and exact native module replays. Reference and
+production declarations are inspected in separate environments.</p>
+<p>Retain the entire external directory, including raw positive/negative
+diagnostics, native reports, provider bindings and wrapper seal lines. Native
+raw reports can be large; deterministic gzip reports and their hashes are
+retained alongside them. Use a fresh external directory for another run.</p>
+<p>This command runs the checks. An official lower-tier receipt additionally
+requires the actual retained executor terminal state and receipt producer.
+Independent comparator evidence is a separate check. Inspect the generated
+<a href="https://github.com/chenle02/walsh-integral-lean/blob/main/README.md#verification-at-a-glance">README verification record</a> and its
+canonical receipts for actual execution and exact source identity.</p></main><footer><p>WalshIntegral · source API 0.8.0 · Le Chen, Auburn University</p><p><a href="llms.txt">llms.txt</a> · <a href="source/CITATION.cff">Citation</a> · <a href="source/LICENSE">Apache-2.0</a></p><p>Public repository interface: <a href="https://github.com/chenle02/walsh-integral-lean">walsh-integral-lean</a>. See the repository verification record for current evidence.</p></footer></body></html>
