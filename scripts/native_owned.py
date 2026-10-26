@@ -17,7 +17,7 @@ with tempfile.TemporaryDirectory(prefix='compiled-escape-') as td:
     t = Path(td)
     env = os.environ.copy()
     env['LEAN_PATH'] = str(t)+':'+subprocess.check_output(['lake','env','printenv','LEAN_PATH'],cwd=root,text=True).strip()
-    for module, expected in [('EscapePositive', set()), ('EscapeNegative', {'sorryAx','EscapeNegative.injected'}), ('EscapeNative', {'EscapeNative.nativeTrue._native.native_decide.ax_1_1'})]:
+    for module, expected in [('EscapePositive', set()), ('EscapeNegative', {'sorryAx','EscapeNegative.injected'}), ('EscapeNative', {'_private.EscapeNative.0.EscapeNative.nativeTrue._native.native_decide.ax_1_1'})]:
         source = root/'tests'/(module+'.lean')
         with (out/(module+'-build.log')).open('w') as log:
             subprocess.run(['lake','env','lean','-R',str(source.parent),str(source),'-o',str(t/(module+'.olean'))],cwd=root,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
