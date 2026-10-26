@@ -85,7 +85,9 @@ for cone, prefixes in [('production', prod), ('reference', ['Challenge'])]:
         assert depth==0, path
         lines=[line.strip() for line in ''.join(clean).splitlines() if line.strip()]
         import re
-        return bool(lines) and all(re.fullmatch(r'import [A-Za-z_][A-Za-z0-9_.]*', line) for line in lines)
+        # A Lean module-system umbrella is `module` followed by only (public) imports.
+        body=lines[1:] if lines[:1]==['module'] else lines
+        return bool(body) and all(re.fullmatch(r'(?:public )?import [A-Za-z_][A-Za-z0-9_.]*', line) for line in body)
     skipped=[]; records=[]
     for module in modules:
         owned=sum(row['module']==module for row in rows)
