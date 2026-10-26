@@ -1,3 +1,5 @@
+module
+
 import WalshIntegralTest.NegIntegralIsometryWitness
 
 open MeasureTheory WalshIntegral.WhiteNoise WalshIntegral.Integral

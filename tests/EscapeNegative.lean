@@ -1,4 +1,8 @@
+module
+
 import Lean
+
+public section
 namespace EscapeNegative
 axiom injected : False
 theorem publicFalse : False := by sorry

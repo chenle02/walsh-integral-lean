@@ -1,4 +1,8 @@
-import WalshIntegral
+module
+
+public import WalshIntegral
+
+public section
 
 open MeasureTheory WalshIntegral.Predictable
 open scoped NNReal

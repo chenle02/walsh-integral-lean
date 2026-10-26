@@ -1,4 +1,8 @@
-import WalshIntegral.Predictable
+module
+
+public import WalshIntegral.Predictable
+
+@[expose] public section
 
 open MeasureTheory Set WalshIntegral.Predictable
 open scoped NNReal

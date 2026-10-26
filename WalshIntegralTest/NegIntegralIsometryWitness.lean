@@ -1,4 +1,8 @@
-import WalshIntegral
+module
+
+public import WalshIntegral
+
+@[expose] public section
 
 noncomputable section
 

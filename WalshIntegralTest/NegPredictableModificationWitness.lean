@@ -1,4 +1,8 @@
-import WalshIntegral.Modification
+module
+
+public import WalshIntegral.Modification
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory ProbabilityTheory Set Filter

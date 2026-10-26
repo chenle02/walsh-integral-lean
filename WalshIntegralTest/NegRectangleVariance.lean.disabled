@@ -1,3 +1,5 @@
+module
+
 import WalshIntegralTest.NegRectangleVarianceWitness
 
 open MeasureTheory ProbabilityTheory WalshIntegral.WhiteNoise

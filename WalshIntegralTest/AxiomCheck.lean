@@ -1,4 +1,6 @@
-import WalshIntegral
+module
+
+public import WalshIntegral
 
 #print axioms WalshIntegral.Integral.Elementary.inDomain
 #print axioms WalshIntegral.Integral.InDomain.add

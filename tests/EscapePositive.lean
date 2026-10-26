@@ -1,4 +1,8 @@
+module
+
 import Lean
+
+public section
 namespace EscapePositive
 theorem publicTrue : True := True.intro
 private theorem privateTrue : True := True.intro

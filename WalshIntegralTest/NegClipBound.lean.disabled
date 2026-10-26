@@ -1,3 +1,5 @@
+module
+
 import WalshIntegralTest.NegClipBoundWitness
 
 open WalshIntegral.Modification WalshIntegralTest.NegClipBound

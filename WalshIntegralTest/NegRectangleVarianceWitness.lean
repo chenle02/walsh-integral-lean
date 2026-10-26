@@ -1,4 +1,8 @@
-import WalshIntegral
+module
+
+public import WalshIntegral
+
+public section
 
 open MeasureTheory ProbabilityTheory WalshIntegral.WhiteNoise
 open scoped ENNReal NNReal

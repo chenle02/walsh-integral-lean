@@ -1,4 +1,8 @@
-import WalshIntegral.Rio
+module
+
+public import WalshIntegral.Rio
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory ProbabilityTheory Set Filter
