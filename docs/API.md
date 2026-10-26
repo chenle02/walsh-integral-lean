@@ -10,9 +10,9 @@ The main construction starts with `WalshIntegral.WhiteNoise.IsWhiteNoise P F W`.
 
 `WalshIntegral.Modification.CausalKernel` packages a Borel causal kernel with deterministic L² membership and L² continuity at every real output. `exists_predictable_modification` assumes a predictable input and finite `kernelVariance` at every output, and gives a predictable version equal almost surely at each output separately. Neither a common exceptional set nor sample continuity is concluded.
 
-Added in 0.8.0 (verification pending): `integral_walshL2` states that the Walsh integral of every `PredL2` class has expectation zero, `integral_elementaryIntegral` is the elementary case, and `integral_walshT` gives expectation zero of the totalized integral for every field (off the domain it is identically zero, so this is not evidence of integrability). `exists_adapted_representative` chooses, for each `PredL2` class, a predictable representative whose sample sections at every time t ≥ 0 are `F t`-measurable.
+Added in 0.8.0 (verified at `35bc9935bea9`): `integral_walshL2` states that the Walsh integral of every `PredL2` class has expectation zero, `integral_elementaryIntegral` is the elementary case, and `integral_walshT` gives expectation zero of the totalized integral for every field (off the domain it is identically zero, so this is not evidence of integrability). `exists_adapted_representative` chooses, for each `PredL2` class, a predictable representative whose sample sections at every time t ≥ 0 are `F t`-measurable.
 
-Added in 0.8.0 (verification pending): `WalshIntegral.Predictable.measurable_timeSection` states that a predictable field is adapted: at every t ≥ 0 and space point x, `ω ↦ f (t, x, ω)` is `F t`-measurable. `measurable_timeSection_of_le` is the version at real time r ≤ u with level `F u`.
+Added in 0.8.0 (verified at `35bc9935bea9`): `WalshIntegral.Predictable.measurable_timeSection` states that a predictable field is adapted: at every t ≥ 0 and space point x, `ω ↦ f (t, x, ω)` is `F t`-measurable. `measurable_timeSection_of_le` is the version at real time r ≤ u with level `F u`.
 
 `WalshIntegral.Predictable.isPredictable_parametric_integral` concerns predictable measurability of the totalized Bochner integral. Integrability must be established separately when using it as an integral representation.
 

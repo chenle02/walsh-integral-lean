@@ -35,9 +35,9 @@ status:
   - Quot.sound
   - propext
   evidence:
-    commit: 128b3637c14bd164108b6c10fd3a49fe19d793f2
-    gate_receipt: .lean-receipts/128b3637c14b-systemd-user-walsh-final-cold-official2-20261019.service-9e3b6f62ab46485ca497dbb0b7ea9799-h-24e00fc5da6c.json
-    comparator_receipt: .lean-receipts/128b3637c14b-comparator.json
+    commit: 35bc9935bea9b69bcbdd8f78ecc90c18626be3ee
+    gate_receipt: .lean-receipts/35bc9935bea9-systemd-user-walsh-integral-v080-p14s.service-87df036883fc45e9b3360eb42299fc1b-h-2db2e0fa6029.json
+    comparator_receipt: .lean-receipts/35bc9935bea9-comparator.json
   main_results:
   - comparator_config: comparator.json
     declaration: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
@@ -61,6 +61,14 @@ status:
     challenge_file: Challenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Modification.exists_predictable_modification
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.Integral.integral_walshL2
+    file: Solution.lean
+    challenge_file: Challenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.Predictable.measurable_timeSection
     file: Solution.lean
     challenge_file: Challenge.lean
 automation:
@@ -124,6 +132,22 @@ alignment:
     note: For a causal L²-regular deterministic kernel and predictable input with finite variance at every
       output, the stochastic convolution has a predictable version, equal almost surely separately at
       each output.
+  - source: null
+    lean: WalshIntegral.Integral.integral_walshL2
+    module: WalshIntegral/Integral.lean
+    kind: theorem
+    claim: walsh-integral/walsh-mean-zero
+    status: reusable
+    note: For every compatible white noise and predictable L² integrand class, the Walsh integral has
+      expectation zero.
+  - source: null
+    lean: WalshIntegral.Predictable.measurable_timeSection
+    module: WalshIntegral/Predictable.lean
+    kind: theorem
+    claim: walsh-integral/predictable-adapted
+    status: reusable
+    note: Every predictable time-space-sample field is adapted; at each time t≥0 and space point x its
+      sample section is F t-measurable.
 acknowledgements: Developed and verified with lean-pkg (https://github.com/lean-pkg/lean-pkg, doi:10.5281/zenodo.23272098).
   This work was completed in part with resources provided by the Auburn University Easley Cluster (https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html).
   Historical verification used Easley; current release execution is identified by its own receipts.
