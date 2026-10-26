@@ -1,0 +1,120 @@
+{
+  "build_provenance": {
+    "compiled": true,
+    "modules_built": 11,
+    "prebuilt": false,
+    "source": null
+  },
+  "commit": "35bc9935bea9b69bcbdd8f78ecc90c18626be3ee",
+  "configs": [
+    {
+      "challenge_module": "Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/35bc9935bea9-comparator-comparator.log",
+      "log_sha256": "a03f56282ffbea454923a3689a1b80e08f87fd8908aa947e4724d70b2859240b",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "807b36cc4acfe3de7320452b38135e56cec619ea6d0e06fe54f3a858324f156f",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+        "WalshIntegral.Integral.integral_sq_walshL2",
+        "WalshIntegral.Integral.walshL2_unique",
+        "WalshIntegral.Rio.eLpNorm_sum_sq_le",
+        "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+        "WalshIntegral.Modification.exists_predictable_modification",
+        "WalshIntegral.Integral.integral_walshL2",
+        "WalshIntegral.Predictable.measurable_timeSection"
+      ],
+      "units": [
+        {
+          "log_sha256": "4bae76a3a758b15d52970116051640ca4b2556d8ad92c34b6ff416b2c87b0d68",
+          "slots": [
+            "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+            "WalshIntegral.Integral.integral_sq_walshL2",
+            "WalshIntegral.Integral.walshL2_unique",
+            "WalshIntegral.Rio.eLpNorm_sum_sq_le"
+          ]
+        },
+        {
+          "log_sha256": "fd159ce5533b222a1286bef47121e0f2c46c22bc539811966fb2890c26d2c244",
+          "slots": [
+            "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+            "WalshIntegral.Modification.exists_predictable_modification",
+            "WalshIntegral.Integral.integral_walshL2",
+            "WalshIntegral.Predictable.measurable_timeSection"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-26T22:33:41+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7 listed in COMPARATOR_RECEIPT_ALLOWED_HOSTS",
+  "job_id": "local-h-f985343177f7-3066265-20261026T223341Z",
+  "judges": 2,
+  "lean_threads": null,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 51,
+    "lake_manifest_sha256": "4613d80c583a8d8ce1176241cfdc90ca5fcb69677c83cef64d742db8a8e227d8",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "8211d936fd7c86544ae4c103f359460dcfa917e6209cd701c1ba948a7bda59c4"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": 8192,
+    "source": "inherited"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "ok",
+      "wall_s": 8.384
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "ok",
+      "wall_s": 3.403
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "ok",
+      "wall_s": 55.001
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 235.341
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}
