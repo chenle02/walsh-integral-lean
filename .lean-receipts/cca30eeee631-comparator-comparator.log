@@ -1,0 +1,21 @@
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) comparator.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.WhiteNoise.exists_completed_whiteNoise, WalshIntegral.Integral.integral_sq_walshL2, WalshIntegral.Integral.walshL2_unique, WalshIntegral.Rio.eLpNorm_sum_sq_le, WalshIntegral.MomentBound.eLpNorm_walshT_sq_le, WalshIntegral.Modification.exists_predictable_modification, WalshIntegral.Integral.integral_walshL2, WalshIntegral.Predictable.measurable_timeSection, WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod, WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences, WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound, WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.WhiteNoise.exists_completed_whiteNoise, WalshIntegral.Integral.integral_sq_walshL2, WalshIntegral.Integral.walshL2_unique, WalshIntegral.Rio.eLpNorm_sum_sq_le, WalshIntegral.MomentBound.eLpNorm_walshT_sq_le, WalshIntegral.Modification.exists_predictable_modification, WalshIntegral.Integral.integral_walshL2, WalshIntegral.Predictable.measurable_timeSection, WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod, WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences, WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound, WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 57885 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

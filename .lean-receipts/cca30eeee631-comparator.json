@@ -1,0 +1,119 @@
+{
+  "build_provenance": {
+    "compiled": false,
+    "modules_built": 0,
+    "prebuilt": true,
+    "source": "existing source-identical owned artifacts from official preparation/comparison at e0547e67d6a0604f0ed40d06ca7f3b87305bf300; Lean sources, toolchain, locks and config unchanged; coverage/manual metadata new source cca30eeee631479659a7486f1155a8b4ad6df3e1"
+  },
+  "commit": "cca30eeee631479659a7486f1155a8b4ad6df3e1",
+  "configs": [
+    {
+      "challenge_module": "Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/cca30eeee631-comparator-comparator.log",
+      "log_sha256": "82bfc7b4cec8cb9dfc87add4588dc8986fb9c1a70cbed1d86bdb6c1048d752b4",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "4f81f6cfa28ecb4794bdb05d6bd0df9f2409bf6a3acd72708f8c9b7989def581",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+        "WalshIntegral.Integral.integral_sq_walshL2",
+        "WalshIntegral.Integral.walshL2_unique",
+        "WalshIntegral.Rio.eLpNorm_sum_sq_le",
+        "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+        "WalshIntegral.Modification.exists_predictable_modification",
+        "WalshIntegral.Integral.integral_walshL2",
+        "WalshIntegral.Predictable.measurable_timeSection",
+        "WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm",
+        "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter",
+        "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod",
+        "WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences",
+        "WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound",
+        "WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound"
+      ]
+    }
+  ],
+  "generated_at": "2026-10-28T13:42:54+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7 listed in COMPARATOR_RECEIPT_ALLOWED_HOSTS",
+  "job_id": "local-h-f985343177f7-2564007-20261028T134254Z",
+  "judges": 1,
+  "lean_threads": 1,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 63,
+    "lake_manifest_sha256": "4613d80c583a8d8ce1176241cfdc90ca5fcb69677c83cef64d742db8a8e227d8",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "2e8c3fecebc1541cd09cf48a3e062b80cfeb5ad239b6e9d45b0c7ae48018b282"
+  },
+  "producer": {
+    "bytecode_files": 80,
+    "bytecode_sha256": "4eca99f57c2af9a563ca06205e71579483afd2ae860602ccea31e6bbb1df7b31",
+    "bytecode_tag": "cpython-312",
+    "commit": null,
+    "dirty": null,
+    "install": "installed",
+    "lean_pkg": "0.22.0",
+    "other_bytecode_files": 0,
+    "python": "3.12.3",
+    "source_files": 95,
+    "sources_sha256": "2f46280da99e779e284b3ab3c6d77634b8f828a694146fbb0afb0c8e518a5580"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": "unlimited",
+    "source": "COMPARATOR_RECEIPT_STACK"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "prepared",
+      "wall_s": 10.454
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "prepared",
+      "wall_s": 3.206
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "prepared",
+      "wall_s": 5.851
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 216.921
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}
