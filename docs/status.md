@@ -1,4 +1,4 @@
-Development candidate: generic predictable-integral increment isometries and L² convergence utilities are added. Public inventory:122 theorems. Candidate package/native/comparator gates remain pending; historical release receipts below retain their exact original source scope.
+Verified revision `cca30eeee631`: generic predictable-integral increment isometries and L² convergence utilities are added. The public inventory is 122 theorems; the complete fresh native gate and all 14 curated statement comparisons passed. Historical release receipts below retain their exact original source scope.
 
 # Mathematical scope and verification records
 
