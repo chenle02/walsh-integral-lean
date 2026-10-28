@@ -46,6 +46,12 @@ set_option pp.universes true
 #check @WalshIntegral.Integral.walshT_of_not_inDomain
 #check @WalshIntegral.Integral.walshT_restrictTime
 #check @WalshIntegral.Integral.walshT_smul
+#check @WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+#check @WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+#check @WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+#check @WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+#check @WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+#check @WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
 #check @WalshIntegral.Modification.ae_eq_limitField_of_error_le
 #check @WalshIntegral.Modification.borelSelectField_measurable
 #check @WalshIntegral.Modification.clipField_abs_le

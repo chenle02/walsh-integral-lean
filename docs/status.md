@@ -1,3 +1,5 @@
+Development candidate: generic predictable-integral increment isometries and L² convergence utilities are added. Public inventory:122 theorems. Candidate package/native/comparator gates remain pending; historical release receipts below retain their exact original source scope.
+
 # Mathematical scope and verification records
 
 Source API 0.8.0 contains 116 inventoried public theorems, including 12 implementation lemmas used by the isometric extension, and 8 curated reusable claim declarations. Added in 0.8.0 (verified at 35bc9935bea9): 6 public theorems and 2 claims, namely mean zero of the Walsh integral (`integral_walshL2`, with `integral_elementaryIntegral` and the totalized `integral_walshT`) and adaptedness of predictable fields (`measurable_timeSection`, `measurable_timeSection_of_le`, `exists_adapted_representative`). Every 0.7.0 statement is unchanged. Counts describe a source inventory and do not imply a percentage of all mathematical work. Read the README mathematical scope and all hypotheses in each Lean declaration.

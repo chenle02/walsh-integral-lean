@@ -44,6 +44,12 @@ public import WalshIntegral
 #print axioms WalshIntegral.Integral.walshT_of_not_inDomain
 #print axioms WalshIntegral.Integral.walshT_restrictTime
 #print axioms WalshIntegral.Integral.walshT_smul
+#print axioms WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+#print axioms WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+#print axioms WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+#print axioms WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+#print axioms WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+#print axioms WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
 #print axioms WalshIntegral.Modification.ae_eq_limitField_of_error_le
 #print axioms WalshIntegral.Modification.borelSelectField_measurable
 #print axioms WalshIntegral.Modification.clipField_abs_le
