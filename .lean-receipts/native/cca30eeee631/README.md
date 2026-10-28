@@ -1,0 +1,3 @@
+Native ownership evidence for walsh-integral at cca30eeee631479659a7486f1155a8b4ad6df3e1.
+
+Complete original compressed production/reference kernel-type and axiom records, exact replay logs, and compiled escape controls are retained. The manifest binds every payload by exact SHA-256 and bytes, plus decompressed hashes/counts. Operational provider bindings remain private and are hash-bound, not silently redacted. Only diagnostic build-log checkout prefixes were explicitly normalized to module-relative source paths; theorem/type records are byte-identical. This capsule is not a comparator certificate or release authorization.
