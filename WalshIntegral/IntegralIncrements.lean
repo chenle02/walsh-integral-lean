@@ -11,7 +11,7 @@ public import WalshIntegral.Integral
 # Difference isometries for predictable stochastic integrals
 
 Actual predictable L² classes supply the finite integration domain. Differences
-of integrals preserve L² seminorms, and deterministic weighted increments admit
+of integrals preserve L² seminorms, and deterministic weighted increments have
 an exact lower-integral second-moment formula. No continuity of the random
 field is required, and totalized integrals are used only with domain witnesses.
 -/
