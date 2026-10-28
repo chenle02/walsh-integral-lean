@@ -56,3 +56,31 @@ rows:
   statement: A field measurable for the predictable sigma-algebra has, at every time
     t≥0 and space point x, an F t-measurable sample section. Every predictable L² class
     has such an adapted predictable representative.
+- title: walshT sub eLpNorm
+  claims:
+  - walsh-integral/walsht-sub-elpnorm
+  statement: Difference L2 isometry for totalized representatives on their explicit genuine integration domains.
+- title: enorm sub sq eq iter
+  claims:
+  - walsh-integral/enorm-sub-sq-eq-iter
+  statement: Exact iterated weighted increment formula for actual predictable L2 class witnesses, with no additional
+    field continuity or measurability premise.
+- title: enorm sub sq eq prod
+  claims:
+  - walsh-integral/enorm-sub-sq-eq-prod
+  statement: Product-measure weighted increment formula for actual predictable L2 witnesses and explicit measurable
+    scalar/moment weights.
+- title: l2 tendsto of summable differences
+  claims:
+  - walsh-integral/l2-tendsto-of-summable-differences
+  statement: Summable actual L2 differences and full-sequence pointwise a.e. convergence identify the same L2 limit
+    on a finite measure space.
+- title: eLpNorm two le of moment bound
+  claims:
+  - walsh-integral/elpnorm-two-le-of-moment-bound
+  statement: Square-root moment envelope bounds the L2 seminorm, without division by the envelope.
+- title: tsum eLpNorm two lt top of moment bound
+  claims:
+  - walsh-integral/tsum-elpnorm-two-lt-top-of-moment-bound
+  statement: Summable square-root coefficient envelopes bound the sum of L2 seminorms, including zero finite profile
+    constant.
