@@ -66,3 +66,61 @@ claims:
   file: WalshIntegral/Predictable.lean
   status: reusable
   citation: null
+- id: walsh-integral/walsht-sub-elpnorm
+  decl: WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+  kind: theorem
+  summary: Difference L2 isometry for totalized representatives on their explicit genuine integration domains.
+  file: WalshIntegral/IntegralIncrements.lean
+  status: reusable
+  keywords:
+  - l2
+  - stochastic-integral
+- id: walsh-integral/enorm-sub-sq-eq-iter
+  decl: WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+  kind: theorem
+  summary: Exact iterated weighted increment formula for actual predictable L2 class witnesses, with no additional
+    field continuity or measurability premise.
+  file: WalshIntegral/IntegralIncrements.lean
+  status: reusable
+  keywords:
+  - l2
+  - stochastic-integral
+- id: walsh-integral/enorm-sub-sq-eq-prod
+  decl: WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+  kind: theorem
+  summary: Product-measure weighted increment formula for actual predictable L2 witnesses and explicit measurable
+    scalar/moment weights.
+  file: WalshIntegral/IntegralIncrements.lean
+  status: reusable
+  keywords:
+  - l2
+  - stochastic-integral
+- id: walsh-integral/l2-tendsto-of-summable-differences
+  decl: WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+  kind: theorem
+  summary: Summable actual L2 differences and full-sequence pointwise a.e. convergence identify the same L2 limit
+    on a finite measure space.
+  file: WalshIntegral/LpConvergence.lean
+  status: reusable
+  keywords:
+  - l2
+  - convergence
+- id: walsh-integral/elpnorm-two-le-of-moment-bound
+  decl: WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+  kind: theorem
+  summary: Square-root moment envelope bounds the L2 seminorm, without division by the envelope.
+  file: WalshIntegral/LpConvergence.lean
+  status: reusable
+  keywords:
+  - l2
+  - convergence
+- id: walsh-integral/tsum-elpnorm-two-lt-top-of-moment-bound
+  decl: WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
+  kind: theorem
+  summary: Summable square-root coefficient envelopes bound the sum of L2 seminorms, including zero finite profile
+    constant.
+  file: WalshIntegral/LpConvergence.lean
+  status: reusable
+  keywords:
+  - l2
+  - convergence

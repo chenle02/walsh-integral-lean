@@ -7,3 +7,7 @@ public import Challenge.Reference.WalshIntegral.MomentBound
 public import Challenge.Reference.WalshIntegral.Predictable
 public import Challenge.Reference.WalshIntegral.Rio
 public import Challenge.Reference.WalshIntegral.WhiteNoise
+
+public import Challenge.Reference.WalshIntegral.IntegralIncrements
+
+public import Challenge.Reference.WalshIntegral.LpConvergence

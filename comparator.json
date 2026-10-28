@@ -9,7 +9,13 @@
     "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
     "WalshIntegral.Modification.exists_predictable_modification",
     "WalshIntegral.Integral.integral_walshL2",
-    "WalshIntegral.Predictable.measurable_timeSection"
+    "WalshIntegral.Predictable.measurable_timeSection",
+    "WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm",
+    "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter",
+    "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod",
+    "WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences",
+    "WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound",
+    "WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound"
   ],
   "definition_names": [],
   "permitted_axioms": [
