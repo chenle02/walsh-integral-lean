@@ -1,0 +1,221 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 632,
+      "sha256": "782a0aabeb2d4bc2b98956533c0a36f3b3a3deca136cf3f5eef1617ebe7a2cb9"
+    },
+    "controls/CONTROLS.json": {
+      "bytes": 481,
+      "sha256": "9dd7eb255bd00821d9e32b8c05a18b4e25aa8ddf848ad58e3ae7f97aeaf7b134"
+    },
+    "controls/EscapeNative-build.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/EscapeNative.json": {
+      "bytes": 5890,
+      "sha256": "87be5e8016da91f30de24f1274aebbcfd1b6a9bede3115c4ce6e7ddcddc442f0"
+    },
+    "controls/EscapeNative.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/EscapeNegative-build.log": {
+      "bytes": 322,
+      "sha256": "d80cc28695f2b54c6f3e2b5c26f4598592e2b13dbf541a99a534076db0bf1443"
+    },
+    "controls/EscapeNegative.json": {
+      "bytes": 802,
+      "sha256": "d3de7b7285068aad2b80caff121308dfd5260adbf444f5abeb94fae491867f70"
+    },
+    "controls/EscapeNegative.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/EscapePositive-build.log": {
+      "bytes": 189,
+      "sha256": "54058f6da30001aa9bd50ecdad9babab47ae297213ec901f0acec646d8b0fb04"
+    },
+    "controls/EscapePositive.json": {
+      "bytes": 490,
+      "sha256": "9ff306a70533acfc45062a12de85706bf59cb33eea21d9eb7d5132b3162a3d75"
+    },
+    "controls/EscapePositive.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/sources/EscapeNative.lean": {
+      "bytes": 135,
+      "sha256": "6e54c2db4f3434c10c2ad79c7300097875d4fa17537f5ba559c0c3e076b97d1d"
+    },
+    "controls/sources/EscapeNegative.lean": {
+      "bytes": 273,
+      "sha256": "65635e1e42ab8d99cf1cf7e5bcbdcee778711242fc5f5914b92f22acdf860573"
+    },
+    "controls/sources/EscapePositive.lean": {
+      "bytes": 208,
+      "sha256": "083b878df93e00cae71f763b688acf2df5f475fbf3738c542cb56735fa36290d"
+    },
+    "manifest.json": {
+      "bytes": 25507,
+      "sha256": "4cb6c9b7a9478d6c5709e69b5434dfffb813d9048727c2f389e04730aacda56b"
+    },
+    "production-inventory.json": {
+      "bytes": 63555,
+      "sha256": "b80aca654849bb72fbe56e48cae27ce3cf201431aa94754b9a99c21669195334"
+    },
+    "production.json.gz": {
+      "bytes": 7288074,
+      "sha256": "c073ee5a99470ae8018712c72127e8ba97e2da56228178c13ce7c8fb362da86b"
+    },
+    "production.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reference-inventory.json": {
+      "bytes": 60201,
+      "sha256": "8ae48be3ce0230ed43b38137a7dc5d37eefc549481e4a8c7256ad6b7fe77f0b5"
+    },
+    "reference.json.gz": {
+      "bytes": 6547327,
+      "sha256": "4d945206e382cd065a75b1fd793b2ff36407ada6f0a9eb5d0ab3b220d286c0d7"
+    },
+    "reference.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "replay/Challenge.Reference.WalshIntegral.GaussianSeries.leanchecker.log": {
+      "bytes": 59,
+      "sha256": "3a8d4b42dcb34b836f1c9b4ca4ff5e370143b49e22f2f52d1a7da0e1b4f712e5"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Integral.leanchecker.log": {
+      "bytes": 53,
+      "sha256": "df15b86c4496479e7c40fa9fd4f25c3318de5f4728e6e08e157d2941934c0eed"
+    },
+    "replay/Challenge.Reference.WalshIntegral.IntegralIncrements.leanchecker.log": {
+      "bytes": 63,
+      "sha256": "8a10992bb97981b0781ad3cec48674f8d262b56962fbb0548e22173e1e007d1d"
+    },
+    "replay/Challenge.Reference.WalshIntegral.LpConvergence.leanchecker.log": {
+      "bytes": 58,
+      "sha256": "3c19234cabbe7bbb061a3a3900f14b7bac99ae5b5f689d5fee772487ecaae5ad"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Modification.leanchecker.log": {
+      "bytes": 57,
+      "sha256": "d88636b80c0d029b44aa3a86c4152e06870fa60f2a0fed974e064feaef849355"
+    },
+    "replay/Challenge.Reference.WalshIntegral.MomentBound.leanchecker.log": {
+      "bytes": 56,
+      "sha256": "475426cb3cdbc17d06bb22f4ac007fff4dafadd61f3437159900456e0ffcf256"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Predictable.leanchecker.log": {
+      "bytes": 56,
+      "sha256": "8e6228581d6d9ab6d1540713d29d651ad479628c23ab1c99a339edaf4fd67cf1"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Rio.leanchecker.log": {
+      "bytes": 48,
+      "sha256": "b3d5aa8485b26731ddf40c07b582eedb0e0a3fdd27528b3b2d56d1fb7ff3cb9c"
+    },
+    "replay/Challenge.Reference.WalshIntegral.WhiteNoise.leanchecker.log": {
+      "bytes": 55,
+      "sha256": "5963ce7c92cf069a0f4e7844cffd608908502ba5a89b14b7d5b5cb6e8429caf3"
+    },
+    "replay/WalshIntegral.GaussianSeries.leanchecker.log": {
+      "bytes": 39,
+      "sha256": "c0cc0766e00f2a23ca7a0b4a456f17282649742e452416805f24c42711601106"
+    },
+    "replay/WalshIntegral.Integral.leanchecker.log": {
+      "bytes": 33,
+      "sha256": "958a1d1d4025c2de83b31e719a56d08ae73e6f7979290d4c4ab38a4fcefa9f61"
+    },
+    "replay/WalshIntegral.IntegralIncrements.leanchecker.log": {
+      "bytes": 43,
+      "sha256": "f5ce4057d91831de2485eaeabd012617eadbb0bd9802a5fd1ca3829145340773"
+    },
+    "replay/WalshIntegral.LpConvergence.leanchecker.log": {
+      "bytes": 38,
+      "sha256": "4c5ef6f7001ccc1e2ce56d0b3f88d241710a1ca621682a4ee1e2845297502348"
+    },
+    "replay/WalshIntegral.Modification.leanchecker.log": {
+      "bytes": 37,
+      "sha256": "394cf48aa0d909ccef288b54b600a36135215569bcf51cb737d354d6bdbab189"
+    },
+    "replay/WalshIntegral.MomentBound.leanchecker.log": {
+      "bytes": 36,
+      "sha256": "7ceeb1103d6e7e186601a48035d29d93deeea4ac45bdf46269198f5a1c781af1"
+    },
+    "replay/WalshIntegral.Predictable.leanchecker.log": {
+      "bytes": 36,
+      "sha256": "424e2bb07538ca00cb8d742d6456657332e8f8cd247958a2e1f60de3f6eaa7c1"
+    },
+    "replay/WalshIntegral.Rio.leanchecker.log": {
+      "bytes": 28,
+      "sha256": "181948ccf83ca0e6a039f42a66c7dc21f497dcf046d529796f83b7862bdfae18"
+    },
+    "replay/WalshIntegral.WhiteNoise.leanchecker.log": {
+      "bytes": 35,
+      "sha256": "0137574864b3664e35a59cb2a18c6a848279be4eee073d7705c412802e9fbd9c"
+    },
+    "replay/WalshIntegralTest.AxiomCheck.leanchecker.log": {
+      "bytes": 39,
+      "sha256": "47960ba983bb6d7d328ab0ab041b3ea7da5c15b1b5f621422a0c7e6c6e6e13d8"
+    },
+    "replay/WalshIntegralTest.CompletedConsumer.leanchecker.log": {
+      "bytes": 46,
+      "sha256": "a972ecce10bb14285ef14991ef62dbdcf02fe99bffad59f769622ea619ff59df"
+    },
+    "replay/WalshIntegralTest.Examples.leanchecker.log": {
+      "bytes": 37,
+      "sha256": "25d54ab28b896e1cd6bb86c91f4db53b4e8988bdf905881add3935046e47b400"
+    },
+    "replay/WalshIntegralTest.NegBdgConstZeroWitness.leanchecker.log": {
+      "bytes": 51,
+      "sha256": "d3c54673dd07c4a344a45a20562b6387fbb22331612b7a980054aef463d71492"
+    },
+    "replay/WalshIntegralTest.NegClipBoundWitness.leanchecker.log": {
+      "bytes": 48,
+      "sha256": "ddeb0714112af759377fd853d276d7ce2098185d73a4a469fd9b889cc80204a1"
+    },
+    "replay/WalshIntegralTest.NegCovarianceSignWitness.leanchecker.log": {
+      "bytes": 53,
+      "sha256": "954ae8f242abda24224259378bbc13e65326f99d66bd75211e068a1db44fc8d0"
+    },
+    "replay/WalshIntegralTest.NegIntegralIsometryWitness.leanchecker.log": {
+      "bytes": 55,
+      "sha256": "3efdd0cfd98b6b762a08766c08ab12c58c511bdbd4aa87b657791546c82f6455"
+    },
+    "replay/WalshIntegralTest.NegPredictableMeasurableWitness.leanchecker.log": {
+      "bytes": 60,
+      "sha256": "e28aecf4847be81d6d108dbc0d67eca74362e85e0a95571db1bdbd9c679e10f9"
+    },
+    "replay/WalshIntegralTest.NegPredictableModificationWitness.leanchecker.log": {
+      "bytes": 62,
+      "sha256": "0e43edb32938f0551c84c28ad0cbcdd1c583e55c3dbd3be83d8e88b3cbd5d244"
+    },
+    "replay/WalshIntegralTest.NegPredictableTrivialWitness.leanchecker.log": {
+      "bytes": 57,
+      "sha256": "b3017df64378f697b2fd2418095d24d6e56e05cbcd739b03a52fd120eb0aae19"
+    },
+    "replay/WalshIntegralTest.NegRectangleVarianceWitness.leanchecker.log": {
+      "bytes": 56,
+      "sha256": "b4b50f623474903f67c815aeb3c0dc49971c8bb5aed5ae7973d17ed0cd9d261d"
+    },
+    "replay/WalshIntegralTest.NegReflectionWitness.leanchecker.log": {
+      "bytes": 49,
+      "sha256": "f4e6472b72e9cad09aea847d8cd5f1fe132e74d547c79b9e32c6781b4b9fb9c7"
+    },
+    "replay/WalshIntegralTest.NegRioConstantWitness.leanchecker.log": {
+      "bytes": 50,
+      "sha256": "e87062ab5239cccac1a9f752fb7029a0cbf55f13e90586d490d96b708cad5865"
+    },
+    "replay/WalshIntegralTest.TypeCheck.leanchecker.log": {
+      "bytes": 38,
+      "sha256": "26b49e5d446ee71217420b6e9669defe510a5ee4d28e19be2e6229234417c110"
+    }
+  },
+  "index_self_excluded": true,
+  "package": "walsh-integral",
+  "schema": "native-capsule-file-index/1",
+  "scientific_commit": "e0547e67d6a0604f0ed40d06ca7f3b87305bf300",
+  "scope": "native ownership, complete type/axiom records, compiled controls and replay only; not comparator or release"
+}

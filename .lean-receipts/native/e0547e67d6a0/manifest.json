@@ -1,0 +1,588 @@
+{
+  "cones": {
+    "production": {
+      "gzip_sha256": "c073ee5a99470ae8018712c72127e8ba97e2da56228178c13ce7c8fb362da86b",
+      "module_owned_counts": {
+        "Solution": 0,
+        "WalshIntegral": 0,
+        "WalshIntegral.GaussianSeries": 13,
+        "WalshIntegral.Integral": 102,
+        "WalshIntegral.IntegralIncrements": 6,
+        "WalshIntegral.LpConvergence": 3,
+        "WalshIntegral.Modification": 97,
+        "WalshIntegral.MomentBound": 97,
+        "WalshIntegral.Predictable": 29,
+        "WalshIntegral.Rio": 36,
+        "WalshIntegral.WhiteNoise": 66,
+        "WalshIntegralTest": 0,
+        "WalshIntegralTest.AxiomCheck": 0,
+        "WalshIntegralTest.CompletedConsumer": 13,
+        "WalshIntegralTest.Examples": 0,
+        "WalshIntegralTest.NegBdgConstZeroWitness": 2,
+        "WalshIntegralTest.NegClipBoundWitness": 3,
+        "WalshIntegralTest.NegCovarianceSignWitness": 2,
+        "WalshIntegralTest.NegIntegralIsometryWitness": 11,
+        "WalshIntegralTest.NegPredictableMeasurableWitness": 7,
+        "WalshIntegralTest.NegPredictableModificationWitness": 27,
+        "WalshIntegralTest.NegPredictableTrivialWitness": 1,
+        "WalshIntegralTest.NegRectangleVarianceWitness": 2,
+        "WalshIntegralTest.NegReflectionWitness": 6,
+        "WalshIntegralTest.NegRioConstantWitness": 24,
+        "WalshIntegralTest.TypeCheck": 0
+      },
+      "modules": [
+        "Solution",
+        "WalshIntegral",
+        "WalshIntegral.GaussianSeries",
+        "WalshIntegral.Integral",
+        "WalshIntegral.IntegralIncrements",
+        "WalshIntegral.LpConvergence",
+        "WalshIntegral.Modification",
+        "WalshIntegral.MomentBound",
+        "WalshIntegral.Predictable",
+        "WalshIntegral.Rio",
+        "WalshIntegral.WhiteNoise",
+        "WalshIntegralTest",
+        "WalshIntegralTest.AxiomCheck",
+        "WalshIntegralTest.CompletedConsumer",
+        "WalshIntegralTest.Examples",
+        "WalshIntegralTest.NegBdgConstZeroWitness",
+        "WalshIntegralTest.NegClipBoundWitness",
+        "WalshIntegralTest.NegCovarianceSignWitness",
+        "WalshIntegralTest.NegIntegralIsometryWitness",
+        "WalshIntegralTest.NegPredictableMeasurableWitness",
+        "WalshIntegralTest.NegPredictableModificationWitness",
+        "WalshIntegralTest.NegPredictableTrivialWitness",
+        "WalshIntegralTest.NegRectangleVarianceWitness",
+        "WalshIntegralTest.NegReflectionWitness",
+        "WalshIntegralTest.NegRioConstantWitness",
+        "WalshIntegralTest.TypeCheck"
+      ],
+      "owned_count": 547,
+      "projectwide_axiom_union": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "raw_bytes": 356215036,
+      "raw_sha256": "037c31c1d8c68761f86889b6c391195165d9838e6ac8b47f6e6573ce780f2dd4",
+      "replayed_modules": [
+        "WalshIntegral.GaussianSeries",
+        "WalshIntegral.Integral",
+        "WalshIntegral.IntegralIncrements",
+        "WalshIntegral.LpConvergence",
+        "WalshIntegral.Modification",
+        "WalshIntegral.MomentBound",
+        "WalshIntegral.Predictable",
+        "WalshIntegral.Rio",
+        "WalshIntegral.WhiteNoise",
+        "WalshIntegralTest.AxiomCheck",
+        "WalshIntegralTest.CompletedConsumer",
+        "WalshIntegralTest.Examples",
+        "WalshIntegralTest.NegBdgConstZeroWitness",
+        "WalshIntegralTest.NegClipBoundWitness",
+        "WalshIntegralTest.NegCovarianceSignWitness",
+        "WalshIntegralTest.NegIntegralIsometryWitness",
+        "WalshIntegralTest.NegPredictableMeasurableWitness",
+        "WalshIntegralTest.NegPredictableModificationWitness",
+        "WalshIntegralTest.NegPredictableTrivialWitness",
+        "WalshIntegralTest.NegRectangleVarianceWitness",
+        "WalshIntegralTest.NegReflectionWitness",
+        "WalshIntegralTest.NegRioConstantWitness",
+        "WalshIntegralTest.TypeCheck"
+      ],
+      "zero_owned_import_only_modules": [
+        "Solution",
+        "WalshIntegral",
+        "WalshIntegralTest"
+      ]
+    },
+    "reference": {
+      "gzip_sha256": "4d945206e382cd065a75b1fd793b2ff36407ada6f0a9eb5d0ab3b220d286c0d7",
+      "module_owned_counts": {
+        "Challenge": 0,
+        "Challenge.Reference.WalshIntegral.GaussianSeries": 13,
+        "Challenge.Reference.WalshIntegral.Integral": 102,
+        "Challenge.Reference.WalshIntegral.IntegralIncrements": 6,
+        "Challenge.Reference.WalshIntegral.LpConvergence": 3,
+        "Challenge.Reference.WalshIntegral.Modification": 97,
+        "Challenge.Reference.WalshIntegral.MomentBound": 97,
+        "Challenge.Reference.WalshIntegral.Predictable": 29,
+        "Challenge.Reference.WalshIntegral.Rio": 36,
+        "Challenge.Reference.WalshIntegral.WhiteNoise": 66
+      },
+      "modules": [
+        "Challenge",
+        "Challenge.Reference.WalshIntegral.GaussianSeries",
+        "Challenge.Reference.WalshIntegral.Integral",
+        "Challenge.Reference.WalshIntegral.IntegralIncrements",
+        "Challenge.Reference.WalshIntegral.LpConvergence",
+        "Challenge.Reference.WalshIntegral.Modification",
+        "Challenge.Reference.WalshIntegral.MomentBound",
+        "Challenge.Reference.WalshIntegral.Predictable",
+        "Challenge.Reference.WalshIntegral.Rio",
+        "Challenge.Reference.WalshIntegral.WhiteNoise"
+      ],
+      "owned_count": 449,
+      "projectwide_axiom_union": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "raw_bytes": 319548140,
+      "raw_sha256": "ab7b7e2eeb3db9d5214e5d14fbe76516eeb1ad6897334c11e691972da3d798e3",
+      "replayed_modules": [
+        "Challenge.Reference.WalshIntegral.GaussianSeries",
+        "Challenge.Reference.WalshIntegral.Integral",
+        "Challenge.Reference.WalshIntegral.IntegralIncrements",
+        "Challenge.Reference.WalshIntegral.LpConvergence",
+        "Challenge.Reference.WalshIntegral.Modification",
+        "Challenge.Reference.WalshIntegral.MomentBound",
+        "Challenge.Reference.WalshIntegral.Predictable",
+        "Challenge.Reference.WalshIntegral.Rio",
+        "Challenge.Reference.WalshIntegral.WhiteNoise"
+      ],
+      "zero_owned_import_only_modules": [
+        "Challenge"
+      ]
+    }
+  },
+  "diagnostic_log_transformations": [
+    {
+      "artifact": "controls/EscapePositive-build.log",
+      "mathematical_records_modified": false,
+      "published_sha256": "54058f6da30001aa9bd50ecdad9babab47ae297213ec901f0acec646d8b0fb04",
+      "raw_private_artifact": "controls/EscapePositive-build.log",
+      "raw_sha256": "4e5d4200363fb5373a726086118d6eb9c68b7e5e6bad0e67109208694c24a432",
+      "transformation": "remove exact scientific-checkout prefix from diagnostic source locations only; preserve every diagnostic line"
+    },
+    {
+      "artifact": "controls/EscapeNegative-build.log",
+      "mathematical_records_modified": false,
+      "published_sha256": "d80cc28695f2b54c6f3e2b5c26f4598592e2b13dbf541a99a534076db0bf1443",
+      "raw_private_artifact": "controls/EscapeNegative-build.log",
+      "raw_sha256": "0fb6ef26e8faf98463c2b27ab039a83d5e5c1c14026d96da99ac13a12e22664d",
+      "transformation": "remove exact scientific-checkout prefix from diagnostic source locations only; preserve every diagnostic line"
+    }
+  ],
+  "kernel_type_records_redacted": false,
+  "native_tool_limit": "high-trust imported inspection paired with recorded kernel replay; projectwide forbidden-axiom union is authoritative, per-declaration cyclic collector lists may undercount",
+  "original_raw_artifacts_retained": true,
+  "package": "walsh-integral",
+  "payloads": {
+    "controls/CONTROLS.json": {
+      "bytes": 481,
+      "sha256": "9dd7eb255bd00821d9e32b8c05a18b4e25aa8ddf848ad58e3ae7f97aeaf7b134"
+    },
+    "controls/EscapeNative-build.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/EscapeNative.json": {
+      "bytes": 5890,
+      "sha256": "87be5e8016da91f30de24f1274aebbcfd1b6a9bede3115c4ce6e7ddcddc442f0"
+    },
+    "controls/EscapeNative.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/EscapeNegative-build.log": {
+      "bytes": 322,
+      "sha256": "d80cc28695f2b54c6f3e2b5c26f4598592e2b13dbf541a99a534076db0bf1443"
+    },
+    "controls/EscapeNegative.json": {
+      "bytes": 802,
+      "sha256": "d3de7b7285068aad2b80caff121308dfd5260adbf444f5abeb94fae491867f70"
+    },
+    "controls/EscapeNegative.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/EscapePositive-build.log": {
+      "bytes": 189,
+      "sha256": "54058f6da30001aa9bd50ecdad9babab47ae297213ec901f0acec646d8b0fb04"
+    },
+    "controls/EscapePositive.json": {
+      "bytes": 490,
+      "sha256": "9ff306a70533acfc45062a12de85706bf59cb33eea21d9eb7d5132b3162a3d75"
+    },
+    "controls/EscapePositive.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controls/sources/EscapeNative.lean": {
+      "bytes": 135,
+      "sha256": "6e54c2db4f3434c10c2ad79c7300097875d4fa17537f5ba559c0c3e076b97d1d"
+    },
+    "controls/sources/EscapeNegative.lean": {
+      "bytes": 273,
+      "sha256": "65635e1e42ab8d99cf1cf7e5bcbdcee778711242fc5f5914b92f22acdf860573"
+    },
+    "controls/sources/EscapePositive.lean": {
+      "bytes": 208,
+      "sha256": "083b878df93e00cae71f763b688acf2df5f475fbf3738c542cb56735fa36290d"
+    },
+    "production-inventory.json": {
+      "bytes": 63555,
+      "sha256": "b80aca654849bb72fbe56e48cae27ce3cf201431aa94754b9a99c21669195334"
+    },
+    "production.json.gz": {
+      "bytes": 7288074,
+      "complete_type_axiom_records": true,
+      "decompression_verified": true,
+      "format": "gzip",
+      "raw_bytes": 356215036,
+      "raw_sha256": "037c31c1d8c68761f86889b6c391195165d9838e6ac8b47f6e6573ce780f2dd4",
+      "sha256": "c073ee5a99470ae8018712c72127e8ba97e2da56228178c13ce7c8fb362da86b"
+    },
+    "production.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reference-inventory.json": {
+      "bytes": 60201,
+      "sha256": "8ae48be3ce0230ed43b38137a7dc5d37eefc549481e4a8c7256ad6b7fe77f0b5"
+    },
+    "reference.json.gz": {
+      "bytes": 6547327,
+      "complete_type_axiom_records": true,
+      "decompression_verified": true,
+      "format": "gzip",
+      "raw_bytes": 319548140,
+      "raw_sha256": "ab7b7e2eeb3db9d5214e5d14fbe76516eeb1ad6897334c11e691972da3d798e3",
+      "sha256": "4d945206e382cd065a75b1fd793b2ff36407ada6f0a9eb5d0ab3b220d286c0d7"
+    },
+    "reference.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "replay/Challenge.Reference.WalshIntegral.GaussianSeries.leanchecker.log": {
+      "bytes": 59,
+      "sha256": "3a8d4b42dcb34b836f1c9b4ca4ff5e370143b49e22f2f52d1a7da0e1b4f712e5"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Integral.leanchecker.log": {
+      "bytes": 53,
+      "sha256": "df15b86c4496479e7c40fa9fd4f25c3318de5f4728e6e08e157d2941934c0eed"
+    },
+    "replay/Challenge.Reference.WalshIntegral.IntegralIncrements.leanchecker.log": {
+      "bytes": 63,
+      "sha256": "8a10992bb97981b0781ad3cec48674f8d262b56962fbb0548e22173e1e007d1d"
+    },
+    "replay/Challenge.Reference.WalshIntegral.LpConvergence.leanchecker.log": {
+      "bytes": 58,
+      "sha256": "3c19234cabbe7bbb061a3a3900f14b7bac99ae5b5f689d5fee772487ecaae5ad"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Modification.leanchecker.log": {
+      "bytes": 57,
+      "sha256": "d88636b80c0d029b44aa3a86c4152e06870fa60f2a0fed974e064feaef849355"
+    },
+    "replay/Challenge.Reference.WalshIntegral.MomentBound.leanchecker.log": {
+      "bytes": 56,
+      "sha256": "475426cb3cdbc17d06bb22f4ac007fff4dafadd61f3437159900456e0ffcf256"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Predictable.leanchecker.log": {
+      "bytes": 56,
+      "sha256": "8e6228581d6d9ab6d1540713d29d651ad479628c23ab1c99a339edaf4fd67cf1"
+    },
+    "replay/Challenge.Reference.WalshIntegral.Rio.leanchecker.log": {
+      "bytes": 48,
+      "sha256": "b3d5aa8485b26731ddf40c07b582eedb0e0a3fdd27528b3b2d56d1fb7ff3cb9c"
+    },
+    "replay/Challenge.Reference.WalshIntegral.WhiteNoise.leanchecker.log": {
+      "bytes": 55,
+      "sha256": "5963ce7c92cf069a0f4e7844cffd608908502ba5a89b14b7d5b5cb6e8429caf3"
+    },
+    "replay/WalshIntegral.GaussianSeries.leanchecker.log": {
+      "bytes": 39,
+      "sha256": "c0cc0766e00f2a23ca7a0b4a456f17282649742e452416805f24c42711601106"
+    },
+    "replay/WalshIntegral.Integral.leanchecker.log": {
+      "bytes": 33,
+      "sha256": "958a1d1d4025c2de83b31e719a56d08ae73e6f7979290d4c4ab38a4fcefa9f61"
+    },
+    "replay/WalshIntegral.IntegralIncrements.leanchecker.log": {
+      "bytes": 43,
+      "sha256": "f5ce4057d91831de2485eaeabd012617eadbb0bd9802a5fd1ca3829145340773"
+    },
+    "replay/WalshIntegral.LpConvergence.leanchecker.log": {
+      "bytes": 38,
+      "sha256": "4c5ef6f7001ccc1e2ce56d0b3f88d241710a1ca621682a4ee1e2845297502348"
+    },
+    "replay/WalshIntegral.Modification.leanchecker.log": {
+      "bytes": 37,
+      "sha256": "394cf48aa0d909ccef288b54b600a36135215569bcf51cb737d354d6bdbab189"
+    },
+    "replay/WalshIntegral.MomentBound.leanchecker.log": {
+      "bytes": 36,
+      "sha256": "7ceeb1103d6e7e186601a48035d29d93deeea4ac45bdf46269198f5a1c781af1"
+    },
+    "replay/WalshIntegral.Predictable.leanchecker.log": {
+      "bytes": 36,
+      "sha256": "424e2bb07538ca00cb8d742d6456657332e8f8cd247958a2e1f60de3f6eaa7c1"
+    },
+    "replay/WalshIntegral.Rio.leanchecker.log": {
+      "bytes": 28,
+      "sha256": "181948ccf83ca0e6a039f42a66c7dc21f497dcf046d529796f83b7862bdfae18"
+    },
+    "replay/WalshIntegral.WhiteNoise.leanchecker.log": {
+      "bytes": 35,
+      "sha256": "0137574864b3664e35a59cb2a18c6a848279be4eee073d7705c412802e9fbd9c"
+    },
+    "replay/WalshIntegralTest.AxiomCheck.leanchecker.log": {
+      "bytes": 39,
+      "sha256": "47960ba983bb6d7d328ab0ab041b3ea7da5c15b1b5f621422a0c7e6c6e6e13d8"
+    },
+    "replay/WalshIntegralTest.CompletedConsumer.leanchecker.log": {
+      "bytes": 46,
+      "sha256": "a972ecce10bb14285ef14991ef62dbdcf02fe99bffad59f769622ea619ff59df"
+    },
+    "replay/WalshIntegralTest.Examples.leanchecker.log": {
+      "bytes": 37,
+      "sha256": "25d54ab28b896e1cd6bb86c91f4db53b4e8988bdf905881add3935046e47b400"
+    },
+    "replay/WalshIntegralTest.NegBdgConstZeroWitness.leanchecker.log": {
+      "bytes": 51,
+      "sha256": "d3c54673dd07c4a344a45a20562b6387fbb22331612b7a980054aef463d71492"
+    },
+    "replay/WalshIntegralTest.NegClipBoundWitness.leanchecker.log": {
+      "bytes": 48,
+      "sha256": "ddeb0714112af759377fd853d276d7ce2098185d73a4a469fd9b889cc80204a1"
+    },
+    "replay/WalshIntegralTest.NegCovarianceSignWitness.leanchecker.log": {
+      "bytes": 53,
+      "sha256": "954ae8f242abda24224259378bbc13e65326f99d66bd75211e068a1db44fc8d0"
+    },
+    "replay/WalshIntegralTest.NegIntegralIsometryWitness.leanchecker.log": {
+      "bytes": 55,
+      "sha256": "3efdd0cfd98b6b762a08766c08ab12c58c511bdbd4aa87b657791546c82f6455"
+    },
+    "replay/WalshIntegralTest.NegPredictableMeasurableWitness.leanchecker.log": {
+      "bytes": 60,
+      "sha256": "e28aecf4847be81d6d108dbc0d67eca74362e85e0a95571db1bdbd9c679e10f9"
+    },
+    "replay/WalshIntegralTest.NegPredictableModificationWitness.leanchecker.log": {
+      "bytes": 62,
+      "sha256": "0e43edb32938f0551c84c28ad0cbcdd1c583e55c3dbd3be83d8e88b3cbd5d244"
+    },
+    "replay/WalshIntegralTest.NegPredictableTrivialWitness.leanchecker.log": {
+      "bytes": 57,
+      "sha256": "b3017df64378f697b2fd2418095d24d6e56e05cbcd739b03a52fd120eb0aae19"
+    },
+    "replay/WalshIntegralTest.NegRectangleVarianceWitness.leanchecker.log": {
+      "bytes": 56,
+      "sha256": "b4b50f623474903f67c815aeb3c0dc49971c8bb5aed5ae7973d17ed0cd9d261d"
+    },
+    "replay/WalshIntegralTest.NegReflectionWitness.leanchecker.log": {
+      "bytes": 49,
+      "sha256": "f4e6472b72e9cad09aea847d8cd5f1fe132e74d547c79b9e32c6781b4b9fb9c7"
+    },
+    "replay/WalshIntegralTest.NegRioConstantWitness.leanchecker.log": {
+      "bytes": 50,
+      "sha256": "e87062ab5239cccac1a9f752fb7029a0cbf55f13e90586d490d96b708cad5865"
+    },
+    "replay/WalshIntegralTest.TypeCheck.leanchecker.log": {
+      "bytes": 38,
+      "sha256": "26b49e5d446ee71217420b6e9669defe510a5ee4d28e19be2e6229234417c110"
+    }
+  },
+  "private_operational_bindings": [
+    {
+      "artifact": "production-providers-pre.json",
+      "bytes": 9529,
+      "sha256": "cae98a7830b59e54795b797953e30173094aa1279949e30e536f82ae6ffa0545"
+    },
+    {
+      "artifact": "production-providers-post.json",
+      "bytes": 9529,
+      "sha256": "cae98a7830b59e54795b797953e30173094aa1279949e30e536f82ae6ffa0545"
+    },
+    {
+      "artifact": "reference-providers-pre.json",
+      "bytes": 3873,
+      "sha256": "2fc2b767d07b9330894bbafb870f63b7e9a5ba78b8ee3933b624e4f2e6d54756"
+    },
+    {
+      "artifact": "reference-providers-post.json",
+      "bytes": 3873,
+      "sha256": "2fc2b767d07b9330894bbafb870f63b7e9a5ba78b8ee3933b624e4f2e6d54756"
+    },
+    {
+      "artifact": "controls/EscapePositive-build.log",
+      "bytes": 258,
+      "sha256": "4e5d4200363fb5373a726086118d6eb9c68b7e5e6bad0e67109208694c24a432"
+    },
+    {
+      "artifact": "controls/EscapeNegative-build.log",
+      "bytes": 529,
+      "sha256": "0fb6ef26e8faf98463c2b27ab039a83d5e5c1c14026d96da99ac13a12e22664d"
+    },
+    {
+      "artifact": "controls/EscapeNative-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "producer_provider_pre_post_equal": true,
+  "provider_paths_published": false,
+  "schema": "native-evidence-capsule/1",
+  "scientific_commit": "e0547e67d6a0604f0ed40d06ca7f3b87305bf300",
+  "scope": "complete native compiled ownership/type/axiom inspection, compiled escape controls and exact selected-module leanchecker replay; not comparator, release or whole-campaign acceptance",
+  "source_bindings": {
+    "Challenge": {
+      "path": "Challenge.lean",
+      "sha256": "62b1c7c3af81729994a63c4a0367f71c1b52e8270076afe8c95c739c578c48e9"
+    },
+    "Challenge.Reference.WalshIntegral.GaussianSeries": {
+      "path": "Challenge/Reference/WalshIntegral/GaussianSeries.lean",
+      "sha256": "2879ab478cd4d6dd38fbd278627c48adff97be10c3d0562566a5c27a17cde725"
+    },
+    "Challenge.Reference.WalshIntegral.Integral": {
+      "path": "Challenge/Reference/WalshIntegral/Integral.lean",
+      "sha256": "d2b6fbf0576c715837a231e6c2aa9786507409999c59f856825b4f68edf99d6b"
+    },
+    "Challenge.Reference.WalshIntegral.IntegralIncrements": {
+      "path": "Challenge/Reference/WalshIntegral/IntegralIncrements.lean",
+      "sha256": "fe4c8d1e0ea3e7376c7db6bb39eac75f63267afb7afc2632dfe8854bfcd60f61"
+    },
+    "Challenge.Reference.WalshIntegral.LpConvergence": {
+      "path": "Challenge/Reference/WalshIntegral/LpConvergence.lean",
+      "sha256": "d64cbf93b0c1a9d993b14b0aa3ce54d36499d48f4b3a210cc1a886ec6b666ae2"
+    },
+    "Challenge.Reference.WalshIntegral.Modification": {
+      "path": "Challenge/Reference/WalshIntegral/Modification.lean",
+      "sha256": "0e30f7f7cb99d5670cc39b2e718ce2832b4ddf9673157e75ccb8379aa1ec1a6e"
+    },
+    "Challenge.Reference.WalshIntegral.MomentBound": {
+      "path": "Challenge/Reference/WalshIntegral/MomentBound.lean",
+      "sha256": "85924b5e939b1504208238f4dba3d7889f652f983c131f97e877bdc29a165ed1"
+    },
+    "Challenge.Reference.WalshIntegral.Predictable": {
+      "path": "Challenge/Reference/WalshIntegral/Predictable.lean",
+      "sha256": "4796adf492701b96acaa7ed623b239c707d50fe5b2c161d52f47e862f3e290b2"
+    },
+    "Challenge.Reference.WalshIntegral.Rio": {
+      "path": "Challenge/Reference/WalshIntegral/Rio.lean",
+      "sha256": "d38dd5cff386e0bcf0ad1cc51f033fbaf9ef0b45d7317d0fd73606b4376d9f0d"
+    },
+    "Challenge.Reference.WalshIntegral.WhiteNoise": {
+      "path": "Challenge/Reference/WalshIntegral/WhiteNoise.lean",
+      "sha256": "8dc39b50530ebcef6d3e45724e7e8b777679446d6ce062b4cea6e0bc3002fb27"
+    },
+    "Solution": {
+      "path": "Solution.lean",
+      "sha256": "b667a597893b73119e308c2aa03fa3fc6e84c04d3d680c9ea1d80f371d74c9a9"
+    },
+    "WalshIntegral": {
+      "path": "WalshIntegral.lean",
+      "sha256": "65abbc1f85a43f19182cc7966dd539254c80f4c41b99b172e277cfbdf47fff7a"
+    },
+    "WalshIntegral.GaussianSeries": {
+      "path": "WalshIntegral/GaussianSeries.lean",
+      "sha256": "2879ab478cd4d6dd38fbd278627c48adff97be10c3d0562566a5c27a17cde725"
+    },
+    "WalshIntegral.Integral": {
+      "path": "WalshIntegral/Integral.lean",
+      "sha256": "e05ff0b982140f56e55d444e36033870944852e502edd493d8d86b7bd564dfec"
+    },
+    "WalshIntegral.IntegralIncrements": {
+      "path": "WalshIntegral/IntegralIncrements.lean",
+      "sha256": "aa6532f6f4262ea48adc0bb0cb015f7ee442c53726329a71330b67a75e2e82f6"
+    },
+    "WalshIntegral.LpConvergence": {
+      "path": "WalshIntegral/LpConvergence.lean",
+      "sha256": "d64cbf93b0c1a9d993b14b0aa3ce54d36499d48f4b3a210cc1a886ec6b666ae2"
+    },
+    "WalshIntegral.Modification": {
+      "path": "WalshIntegral/Modification.lean",
+      "sha256": "e140e77f228c4e632566745b3c47654546a1b06c02ae85b41f99bcc6bd9bead3"
+    },
+    "WalshIntegral.MomentBound": {
+      "path": "WalshIntegral/MomentBound.lean",
+      "sha256": "93854bcd992f77c6a2bdf9f9ddd3458e430065e6a18475966c7918eb11d3fd58"
+    },
+    "WalshIntegral.Predictable": {
+      "path": "WalshIntegral/Predictable.lean",
+      "sha256": "4796adf492701b96acaa7ed623b239c707d50fe5b2c161d52f47e862f3e290b2"
+    },
+    "WalshIntegral.Rio": {
+      "path": "WalshIntegral/Rio.lean",
+      "sha256": "d38dd5cff386e0bcf0ad1cc51f033fbaf9ef0b45d7317d0fd73606b4376d9f0d"
+    },
+    "WalshIntegral.WhiteNoise": {
+      "path": "WalshIntegral/WhiteNoise.lean",
+      "sha256": "e94960b8e9d5c9e0596c905fdf398e6a841fdbf5beac009037a4055de34e5bc0"
+    },
+    "WalshIntegralTest": {
+      "path": "WalshIntegralTest.lean",
+      "sha256": "e56db312c23611bdbf59bb338b7ec28640ec523513f3f9f318f99e1d873bc941"
+    },
+    "WalshIntegralTest.AxiomCheck": {
+      "path": "WalshIntegralTest/AxiomCheck.lean",
+      "sha256": "0ac0ef266ad8cf78292dad8e25d85fe066f30c488807cbd18f4a925f8f76198f"
+    },
+    "WalshIntegralTest.CompletedConsumer": {
+      "path": "WalshIntegralTest/CompletedConsumer.lean",
+      "sha256": "9fa02bd042b3c43e3156dfca4b7fadf2792e13b17f95fbff9796425d2290dc35"
+    },
+    "WalshIntegralTest.Examples": {
+      "path": "WalshIntegralTest/Examples.lean",
+      "sha256": "02855ab763df524f4d07fd3978f25fb131a43db831f189f4eed19e85237dc3f1"
+    },
+    "WalshIntegralTest.NegBdgConstZeroWitness": {
+      "path": "WalshIntegralTest/NegBdgConstZeroWitness.lean",
+      "sha256": "8a7db7d8c7dcbac2a879e4c857c3bfb66d18810def3e1729c389ad0dcd9a87f2"
+    },
+    "WalshIntegralTest.NegClipBoundWitness": {
+      "path": "WalshIntegralTest/NegClipBoundWitness.lean",
+      "sha256": "007f588d221f0c77f41d5bc4907773fbe243fd8a733a5ae13d4e67e27160cae1"
+    },
+    "WalshIntegralTest.NegCovarianceSignWitness": {
+      "path": "WalshIntegralTest/NegCovarianceSignWitness.lean",
+      "sha256": "6c175adc1e0072694f122869deec65cb4b9716640179680dbd02526cb2af8d9c"
+    },
+    "WalshIntegralTest.NegIntegralIsometryWitness": {
+      "path": "WalshIntegralTest/NegIntegralIsometryWitness.lean",
+      "sha256": "68e7fc7ddc7731b15894947519aec6a647cccfa552e447f43c064513dba3dbe1"
+    },
+    "WalshIntegralTest.NegPredictableMeasurableWitness": {
+      "path": "WalshIntegralTest/NegPredictableMeasurableWitness.lean",
+      "sha256": "6fe7ab9a2659a1c17272d9a5208e2cd1005e5feadc22a226077defbfe499abb7"
+    },
+    "WalshIntegralTest.NegPredictableModificationWitness": {
+      "path": "WalshIntegralTest/NegPredictableModificationWitness.lean",
+      "sha256": "7fbfa508000cb9639c3e6f3763981092f79f2bc0966265bae571fae585cf49a0"
+    },
+    "WalshIntegralTest.NegPredictableTrivialWitness": {
+      "path": "WalshIntegralTest/NegPredictableTrivialWitness.lean",
+      "sha256": "e00d9ac11f9ee5d01f9847739b98dc452e913557be09d93eae9eadaae49d3132"
+    },
+    "WalshIntegralTest.NegRectangleVarianceWitness": {
+      "path": "WalshIntegralTest/NegRectangleVarianceWitness.lean",
+      "sha256": "4de8d59cf11152aa41288c29a0e22fcee80b28d4eff449ba40c2db77492ef4e0"
+    },
+    "WalshIntegralTest.NegReflectionWitness": {
+      "path": "WalshIntegralTest/NegReflectionWitness.lean",
+      "sha256": "4880c8f2adb470f4d923b0b7d596650f4e93a06619a70f8094ff102d011cd21b"
+    },
+    "WalshIntegralTest.NegRioConstantWitness": {
+      "path": "WalshIntegralTest/NegRioConstantWitness.lean",
+      "sha256": "910d74d6c953254698546d67212f1cd3b2eb92e207bc4c09b5770106a45a378e"
+    },
+    "WalshIntegralTest.TypeCheck": {
+      "path": "WalshIntegralTest/TypeCheck.lean",
+      "sha256": "8de26bc83d2e4c013c5d18a8f99fa9bcf75b058b70360f1fd1fc43df06895b82"
+    },
+    "control:EscapeNative": {
+      "path": "tests/EscapeNative.lean",
+      "sha256": "6e54c2db4f3434c10c2ad79c7300097875d4fa17537f5ba559c0c3e076b97d1d"
+    },
+    "control:EscapeNegative": {
+      "path": "tests/EscapeNegative.lean",
+      "sha256": "65635e1e42ab8d99cf1cf7e5bcbdcee778711242fc5f5914b92f22acdf860573"
+    },
+    "control:EscapePositive": {
+      "path": "tests/EscapePositive.lean",
+      "sha256": "083b878df93e00cae71f763b688acf2df5f475fbf3738c542cb56735fa36290d"
+    }
+  }
+}
