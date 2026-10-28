@@ -1,5 +1,7 @@
 module
 
+public import WalshIntegral.IntegralIncrements
+
 public import WalshIntegral.WhiteNoise
 public import WalshIntegral.Predictable
 public import WalshIntegral.Integral
@@ -313,23 +315,7 @@ private theorem walshT_sub_eLpNorm (hW : IsWhiteNoise P F W)
     eLpNorm (fun ω => walshT hW G ω - walshT hW G' ω) 2 P =
       eLpNorm (fun q : ℝ × ℝ × Ω => G q.1 q.2.1 q.2.2 - G' q.1 q.2.1 q.2.2)
         2 (spaceTimeSample P) := by
-  let a := toPredL2 G hG
-  let b := toPredL2 G' hG'
-  calc
-    _ = eLpNorm (fun ω => (walshL2 hW a - walshL2 hW b) ω) 2 P := by
-      apply eLpNorm_congr_ae
-      filter_upwards [walshT_ae_eq hW G hG, walshT_ae_eq hW G' hG',
-        Lp.coeFn_sub (walshL2 hW a) (walshL2 hW b)] with ω ha hb hab
-      exact (congrArg₂ (· - ·) ha hb).trans hab.symm
-    _ = ‖walshL2 hW (a - b)‖ₑ := by rw [map_sub, Lp.enorm_def]
-    _ = ‖a - b‖ₑ := (walshL2 hW).enorm_map _
-    _ = _ := by
-      change ‖(a - b).val‖ₑ = _
-      rw [Lp.enorm_def]
-      apply eLpNorm_congr_ae
-      filter_upwards [Lp.coeFn_sub a.val b.val, toPredL2_ae G hG,
-        toPredL2_ae G' hG'] with q hab ha hb
-      exact hab.trans (congrArg₂ (· - ·) ha hb)
+  exact WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm hW G G' hG hG'
 
 set_option linter.unusedSectionVars false in
 private theorem field_sq_lintegral (G : ℝ → ℝ → Ω → ℝ)
