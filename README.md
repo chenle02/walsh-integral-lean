@@ -8,6 +8,8 @@
 
 </div>
 
+Development candidate: the source adds generic integral-increment identities and L² convergence utilities, with 122 public theorems and 14 curated claims. Verification of this candidate is separate from the published release records below, which retain their original source scope.
+
 A Lean 4 library for space-time white noise, predictable integration, real-p moment estimates and predictable versions of stochastic convolutions. It depends on Mathlib and has no paper-specific dependency.
 
 **Source API 0.8.0.** Version 0.8.0 adds, with every 0.7.0 statement unchanged: mean zero of the Walsh integral (`integral_walshL2` on predictable L² classes, `integral_elementaryIntegral` on elementary integrands, and `integral_walshT` for the totalized integral and every field), and adaptedness of predictable fields (`measurable_timeSection`, `measurable_timeSection_of_le`: sample sections at time t ≥ 0 are `F t`-measurable; `exists_adapted_representative`: every predictable L² class has such an adapted predictable representative). Scientific source `35bc9935bea9` (0.8.0) passed both verification tiers; receipts for 0.7.0 and earlier remain historical. Version 0.7.0 ported every file to the Lean module system (`module` headers, `public import`, `@[expose]` on definitions), so a downstream `module` file can `public import WalshIntegral`.
