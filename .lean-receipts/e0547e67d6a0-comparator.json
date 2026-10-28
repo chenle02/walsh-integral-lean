@@ -1,0 +1,166 @@
+{
+  "build_provenance": {
+    "compiled": true,
+    "modules_built": 21,
+    "prebuilt": false,
+    "source": null
+  },
+  "commit": "e0547e67d6a0604f0ed40d06ca7f3b87305bf300",
+  "configs": [
+    {
+      "challenge_module": "Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/e0547e67d6a0-comparator-comparator.log",
+      "log_sha256": "333e99954a0a227e8504d68f7fc2d83040dad8412d56912b43eb3eadca363bd0",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "4f81f6cfa28ecb4794bdb05d6bd0df9f2409bf6a3acd72708f8c9b7989def581",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+        "WalshIntegral.Integral.integral_sq_walshL2",
+        "WalshIntegral.Integral.walshL2_unique",
+        "WalshIntegral.Rio.eLpNorm_sum_sq_le",
+        "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+        "WalshIntegral.Modification.exists_predictable_modification",
+        "WalshIntegral.Integral.integral_walshL2",
+        "WalshIntegral.Predictable.measurable_timeSection",
+        "WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm",
+        "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter",
+        "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod",
+        "WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences",
+        "WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound",
+        "WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound"
+      ],
+      "units": [
+        {
+          "log_sha256": "01d4214030fb26a25fef49a715e7cb66d8979b4bc984b9d388f60be160a11640",
+          "slots": [
+            "WalshIntegral.WhiteNoise.exists_completed_whiteNoise"
+          ]
+        },
+        {
+          "log_sha256": "93a283d4c0503c1714c29ef51778a83902313aef6f39d505eedc28e184b945f0",
+          "slots": [
+            "WalshIntegral.Integral.integral_sq_walshL2"
+          ]
+        },
+        {
+          "log_sha256": "bf38c2a9292641d1762aa50c89c9a31fdf47d8365a7774655d4e44b519849b6b",
+          "slots": [
+            "WalshIntegral.Integral.walshL2_unique"
+          ]
+        },
+        {
+          "log_sha256": "f165108c6c3572712c66a34a37e880cd9604bd120a3b5e593d08e04c58cbf35f",
+          "slots": [
+            "WalshIntegral.Rio.eLpNorm_sum_sq_le"
+          ]
+        },
+        {
+          "log_sha256": "fcd5f22d7c1448017fd0528772b6e4c5db9d979f0f8315ff0bbaaa6d5911298c",
+          "slots": [
+            "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le"
+          ]
+        },
+        {
+          "log_sha256": "75a312a9f1838bb96c1da30951da79fb937560054177f324fee9be33d0d3607e",
+          "slots": [
+            "WalshIntegral.Modification.exists_predictable_modification",
+            "WalshIntegral.Integral.integral_walshL2",
+            "WalshIntegral.Predictable.measurable_timeSection",
+            "WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm",
+            "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter",
+            "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod",
+            "WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences",
+            "WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound",
+            "WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound"
+          ]
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-10-28T13:15:19+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7 listed in COMPARATOR_RECEIPT_ALLOWED_HOSTS",
+  "job_id": "local-h-f985343177f7-2536124-20261028T131519Z",
+  "judges": 1,
+  "lean_threads": 1,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 63,
+    "lake_manifest_sha256": "4613d80c583a8d8ce1176241cfdc90ca5fcb69677c83cef64d742db8a8e227d8",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "2e8c3fecebc1541cd09cf48a3e062b80cfeb5ad239b6e9d45b0c7ae48018b282"
+  },
+  "producer": {
+    "bytecode_files": 80,
+    "bytecode_sha256": "4eca99f57c2af9a563ca06205e71579483afd2ae860602ccea31e6bbb1df7b31",
+    "bytecode_tag": "cpython-312",
+    "commit": null,
+    "dirty": null,
+    "install": "installed",
+    "lean_pkg": "0.22.0",
+    "other_bytecode_files": 0,
+    "python": "3.12.3",
+    "source_files": 95,
+    "sources_sha256": "2f46280da99e779e284b3ab3c6d77634b8f828a694146fbb0afb0c8e518a5580"
+  },
+  "result": "pass",
+  "resumed_slots": 5,
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": "unlimited",
+    "source": "COMPARATOR_RECEIPT_STACK"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "prepared",
+      "wall_s": 22.393
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "prepared",
+      "wall_s": 3.605
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "prepared",
+      "wall_s": 209.676
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 199.931
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}

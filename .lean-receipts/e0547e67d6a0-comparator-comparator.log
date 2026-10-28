@@ -1,0 +1,132 @@
+== unit: slots 1 (1 names)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/b49dc4f278e0c648.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.WhiteNoise.exists_completed_whiteNoise, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.WhiteNoise.exists_completed_whiteNoise, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 55540 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 2 (1 names)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/25520159ef19db74.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.integral_sq_walshL2, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.integral_sq_walshL2, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 49366 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 3 (1 names)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/e22c163fa6daabda.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.walshL2_unique, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Integral.walshL2_unique, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 49366 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 4 (1 names)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/c456a1fe79f37e1c.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Rio.eLpNorm_sum_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Rio.eLpNorm_sum_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 41734 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 5 (1 names)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/e79cbc17bc529b1c.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.MomentBound.eLpNorm_walshT_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.MomentBound.eLpNorm_walshT_sq_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 51879 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+== unit: slots 6-14 (9 names)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,Solution,WalshIntegral,WalshIntegralTest)
+== lake comparator (toolchain) <evidence>/comparator-stages/04-units/55e1369e22f4be9c.json
+Resolving dependencies
+Building Challenge
+Build completed successfully (9057 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Modification.exists_predictable_modification, WalshIntegral.Integral.integral_walshL2, WalshIntegral.Predictable.measurable_timeSection, WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod, WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences, WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound, WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+Build completed successfully (9058 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, WalshIntegral.Modification.exists_predictable_modification, WalshIntegral.Integral.integral_walshL2, WalshIntegral.Predictable.measurable_timeSection, WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter, WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod, WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences, WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound, WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: accepted 49684 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
