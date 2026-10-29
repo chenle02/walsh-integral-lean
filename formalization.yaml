@@ -35,9 +35,9 @@ status:
   - Quot.sound
   - propext
   evidence:
-    commit: 35bc9935bea9b69bcbdd8f78ecc90c18626be3ee
-    gate_receipt: .lean-receipts/35bc9935bea9-systemd-user-walsh-integral-v080-p14s.service-87df036883fc45e9b3360eb42299fc1b-h-2db2e0fa6029.json
-    comparator_receipt: .lean-receipts/35bc9935bea9-comparator.json
+    commit: b1ae611c8e9c4b9baf8904f07d442b3c8f32194a
+    gate_receipt: .lean-receipts/b1ae611c8e9c-systemd-user-walsh-integral-v090-homedell-202610290958.service-e768d78e244449ffac44c113f6098b1c-h-f985343177f7.json
+    comparator_receipt: .lean-receipts/b1ae611c8e9c-comparator.json
   main_results:
   - comparator_config: comparator.json
     declaration: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
@@ -69,6 +69,30 @@ status:
     challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Predictable.measurable_timeSection
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
+  - comparator_config: comparator.json
+    declaration: WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
     file: WalshIntegralSolution.lean
     challenge_file: WalshIntegralChallenge.lean
 automation:
@@ -148,6 +172,52 @@ alignment:
     status: reusable
     note: Every predictable time-space-sample field is adapted; at each time t≥0 and space point x its
       sample section is F t-measurable.
+  - source: null
+    lean: WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+    module: WalshIntegral/IntegralIncrements.lean
+    kind: theorem
+    claim: walsh-integral/walsht-sub-elpnorm
+    status: reusable
+    note: Difference L2 isometry for totalized representatives on their explicit genuine integration domains.
+  - source: null
+    lean: WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+    module: WalshIntegral/IntegralIncrements.lean
+    kind: theorem
+    claim: walsh-integral/enorm-sub-sq-eq-iter
+    status: reusable
+    note: Exact iterated weighted increment formula for actual predictable L2 class witnesses, with no
+      additional field continuity or measurability premise.
+  - source: null
+    lean: WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+    module: WalshIntegral/IntegralIncrements.lean
+    kind: theorem
+    claim: walsh-integral/enorm-sub-sq-eq-prod
+    status: reusable
+    note: Product-measure weighted increment formula for actual predictable L2 witnesses and explicit
+      measurable scalar/moment weights.
+  - source: null
+    lean: WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+    module: WalshIntegral/LpConvergence.lean
+    kind: theorem
+    claim: walsh-integral/l2-tendsto-of-summable-differences
+    status: reusable
+    note: Summable actual L2 differences and full-sequence pointwise a.e. convergence identify the same
+      L2 limit on a finite measure space.
+  - source: null
+    lean: WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+    module: WalshIntegral/LpConvergence.lean
+    kind: theorem
+    claim: walsh-integral/elpnorm-two-le-of-moment-bound
+    status: reusable
+    note: Square-root moment envelope bounds the L2 seminorm, without division by the envelope.
+  - source: null
+    lean: WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
+    module: WalshIntegral/LpConvergence.lean
+    kind: theorem
+    claim: walsh-integral/tsum-elpnorm-two-lt-top-of-moment-bound
+    status: reusable
+    note: Summable square-root coefficient envelopes bound the sum of L2 seminorms, including zero finite
+      profile constant.
 acknowledgements: Developed and verified with lean-pkg (https://github.com/lean-pkg/lean-pkg, doi:10.5281/zenodo.23272098).
   This work was completed in part with resources provided by the Auburn University Easley Cluster (https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html).
   Historical verification used Easley; current release execution is identified by its own receipts.
