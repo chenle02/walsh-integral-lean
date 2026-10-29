@@ -8,7 +8,7 @@ shopt -s nullglob                       # G8: a missing control is an empty list
 cd "$(dirname "$0")"
 PKG="${PKG:-WalshIntegral}"            # library name: PKG.lean and PKG/**/*.lean
 TEST="${TEST:-${PKG}Test}"              # TypeCheck.lean, AxiomCheck.lean, Examples.lean, *.lean.disabled
-ROOTS="${ROOTS:-$PKG $TEST Challenge Solution}"                   # every root lean_lib namespace (shadow and fresh-build checks)
+ROOTS="${ROOTS:-$PKG $TEST WalshIntegralChallenge WalshIntegralSolution}"                   # every root lean_lib namespace (shadow and fresh-build checks)
 # Negative controls (step 7): strict = each control imports a witness that compiles clean and fails only with
 # unsolved goals `⊢ False`; legacy = packages not yet migrated (missing witness, helper declarations and
 # non-False goals are WARN lines, every other rule holds). New copies keep strict; see README "Negative controls".
@@ -39,8 +39,8 @@ if grep -n -w -E 'sorry|admit|axiom|opaque' "${srcs[@]}"; then
 fi
 echo "placeholder audit: PASS"
 # The proved reference cone must also be free of proof holes and reflective escape syntax.
-reference_sources=(Challenge.lean Solution.lean)
-while IFS= read -r f; do reference_sources+=("$f"); done < <(find Challenge -name '*.lean' | LC_ALL=C sort)
+reference_sources=(WalshIntegralChallenge.lean WalshIntegralSolution.lean)
+while IFS= read -r f; do reference_sources+=("$f"); done < <(find WalshIntegralChallenge -name '*.lean' | LC_ALL=C sort)
 if grep -n -w -E 'sorry|admit|axiom|opaque|unsafe|native_decide|implemented_by|skipKernelTC|trustLevel|include_str|include_bytes|run_io|run_cmd|run_elab' "${reference_sources[@]}"; then
   echo "reference proof escape found" >&2; exit 1
 fi
@@ -59,7 +59,7 @@ echo "lean-pkg-build: begin"
 set +e
 # Separate duplicate-name environments and serialize independent cones at the
 # scheduler level. LEAN_NUM_THREADS alone only limits each Lean compiler.
-for target in "$PKG" Challenge "$TEST" Solution; do
+for target in "$PKG" WalshIntegralChallenge "$TEST" WalshIntegralSolution; do
   lake build -v --log-level info --no-ansi "$target" || exit "$?"
 done 2>&1 | tee "$tmp/build.log"
 build_exit=${PIPESTATUS[0]}
@@ -104,7 +104,7 @@ echo "axiom audit: PASS (only propext, Classical.choice, Quot.sound)"
 
 # 4b. Owned audit: every constant the package's modules define, private helpers included (G7, G13).
 bash scripts/owned_audit.sh "$PKG" "$ALLOWED"
-bash scripts/owned_audit.sh Challenge "$ALLOWED"
+bash scripts/owned_audit.sh WalshIntegralChallenge "$ALLOWED"
 
 # 5. Elaborated types.
 lake lean "$TEST/TypeCheck.lean" > "$tmp/types"

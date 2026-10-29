@@ -41,36 +41,36 @@ status:
   main_results:
   - comparator_config: comparator.json
     declaration: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Integral.integral_sq_walshL2
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Integral.walshL2_unique
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Rio.eLpNorm_sum_sq_le
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Modification.exists_predictable_modification
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Integral.integral_walshL2
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
   - comparator_config: comparator.json
     declaration: WalshIntegral.Predictable.measurable_timeSection
-    file: Solution.lean
-    challenge_file: Challenge.lean
+    file: WalshIntegralSolution.lean
+    challenge_file: WalshIntegralChallenge.lean
 automation:
   methods:
   - method: other

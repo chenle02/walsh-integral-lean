@@ -1,7 +1,7 @@
 module
 
-public import Challenge.Reference.WalshIntegral.WhiteNoise
-public import Challenge.Reference.WalshIntegral.Predictable
+public import WalshIntegralChallenge.Reference.WalshIntegral.WhiteNoise
+public import WalshIntegralChallenge.Reference.WalshIntegral.Predictable
 
 @[expose] public section
 /-!

@@ -39,9 +39,9 @@ with tempfile.TemporaryDirectory(prefix='compiled-escape-') as td:
         controls.append({'module':module,'compile_exit':0,'audit_exit':rc,'forbidden_axioms':sorted(actual)})
 
 # Two cones deliberately define the same declaration names. Never import them into one environment.
-prod = ['WalshIntegral', 'WalshIntegralTest', 'Solution']
+prod = ['WalshIntegral', 'WalshIntegralTest', 'WalshIntegralSolution']
 cones = {'production': [], 'reference': []}
-for cone, prefixes in [('production', prod), ('reference', ['Challenge'])]:
+for cone, prefixes in [('production', prod), ('reference', ['WalshIntegralChallenge'])]:
     for prefix in prefixes:
         paths = [root/(prefix+'.lean'), *sorted((root/prefix).rglob('*.lean'))]
         for source in paths:
@@ -72,7 +72,7 @@ for cone, prefixes in [('production', prod), ('reference', ['Challenge'])]:
     # Import-only umbrellas are not exact selectors: leanchecker expands a
     # module prefix to all descendants. Keep every declaration-bearing/command
     # module and prove each permitted umbrella has zero owned declarations.
-    permitted_umbrellas = {'production': {'WalshIntegral', 'WalshIntegralTest', 'Solution'}, 'reference': {'Challenge'}}[cone]
+    permitted_umbrellas = {'production': {'WalshIntegral', 'WalshIntegralTest', 'WalshIntegralSolution'}, 'reference': {'WalshIntegralChallenge'}}[cone]
     def import_only(path):
         text=path.read_text(); clean=[]; i=0; depth=0
         while i<len(text):

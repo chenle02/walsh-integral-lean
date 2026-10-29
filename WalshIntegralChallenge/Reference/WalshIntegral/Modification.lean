@@ -1,11 +1,11 @@
 module
 
-public import Challenge.Reference.WalshIntegral.IntegralIncrements
+public import WalshIntegralChallenge.Reference.WalshIntegral.IntegralIncrements
 
-public import Challenge.Reference.WalshIntegral.WhiteNoise
-public import Challenge.Reference.WalshIntegral.Predictable
-public import Challenge.Reference.WalshIntegral.Integral
-public import Challenge.Reference.WalshIntegral.MomentBound
+public import WalshIntegralChallenge.Reference.WalshIntegral.WhiteNoise
+public import WalshIntegralChallenge.Reference.WalshIntegral.Predictable
+public import WalshIntegralChallenge.Reference.WalshIntegral.Integral
+public import WalshIntegralChallenge.Reference.WalshIntegral.MomentBound
 
 @[expose] public section
 /-!

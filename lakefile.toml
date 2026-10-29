@@ -1,5 +1,5 @@
 name = "WalshIntegral"
-version = "0.8.0"
+version = "0.9.0"
 description = "Space-time white noise and the Walsh stochastic integral, for SPDEs with rough initial data."
 keywords = ["white noise", "Walsh integral", "stochastic integral", "SPDE", "Gaussian"]
 license = "Apache-2.0"
@@ -17,7 +17,7 @@ name = "WalshIntegral"
 name = "WalshIntegralTest"
 
 [[lean_lib]]
-name = "Challenge"
+name = "WalshIntegralChallenge"
 
 [[lean_lib]]
-name = "Solution"
+name = "WalshIntegralSolution"

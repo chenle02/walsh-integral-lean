@@ -1,6 +1,6 @@
 {
-  "challenge_module": "Challenge",
-  "solution_module": "Solution",
+  "challenge_module": "WalshIntegralChallenge",
+  "solution_module": "WalshIntegralSolution",
   "theorem_names": [
     "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
     "WalshIntegral.Integral.integral_sq_walshL2",

@@ -5,7 +5,7 @@ Authors: Le Chen
 -/
 module
 
-public import Challenge.Reference.WalshIntegral.Integral
+public import WalshIntegralChallenge.Reference.WalshIntegral.Integral
 
 /-!
 # Difference isometries for predictable stochastic integrals

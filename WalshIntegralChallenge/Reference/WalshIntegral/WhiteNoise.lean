@@ -1,7 +1,7 @@
 module
 
 public import Mathlib
-public import Challenge.Reference.WalshIntegral.GaussianSeries
+public import WalshIntegralChallenge.Reference.WalshIntegral.GaussianSeries
 
 @[expose] public section
 /-!

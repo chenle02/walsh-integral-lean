@@ -1,7 +1,7 @@
 module
 
-public import Challenge.Reference.WalshIntegral.Rio
-public import Challenge.Reference.WalshIntegral.Integral
+public import WalshIntegralChallenge.Reference.WalshIntegral.Rio
+public import WalshIntegralChallenge.Reference.WalshIntegral.Integral
 public import Mathlib.Order.Interval.Set.Union
 
 @[expose] public section
