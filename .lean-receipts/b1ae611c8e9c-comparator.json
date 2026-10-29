@@ -1,0 +1,119 @@
+{
+  "build_provenance": {
+    "compiled": false,
+    "modules_built": 0,
+    "prebuilt": true,
+    "source": null
+  },
+  "commit": "b1ae611c8e9c4b9baf8904f07d442b3c8f32194a",
+  "configs": [
+    {
+      "challenge_module": "WalshIntegralChallenge",
+      "definition_names": [],
+      "log": ".lean-receipts/b1ae611c8e9c-comparator-comparator.log",
+      "log_sha256": "e1dfaeb4f392c15ba1ca6aa62483879bff181eda9bc0526e87a5906315d30da4",
+      "path": "comparator.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "1be6c94d501efd43bc5366fa1e31796ea799a57018316f6bc6ac9543780878a6",
+      "solution_module": "WalshIntegralSolution",
+      "theorem_names": [
+        "WalshIntegral.WhiteNoise.exists_completed_whiteNoise",
+        "WalshIntegral.Integral.integral_sq_walshL2",
+        "WalshIntegral.Integral.walshL2_unique",
+        "WalshIntegral.Rio.eLpNorm_sum_sq_le",
+        "WalshIntegral.MomentBound.eLpNorm_walshT_sq_le",
+        "WalshIntegral.Modification.exists_predictable_modification",
+        "WalshIntegral.Integral.integral_walshL2",
+        "WalshIntegral.Predictable.measurable_timeSection",
+        "WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm",
+        "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter",
+        "WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod",
+        "WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences",
+        "WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound",
+        "WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound"
+      ]
+    }
+  ],
+  "generated_at": "2026-10-29T15:23:37+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7 listed in COMPARATOR_RECEIPT_ALLOWED_HOSTS",
+  "job_id": "local-h-f985343177f7-4177798-20261029T152337Z",
+  "judges": 1,
+  "lean_threads": 1,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 108,
+    "lake_manifest_sha256": "4613d80c583a8d8ce1176241cfdc90ca5fcb69677c83cef64d742db8a8e227d8",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "c2dcb07e6a68fbd473d10c21908442771073c9d352f946d433d6e345180fb1f6"
+  },
+  "producer": {
+    "bytecode_files": 81,
+    "bytecode_sha256": "cdeceb3104c7597a8c8c53f999188f3598adc865dbfa9ffc3a2b6673434167d3",
+    "bytecode_tag": "cpython-312",
+    "commit": null,
+    "dirty": null,
+    "install": "installed",
+    "lean_pkg": "0.23.0",
+    "other_bytecode_files": 0,
+    "python": "3.12.3",
+    "source_files": 96,
+    "sources_sha256": "bbba2ec35085773aadd4a0b1d51b31fb04c180dbf6c3d1b11b45cc559e10882b"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": "unlimited",
+    "source": "COMPARATOR_RECEIPT_STACK"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "ok",
+      "wall_s": 15.614
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "ok",
+      "wall_s": 4.407
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "ok",
+      "wall_s": 8.656
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 257.174
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}
