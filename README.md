@@ -80,7 +80,7 @@ Space-time white noise, predictable L² Walsh integration, explicit real-p momen
 There exist a compatible isonormal Gaussian white noise, its completed natural filtration, and a countable orthonormal-series representation on the completed product of standard Gaussian laws.
 ```
 
-**In Lean.** `WalshIntegral.WhiteNoise.exists_completed_whiteNoise` in [Challenge/Reference/WalshIntegral/WhiteNoise.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/WhiteNoise.lean#L463): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.WhiteNoise.exists_completed_whiteNoise` in [WalshIntegralChallenge/Reference/WalshIntegral/WhiteNoise.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/WhiteNoise.lean#L463): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem exists_completed_whiteNoise :
@@ -106,7 +106,7 @@ theorem exists_completed_whiteNoise :
 For every compatible white noise and predictable square-integrable input class, the expected square of its Walsh integral equals its squared time-space-sample norm.
 ```
 
-**In Lean.** `WalshIntegral.Integral.integral_sq_walshL2` in [Challenge/Reference/WalshIntegral/Integral.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/Integral.lean#L622): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.Integral.integral_sq_walshL2` in [WalshIntegralChallenge/Reference/WalshIntegral/Integral.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/Integral.lean#L622): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_sq_walshL2 (hW : IsWhiteNoise P F W) (G : PredL2 F P) :
@@ -126,7 +126,7 @@ theorem integral_sq_walshL2 (hW : IsWhiteNoise P F W) (G : PredL2 F P) :
 A continuous linear map from predictable L² classes to sample L² that agrees with integration on every bounded random elementary integrand equals the constructed Walsh integral.
 ```
 
-**In Lean.** `WalshIntegral.Integral.walshL2_unique` in [Challenge/Reference/WalshIntegral/Integral.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/Integral.lean#L630): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.Integral.walshL2_unique` in [WalshIntegralChallenge/Reference/WalshIntegral/Integral.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/Integral.lean#L630): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem walshL2_unique (hW : IsWhiteNoise P F W)
@@ -147,7 +147,7 @@ theorem walshL2_unique (hW : IsWhiteNoise P F W)
 Let p≥2 be real. For a finite adapted Lᵖ martingale-difference sequence centered conditionally on the preceding filtration, the squared Lᵖ norm of its sum is at most p−1 times the sum of its squared Lᵖ norms.
 ```
 
-**In Lean.** `WalshIntegral.Rio.eLpNorm_sum_sq_le` in [Challenge/Reference/WalshIntegral/Rio.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/Rio.lean#L466): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.Rio.eLpNorm_sum_sq_le` in [WalshIntegralChallenge/Reference/WalshIntegral/Rio.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/Rio.lean#L466): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem eLpNorm_sum_sq_le {Ω : Type*} [mΩ : MeasurableSpace Ω]
@@ -173,7 +173,7 @@ theorem eLpNorm_sum_sq_le {Ω : Type*} [mΩ : MeasurableSpace Ω]
 For real p≥2, a predictable input with finite mixed norm belongs to the genuine L² integration domain. Its squared Lᵖ Walsh norm is bounded by bdgConst(p) times mixedNormSq, where bdgConst(p)=(p−1)·gaussianMoment(p)². This constant grows quadratically in p.
 ```
 
-**In Lean.** `WalshIntegral.MomentBound.eLpNorm_walshT_sq_le` in [Challenge/Reference/WalshIntegral/MomentBound.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/MomentBound.lean#L1546): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.MomentBound.eLpNorm_walshT_sq_le` in [WalshIntegralChallenge/Reference/WalshIntegral/MomentBound.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/MomentBound.lean#L1546): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem eLpNorm_walshT_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
@@ -197,7 +197,7 @@ theorem eLpNorm_walshT_sq_le (hW : IsWhiteNoise P F W) {p : ℝ} (hp : 2 ≤ p)
 For a jointly measurable causal kernel with deterministic L² membership and L² continuity at every real output, every predictable input with finite kernel variance at every output has a predictable stochastic-convolution version. Equality holds almost surely separately at each output; no common exceptional set or sample continuity is asserted.
 ```
 
-**In Lean.** `WalshIntegral.Modification.exists_predictable_modification` in [Challenge/Reference/WalshIntegral/Modification.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/Modification.lean#L811): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.Modification.exists_predictable_modification` in [WalshIntegralChallenge/Reference/WalshIntegral/Modification.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/Modification.lean#L811): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem exists_predictable_modification (hW : IsWhiteNoise P F W)
@@ -222,7 +222,7 @@ theorem exists_predictable_modification (hW : IsWhiteNoise P F W)
 For every compatible white noise and predictable square-integrable input class, the expectation of its Walsh integral is zero. The totalized integral has expectation zero for every field.
 ```
 
-**In Lean.** `WalshIntegral.Integral.integral_walshL2` in [Challenge/Reference/WalshIntegral/Integral.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/Integral.lean#L803): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.Integral.integral_walshL2` in [WalshIntegralChallenge/Reference/WalshIntegral/Integral.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/Integral.lean#L803): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem integral_walshL2 (hW : IsWhiteNoise P F W) (G : PredL2 F P) :
@@ -241,7 +241,7 @@ theorem integral_walshL2 (hW : IsWhiteNoise P F W) (G : PredL2 F P) :
 A field measurable for the predictable sigma-algebra has, at every time t≥0 and space point x, an F t-measurable sample section. Every predictable L² class has such an adapted predictable representative.
 ```
 
-**In Lean.** `WalshIntegral.Predictable.measurable_timeSection` in [Challenge/Reference/WalshIntegral/Predictable.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/Predictable.lean#L167): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.Predictable.measurable_timeSection` in [WalshIntegralChallenge/Reference/WalshIntegral/Predictable.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/Predictable.lean#L167): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem measurable_timeSection (F : Filtration ℝ≥0 mΩ)
@@ -262,7 +262,7 @@ theorem measurable_timeSection (F : Filtration ℝ≥0 mΩ)
 Difference L2 isometry for totalized representatives on their explicit genuine integration domains.
 ```
 
-**In Lean.** `WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm` in [Challenge/Reference/WalshIntegral/IntegralIncrements.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/IntegralIncrements.lean#L53): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm` in [WalshIntegralChallenge/Reference/WalshIntegral/IntegralIncrements.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/IntegralIncrements.lean#L53): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem walshT_sub_eLpNorm [IsProbabilityMeasure P] {F : Filtration ℝ≥0 mΩ} {W : H →L[ℝ] Lp ℝ 2 P}
@@ -285,7 +285,7 @@ theorem walshT_sub_eLpNorm [IsProbabilityMeasure P] {F : Filtration ℝ≥0 mΩ}
 Exact iterated weighted increment formula for actual predictable L2 class witnesses, with no additional field continuity or measurability premise.
 ```
 
-**In Lean.** `WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter` in [Challenge/Reference/WalshIntegral/IntegralIncrements.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/IntegralIncrements.lean#L80): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter` in [WalshIntegralChallenge/Reference/WalshIntegral/IntegralIncrements.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/IntegralIncrements.lean#L80): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem enorm_sub_sq_eq_iter [IsProbabilityMeasure P]
@@ -312,7 +312,7 @@ theorem enorm_sub_sq_eq_iter [IsProbabilityMeasure P]
 Product-measure weighted increment formula for actual predictable L2 witnesses and explicit measurable scalar/moment weights.
 ```
 
-**In Lean.** `WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod` in [Challenge/Reference/WalshIntegral/IntegralIncrements.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/IntegralIncrements.lean#L120): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod` in [WalshIntegralChallenge/Reference/WalshIntegral/IntegralIncrements.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/IntegralIncrements.lean#L120): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem enorm_sub_sq_eq_prod [IsProbabilityMeasure P]
@@ -340,7 +340,7 @@ theorem enorm_sub_sq_eq_prod [IsProbabilityMeasure P]
 Summable actual L2 differences and full-sequence pointwise a.e. convergence identify the same L2 limit on a finite measure space.
 ```
 
-**In Lean.** `WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences` in [Challenge/Reference/WalshIntegral/LpConvergence.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/LpConvergence.lean#L29): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences` in [WalshIntegralChallenge/Reference/WalshIntegral/LpConvergence.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/LpConvergence.lean#L29): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem l2_tendsto_of_summable_differences [IsFiniteMeasure P]
@@ -363,7 +363,7 @@ theorem l2_tendsto_of_summable_differences [IsFiniteMeasure P]
 Square-root moment envelope bounds the L2 seminorm, without division by the envelope.
 ```
 
-**In Lean.** `WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound` in [Challenge/Reference/WalshIntegral/LpConvergence.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/LpConvergence.lean#L59): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound` in [WalshIntegralChallenge/Reference/WalshIntegral/LpConvergence.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/LpConvergence.lean#L59): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem eLpNorm_two_le_of_moment_bound {f : Ω → ℝ}
@@ -384,7 +384,7 @@ theorem eLpNorm_two_le_of_moment_bound {f : Ω → ℝ}
 Summable square-root coefficient envelopes bound the sum of L2 seminorms, including zero finite profile constant.
 ```
 
-**In Lean.** `WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound` in [Challenge/Reference/WalshIntegral/LpConvergence.lean](https://github.com/chenle02/walsh-integral-lean/blob/cca30eeee631479659a7486f1155a8b4ad6df3e1/Challenge/Reference/WalshIntegral/LpConvergence.lean#L74): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
+**In Lean.** `WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound` in [WalshIntegralChallenge/Reference/WalshIntegral/LpConvergence.lean](https://github.com/chenle02/walsh-integral-lean/blob/b1ae611c8e9c4b9baf8904f07d442b3c8f32194a/WalshIntegralChallenge/Reference/WalshIntegral/LpConvergence.lean#L74): the statement the proof was checked against (the proof is in a separate file, and a second checker confirmed it proves exactly this).
 
 ```lean
 theorem tsum_eLpNorm_two_lt_top_of_moment_bound (f : ℕ → Ω → ℝ)
@@ -408,10 +408,10 @@ The full account of what each check covers and what it takes on trust is lean-pk
 
 ## How this was checked
 
-- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 14 of 14 required claim(s) verified (`sha256:98e79efd11ff9bb5…`).
-- Build check (`lean-pkg gate`) at commit `cca30eeee631`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`.
+- lean-pkg's claims ledger: **ready**, every required claim is closed by the recorded receipts; 14 of 14 required claim(s) verified (`sha256:ae8b2f6a8d79cc2b…`).
+- Build check (`lean-pkg gate`) at commit `b1ae611c8e9c`: `sorry` count 0; axioms used: `Classical.choice`, `Quot.sound`, `propext`.
 - Axioms of every claim: read from the built environment (Lean's `collectAxioms`) for all 14 claim(s) in `claims.yaml`, not only the theorems the build prints; none uses an axiom beyond `propext`, `Quot.sound` and `Classical.choice`.
-- Statement comparison (comparator) at commit `cca30eeee631`: 1 configuration(s), 14 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
+- Statement comparison (comparator) at commit `b1ae611c8e9c`: 1 configuration(s), 14 theorem(s) compared (each Challenge statement against its Solution proof); permitted axioms: `Classical.choice`, `Quot.sound`, `propext`; definitions compared by name only: none.
 
 ### Receipts
 
@@ -423,9 +423,11 @@ The full account of what each check covers and what it takes on trust is lean-pk
 | `.lean-receipts/35bc9935bea9-systemd-user-walsh-integral-v080-p14s.service-87df036883fc45e9b3360eb42299fc1b-h-2db2e0fa6029.json` | build | `35bc9935bea9` | 2026-10-26 | — | `676d8f28aabca4c2c6bff0116561da1d0f17fdf408078444229a9daa3d378bf1` |
 | `.lean-receipts/76a84faf9b08-comparator.json` | statement comparison | `76a84faf9b08` | 2026-10-26 | — | `46d53d051da35fcb74578f5466e54148ee07b12ca5a4dbeec93cc8ddfd411dd5` |
 | `.lean-receipts/76a84faf9b08-systemd-user-walsh-integral-v070-p14s-2.service-451c901e09a64116b71dec47c2a18723-h-2db2e0fa6029.json` | build | `76a84faf9b08` | 2026-10-26 | — | `27c8e710d348a29541ff9d1cdbf0cd6cd55ebe32edfa7af221d6333d0dbd2603` |
-| `.lean-receipts/cca30eeee631-comparator.json` (used here) | statement comparison | `cca30eeee631` | 2026-10-28 | — | `1aa88a16c1aedf8d3b960bbe512e8c61380d1b3d0975d4b51d082f0c9d70ef23` |
+| `.lean-receipts/b1ae611c8e9c-comparator.json` (used here) | statement comparison | `b1ae611c8e9c` | 2026-10-29 | — | `845c54f1d1116ea7fd4db4b6152acda9c0e653d3f7614ea72dcd53667286a225` |
+| `.lean-receipts/b1ae611c8e9c-systemd-user-walsh-integral-v090-homedell-202610290958.service-e768d78e244449ffac44c113f6098b1c-h-f985343177f7.json` (used here) | build | `b1ae611c8e9c` | 2026-10-29 | — | `490ac1697a9fb5c6bac75c8f53dc269506de5a872297ebf1b3ac2c3d31bf6872` |
+| `.lean-receipts/cca30eeee631-comparator.json` | statement comparison | `cca30eeee631` | 2026-10-28 | — | `1aa88a16c1aedf8d3b960bbe512e8c61380d1b3d0975d4b51d082f0c9d70ef23` |
 | `.lean-receipts/cca30eeee631-official-native.json` | build | `cca30eeee631` | 2026-10-28 | — | `95d0e5e60beb906464b8f43a76187fd71ea5c2623007907f3589b4a5a1b8fb7d` |
-| `.lean-receipts/cca30eeee631-systemd-user-walsh-integral-coverage-20261028.service-fe797aaa92ab4664bda66251adeeeaef-h-2db2e0fa6029.json` (used here) | build | `cca30eeee631` | 2026-10-28 | — | `95d0e5e60beb906464b8f43a76187fd71ea5c2623007907f3589b4a5a1b8fb7d` |
+| `.lean-receipts/cca30eeee631-systemd-user-walsh-integral-coverage-20261028.service-fe797aaa92ab4664bda66251adeeeaef-h-2db2e0fa6029.json` | build | `cca30eeee631` | 2026-10-28 | — | `95d0e5e60beb906464b8f43a76187fd71ea5c2623007907f3589b4a5a1b8fb7d` |
 | `.lean-receipts/e0547e67d6a0-comparator.json` | statement comparison | `e0547e67d6a0` | 2026-10-28 | — | `4031195f515adf152c7da084bd82597454bf148e3f4e0161a3b5e407b711c024` |
 | `.lean-receipts/e0547e67d6a0-official-native.json` | build | `e0547e67d6a0` | 2026-10-28 | — | `4c59e2907dfe13349040e3b4322b449a6978f10ee9df435ad1ecac7d1754d0f6` |
 
@@ -439,7 +441,7 @@ The full account of what each check covers and what it takes on trust is lean-pk
 ```bash
 git clone https://github.com/chenle02/walsh-integral-lean
 cd walsh-integral-lean
-git checkout cca30eeee631479659a7486f1155a8b4ad6df3e1   # the commit the build check binds
+git checkout b1ae611c8e9c4b9baf8904f07d442b3c8f32194a   # the commit the build check binds
 lake exe cache get
 lake build
 ```
@@ -448,7 +450,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *WalshIntegral*. Version 0.8.0.
+Le Chen. *WalshIntegral*. Version 0.9.0.
 
 See [CITATION.cff](CITATION.cff).
 
