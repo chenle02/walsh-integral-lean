@@ -1,0 +1,25 @@
+[
+  {
+    "module": "EscapePositive",
+    "compile_exit": 0,
+    "audit_exit": 0,
+    "forbidden_axioms": []
+  },
+  {
+    "module": "EscapeNegative",
+    "compile_exit": 0,
+    "audit_exit": 1,
+    "forbidden_axioms": [
+      "EscapeNegative.injected",
+      "sorryAx"
+    ]
+  },
+  {
+    "module": "EscapeNative",
+    "compile_exit": 0,
+    "audit_exit": 1,
+    "forbidden_axioms": [
+      "_private.EscapeNative.0.EscapeNative.nativeTrue._native.native_decide.ax_1_1"
+    ]
+  }
+]

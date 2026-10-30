@@ -1,0 +1,43 @@
+{
+  "schema": "lower-receipt/1",
+  "commit": "b1ae611c8e9c4b9baf8904f07d442b3c8f32194a",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "32ea0e5a2a2faa00df256e8ecaf4f86f544c1a942a2491be7e95010e728b8540",
+  "job_id": "systemd-user:walsh-integral-v090-homedell-202610290958.service:e768d78e244449ffac44c113f6098b1c@h-f985343177f7",
+  "checker": "verify.sh (fresh complete library/reference/tests; all-owned/strict controls/native replay)",
+  "generated_at": "2026-10-29T15:18:27Z",
+  "job_stdout_sha256": "ccd512666ed7d976b218044277541129da874b308f175b7fd706825664ef8d60",
+  "manifest_sha256": "4613d80c583a8d8ce1176241cfdc90ca5fcb69677c83cef64d742db8a8e227d8",
+  "log_commit_bound": true,
+  "claim_axioms": {
+    "checked": 14,
+    "nonstandard": [],
+    "missing": []
+  },
+  "producer": {
+    "lean_pkg": "0.23.0",
+    "install": "installed",
+    "commit": null,
+    "dirty": null,
+    "sources_sha256": "bbba2ec35085773aadd4a0b1d51b31fb04c180dbf6c3d1b11b45cc559e10882b",
+    "source_files": 96,
+    "python": "3.12.3",
+    "bytecode_tag": "cpython-312",
+    "bytecode_files": 81,
+    "bytecode_sha256": "cdeceb3104c7597a8c8c53f999188f3598adc865dbfa9ffc3a2b6673434167d3",
+    "other_bytecode_files": 0
+  },
+  "unit_properties_sha256": "5e3019c990ad1c0d0d1f2444c5ee7c0cd6869a07c5910118d8a990e35da85b20",
+  "report_compressed": {
+    "format": "gzip",
+    "sha256": "8c7369e0df7b762f663b102bc1df8e906d1fcb156559a348f84fc3730d81b670",
+    "bytes": 2576879
+  }
+}

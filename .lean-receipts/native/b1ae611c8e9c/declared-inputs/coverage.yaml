@@ -1,0 +1,86 @@
+schema: coverage/1
+package: walsh-integral
+kind: library
+summary: Space-time white noise, predictable L² Walsh integration, explicit real-p
+  moment bounds and predictable convolution modifications. Exact hypotheses and separate
+  almost-sure equality are retained.
+rows:
+- title: White noise exists on the completed Gaussian product
+  claims:
+  - walsh-integral/completed-white-noise
+  statement: There exist a compatible isonormal Gaussian white noise, its completed
+    natural filtration, and a countable orthonormal-series representation on the completed
+    product of standard Gaussian laws.
+- title: The Walsh integral satisfies the Itô isometry
+  claims:
+  - walsh-integral/ito-isometry
+  statement: For every compatible white noise and predictable square-integrable input
+    class, the expected square of its Walsh integral equals its squared time-space-sample
+    norm.
+- title: Elementary agreement determines the integral uniquely
+  claims:
+  - walsh-integral/integral-unique
+  statement: A continuous linear map from predictable L² classes to sample L² that
+    agrees with integration on every bounded random elementary integrand equals the
+    constructed Walsh integral.
+- title: Real-p martingale differences satisfy Rio’s inequality
+  claims:
+  - walsh-integral/rio-moment
+  statement: Let p≥2 be real. For a finite adapted Lᵖ martingale-difference sequence
+    centered conditionally on the preceding filtration, the squared Lᵖ norm of its
+    sum is at most p−1 times the sum of its squared Lᵖ norms.
+- title: The Walsh integral has an explicit real-p mixed-norm estimate
+  claims:
+  - walsh-integral/walsh-real-p
+  statement: For real p≥2, a predictable input with finite mixed norm belongs to the
+    genuine L² integration domain. Its squared Lᵖ Walsh norm is bounded by bdgConst(p)
+    times mixedNormSq, where bdgConst(p)=(p−1)·gaussianMoment(p)². This constant grows
+    quadratically in p.
+- title: Finite-variance convolutions admit predictable modifications
+  claims:
+  - walsh-integral/predictable-modification
+  statement: For a jointly measurable causal kernel with deterministic L² membership
+    and L² continuity at every real output, every predictable input with finite kernel
+    variance at every output has a predictable stochastic-convolution version. Equality
+    holds almost surely separately at each output; no common exceptional set or sample
+    continuity is asserted.
+- title: The Walsh integral has mean zero
+  claims:
+  - walsh-integral/walsh-mean-zero
+  statement: For every compatible white noise and predictable square-integrable input
+    class, the expectation of its Walsh integral is zero. The totalized integral has
+    expectation zero for every field.
+- title: Predictable fields are adapted
+  claims:
+  - walsh-integral/predictable-adapted
+  statement: A field measurable for the predictable sigma-algebra has, at every time
+    t≥0 and space point x, an F t-measurable sample section. Every predictable L² class
+    has such an adapted predictable representative.
+- title: walshT sub eLpNorm
+  claims:
+  - walsh-integral/walsht-sub-elpnorm
+  statement: Difference L2 isometry for totalized representatives on their explicit genuine integration domains.
+- title: enorm sub sq eq iter
+  claims:
+  - walsh-integral/enorm-sub-sq-eq-iter
+  statement: Exact iterated weighted increment formula for actual predictable L2 class witnesses, with no additional
+    field continuity or measurability premise.
+- title: enorm sub sq eq prod
+  claims:
+  - walsh-integral/enorm-sub-sq-eq-prod
+  statement: Product-measure weighted increment formula for actual predictable L2 witnesses and explicit measurable
+    scalar/moment weights.
+- title: l2 tendsto of summable differences
+  claims:
+  - walsh-integral/l2-tendsto-of-summable-differences
+  statement: Summable actual L2 differences and full-sequence pointwise a.e. convergence identify the same L2 limit
+    on a finite measure space.
+- title: eLpNorm two le of moment bound
+  claims:
+  - walsh-integral/elpnorm-two-le-of-moment-bound
+  statement: Square-root moment envelope bounds the L2 seminorm, without division by the envelope.
+- title: tsum eLpNorm two lt top of moment bound
+  claims:
+  - walsh-integral/tsum-elpnorm-two-lt-top-of-moment-bound
+  statement: Summable square-root coefficient envelopes bound the sum of L2 seminorms, including zero finite profile
+    constant.
