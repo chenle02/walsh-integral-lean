@@ -423,6 +423,7 @@ The full account of what each check covers and what it takes on trust is lean-pk
 | `.lean-receipts/35bc9935bea9-systemd-user-walsh-integral-v080-p14s.service-87df036883fc45e9b3360eb42299fc1b-h-2db2e0fa6029.json` | build | `35bc9935bea9` | 2026-10-26 | — | `676d8f28aabca4c2c6bff0116561da1d0f17fdf408078444229a9daa3d378bf1` |
 | `.lean-receipts/76a84faf9b08-comparator.json` | statement comparison | `76a84faf9b08` | 2026-10-26 | — | `46d53d051da35fcb74578f5466e54148ee07b12ca5a4dbeec93cc8ddfd411dd5` |
 | `.lean-receipts/76a84faf9b08-systemd-user-walsh-integral-v070-p14s-2.service-451c901e09a64116b71dec47c2a18723-h-2db2e0fa6029.json` | build | `76a84faf9b08` | 2026-10-26 | — | `27c8e710d348a29541ff9d1cdbf0cd6cd55ebe32edfa7af221d6333d0dbd2603` |
+| `.lean-receipts/b1ae611-official-native.json` | build | `b1ae611c8e9c` | 2026-10-29 | — | `490ac1697a9fb5c6bac75c8f53dc269506de5a872297ebf1b3ac2c3d31bf6872` |
 | `.lean-receipts/b1ae611c8e9c-comparator.json` (used here) | statement comparison | `b1ae611c8e9c` | 2026-10-29 | — | `845c54f1d1116ea7fd4db4b6152acda9c0e653d3f7614ea72dcd53667286a225` |
 | `.lean-receipts/b1ae611c8e9c-systemd-user-walsh-integral-v090-homedell-202610290958.service-e768d78e244449ffac44c113f6098b1c-h-f985343177f7.json` (used here) | build | `b1ae611c8e9c` | 2026-10-29 | — | `490ac1697a9fb5c6bac75c8f53dc269506de5a872297ebf1b3ac2c3d31bf6872` |
 | `.lean-receipts/cca30eeee631-comparator.json` | statement comparison | `cca30eeee631` | 2026-10-28 | — | `1aa88a16c1aedf8d3b960bbe512e8c61380d1b3d0975d4b51d082f0c9d70ef23` |
@@ -450,7 +451,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *WalshIntegral*. Version 0.9.0.
+Le Chen. *WalshIntegral*. Version 0.9.0. [doi:10.5281/zenodo.23668760](https://doi.org/10.5281/zenodo.23668760).
 
 See [CITATION.cff](CITATION.cff).
 
