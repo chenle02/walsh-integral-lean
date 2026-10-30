@@ -10,4 +10,5 @@ license: Apache-2.0
 abstract: Lean library for space-time white noise, predictable Walsh integration, explicit real-p
   moment bounds and predictable modifications.
 version: 0.9.0
+doi: 10.5281/zenodo.23770192
 repository-code: https://github.com/chenle02/walsh-integral-lean
