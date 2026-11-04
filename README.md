@@ -50,6 +50,10 @@ The generated verification block and canonical receipts identify the scientific 
 
 Apache-2.0; see [LICENSE](LICENSE).
 
+## Attribution and AI assistance
+
+This library was developed with AI coding agents under the author's direction: Anthropic's Claude co-authored commits in this repository's history. Every theorem is checked by Lean's kernel. Mathematical statements, trust claims and publication decisions remain the author's responsibility.
+
 ## Acknowledgments
 
 Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)).
