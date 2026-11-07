@@ -1,6 +1,10 @@
-import WalshIntegral.Rio
-import WalshIntegral.Integral
-import WalshIntegral.GaussianStein
+module
+
+public import WalshIntegral.Rio
+public import WalshIntegral.Integral
+public import WalshIntegral.GaussianStein
+
+@[expose] public section
 
 /-!
 # The Gaussian slab step with the linear constant `p - 1`.

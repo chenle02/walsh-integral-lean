@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+public section
 
 /-!
 # One-dimensional Gaussian integration by parts (Stein's identity).
