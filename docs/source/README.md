@@ -462,7 +462,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *WalshIntegral*. Version 0.10.0. [doi:10.5281/zenodo.23668760](https://doi.org/10.5281/zenodo.23668760).
+Le Chen. *WalshIntegral*. Version 0.10.0. [doi:10.5281/zenodo.24034650](https://doi.org/10.5281/zenodo.24034650).
 
 See [CITATION.cff](CITATION.cff).
 
