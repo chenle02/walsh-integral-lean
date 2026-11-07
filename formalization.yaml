@@ -25,9 +25,9 @@ related_formalizations:
   note: pinned in lake-manifest.json
 status:
   scope: Completed countable Gaussian-product white noise; genuine predictable L2 isometric integral and
-    unique extension; real-p moment bounds with the linear squared-norm coefficient p−1; predictable
-    convolution modifications on the full pointwise finite-variance domain. Equality is almost sure separately
-    at each output. Excludes a common uncountable exceptional set, sample continuity, general Ito theory
+    unique extension; real-p moment bounds with the linear squared-norm coefficient p−1; predictable convolution
+    modifications on the full pointwise finite-variance domain. Equality is almost sure separately at
+    each output. Excludes a common uncountable exceptional set, sample continuity, general Ito theory
     and SPDE well-posedness.
   sorry_count: 0
   axioms:
@@ -35,9 +35,9 @@ status:
   - Quot.sound
   - propext
   evidence:
-    commit: b1ae611c8e9c4b9baf8904f07d442b3c8f32194a
-    gate_receipt: .lean-receipts/b1ae611c8e9c-systemd-user-walsh-integral-v090-homedell-202610290958.service-e768d78e244449ffac44c113f6098b1c-h-f985343177f7.json
-    comparator_receipt: .lean-receipts/b1ae611c8e9c-comparator.json
+    commit: fbe62e483ae1731784e13ad877e7164da751bc1f
+    gate_receipt: .lean-receipts/fbe62e483ae1-systemd-user-walsh-integral-v0100-homedell-202611062024.service-3bc607689127402481039e8e59254fa7-h-f985343177f7.json
+    comparator_receipt: .lean-receipts/fbe62e483ae1-comparator.json
   main_results:
   - comparator_config: comparator.json
     declaration: WalshIntegral.WhiteNoise.exists_completed_whiteNoise
