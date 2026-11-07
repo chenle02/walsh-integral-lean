@@ -4,6 +4,21 @@ public import WalshIntegral
 
 set_option pp.universes true
 
+#check @WalshIntegral.GaussianStein.hasDerivAt_gaussianPDFReal
+#check @WalshIntegral.GaussianStein.integrable_one_add_abs_pow
+#check @WalshIntegral.GaussianStein.integrable_pdf_mul_of_integrable
+#check @WalshIntegral.GaussianStein.integral_mul_eq_variance_mul_integral_deriv
+#check @WalshIntegral.GaussianStein.integral_mul_eq_variance_mul_integral_deriv_of_integrable
+#check @WalshIntegral.GaussianStep.eLpNorm_add_gaussian_slab_sq_le
+#check @WalshIntegral.GaussianStep.eLpNorm_add_gaussian_slab_sq_le_of_stein
+#check @WalshIntegral.GaussianStep.eLpNorm_add_gaussian_sq_le
+#check @WalshIntegral.GaussianStep.eLpNorm_add_gaussian_sq_le_of_stein
+#check @WalshIntegral.GaussianStep.integral_indep_eq_integral_integral
+#check @WalshIntegral.GaussianStep.integral_map_linear_combination
+#check @WalshIntegral.GaussianStep.integral_weight_mul_eq_of_stein
+#check @WalshIntegral.GaussianStep.integral_weight_mul_gaussian_of_stein
+#check @WalshIntegral.GaussianStep.slab_gram_eq
+#check @WalshIntegral.GaussianStep.steinIdentity
 #check @WalshIntegral.Integral.Elementary.inDomain
 #check @WalshIntegral.Integral.InDomain.add
 #check @WalshIntegral.Integral.InDomain.memLp
@@ -46,6 +61,12 @@ set_option pp.universes true
 #check @WalshIntegral.Integral.walshT_of_not_inDomain
 #check @WalshIntegral.Integral.walshT_restrictTime
 #check @WalshIntegral.Integral.walshT_smul
+#check @WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+#check @WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+#check @WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+#check @WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+#check @WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+#check @WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
 #check @WalshIntegral.Modification.ae_eq_limitField_of_error_le
 #check @WalshIntegral.Modification.borelSelectField_measurable
 #check @WalshIntegral.Modification.clipField_abs_le
@@ -64,8 +85,12 @@ set_option pp.universes true
 #check @WalshIntegral.Modification.truncationError_tendsto_zero
 #check @WalshIntegral.Modification.walshT_adapted
 #check @WalshIntegral.Modification.walshT_clipField_l2Continuous
+#check @WalshIntegral.MomentBound.bdgConst_eq
+#check @WalshIntegral.MomentBound.bdgConst_le_self
 #check @WalshIntegral.MomentBound.bdgConst_nonneg
+#check @WalshIntegral.MomentBound.eLpNorm_add_slab_sq_le
 #check @WalshIntegral.MomentBound.eLpNorm_elementarySumIntegral_sq_le
+#check @WalshIntegral.MomentBound.eLpNorm_slabVariance_le
 #check @WalshIntegral.MomentBound.eLpNorm_slab_sq_eq
 #check @WalshIntegral.MomentBound.eLpNorm_slab_sq_le
 #check @WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
@@ -83,7 +108,18 @@ set_option pp.universes true
 #check @WalshIntegral.Predictable.predictableSigma_const_eq
 #check @WalshIntegral.Predictable.predictableSigma_le
 #check @WalshIntegral.Predictable.predictableSigma_mono
+#check @WalshIntegral.Rio.curvature_integral_le
+#check @WalshIntegral.Rio.eLpNorm_add_sq_le_of_deriv_le
+#check @WalshIntegral.Rio.eLpNorm_sq_eq_moment
 #check @WalshIntegral.Rio.eLpNorm_sum_sq_le
+#check @WalshIntegral.Rio.first_order_power_bound
+#check @WalshIntegral.Rio.hasDerivAt_abs_rpow_line_derivative
+#check @WalshIntegral.Rio.hasDerivAt_weight
+#check @WalshIntegral.Rio.hasDerivAt_weight_of_two_le
+#check @WalshIntegral.Rio.moment_derivatives
+#check @WalshIntegral.Rio.moment_hasDerivAt_of_two_le
+#check @WalshIntegral.Rio.regularized_first_order_bound
+#check @WalshIntegral.Rio.weight_integrable_mul
 #check @WalshIntegral.WhiteNoise.H_has_nat_hilbertBasis
 #check @WalshIntegral.WhiteNoise.H_nontrivial
 #check @WalshIntegral.WhiteNoise.IsWhiteNoise.covariance_eq_inner

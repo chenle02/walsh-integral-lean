@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (after 0.9.0)
+## 0.10.0
 
 - Strengthened constant: `WalshIntegral.MomentBound.bdgConst p = p - 1` (previously
   `(p - 1) * gaussianMoment p ^ 2`, quadratic in p). Every public statement keeps its form; only the
