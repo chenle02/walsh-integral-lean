@@ -8,7 +8,7 @@ Mathematical capsule:
 - For real p ≥ 2 and finite mixed norm: the squared-norm coefficient bdgConst p = p − 1, with linear growth in p.
 - For regular deterministic causal kernels and finite variance at every output: a predictable version, equal almost surely at each output separately.
 - Added in 0.8.0 (verified at 35bc9935bea9): mean zero of the Walsh integral and of the totalized integral; predictable fields have F t-measurable time sections and every predictable L² class has an adapted representative.
-- Added in 0.10.0 (verification pending): the linear constant p − 1, from one-dimensional Gaussian integration by parts (WalshIntegral.GaussianStein) and the Gaussian slab step (WalshIntegral.GaussianStep); 152 inventoried public theorems.
+- Added in 0.10.0 (verified at fbe62e483ae1): the linear constant p − 1, from one-dimensional Gaussian integration by parts (WalshIntegral.GaussianStein) and the Gaussian slab step (WalshIntegral.GaussianStep); 152 inventoried public theorems.
 
 Not established:
 - A common exceptional set over every output, indistinguishability or sample-continuous paths.

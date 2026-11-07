@@ -8,13 +8,13 @@
 
 </div>
 
-Verified revision `cca30eeee631`: generic integral-increment identities and L² convergence utilities bring the public inventory to 122 theorems and 14 curated claims. The fresh native gate and all 14 official three-kernel statement comparisons passed. Published release records below retain their original source scope.
+Verified revision `fbe62e483ae1` (0.10.0): the linear real-p moment constant `bdgConst p = p - 1` brings the public inventory to 152 theorems with 14 curated claims. The fresh native gate and all 14 official three-kernel statement comparisons passed. Published release records below retain their original source scope.
 
 A Lean 4 library for space-time white noise, predictable integration, real-p moment estimates and predictable versions of stochastic convolutions. It depends on Mathlib and has no paper-specific dependency.
 
 **Source API 0.8.0.** Version 0.8.0 adds, with every 0.7.0 statement unchanged: mean zero of the Walsh integral (`integral_walshL2` on predictable L² classes, `integral_elementaryIntegral` on elementary integrands, and `integral_walshT` for the totalized integral and every field), and adaptedness of predictable fields (`measurable_timeSection`, `measurable_timeSection_of_le`: sample sections at time t ≥ 0 are `F t`-measurable; `exists_adapted_representative`: every predictable L² class has such an adapted predictable representative). Scientific source `35bc9935bea9` (0.8.0) passed both verification tiers; receipts for 0.7.0 and earlier remain historical. Version 0.7.0 ported every file to the Lean module system (`module` headers, `public import`, `@[expose]` on definitions), so a downstream `module` file can `public import WalshIntegral`.
 
-**Source API 0.10.0 (verification pending).** Version 0.10.0 makes the real-p moment constant linear: `WalshIntegral.MomentBound.bdgConst p = p - 1` (`bdgConst_eq`), in place of `(p - 1) * gaussianMoment p ^ 2`. Every earlier public statement keeps its form; only the value of the constant changes. New modules `WalshIntegral.GaussianStein` and `WalshIntegral.GaussianStep` supply it; the public inventory is 152 theorems across eleven library modules. The 30 theorems added in 0.10.0 are not covered by earlier receipts.
+**Source API 0.10.0 (verified at `fbe62e483ae1`).** Version 0.10.0 makes the real-p moment constant linear: `WalshIntegral.MomentBound.bdgConst p = p - 1` (`bdgConst_eq`), in place of `(p - 1) * gaussianMoment p ^ 2`. Every earlier public statement keeps its form; only the value of the constant changes. New modules `WalshIntegral.GaussianStein` and `WalshIntegral.GaussianStep` supply it; the public inventory is 152 theorems across eleven library modules. Scientific source `fbe62e483ae1` (0.10.0) passed both verification tiers; receipts for 0.9.0 and earlier remain historical.
 
 ## Mathematical scope
 
