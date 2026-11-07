@@ -1,11 +1,16 @@
 # WalshIntegral
 
-Source API 0.8.0. Public repository interface:
+Source API 0.10.0. Public repository interface:
 https://github.com/chenle02/walsh-integral-lean
 
 Added in 0.8.0 (verified at 35bc9935bea9): mean zero of the Walsh integral and of
 the totalized integral; predictable fields have F t-measurable time sections
 and an adapted representative. Every 0.7.0 statement is unchanged.
+
+Added in 0.10.0 (verified at fbe62e483ae1): the real-p moment constant is linear,
+bdgConst p = p - 1 (bdgConst_eq), from Gaussian integration by parts
+(GaussianStein) and the Gaussian slab step (GaussianStep). Every earlier
+statement keeps its form; 152 inventoried public theorems.
 
 Read the exact Lean statement before using a result. The source declaration
 determines every hypothesis and quantifier; each receipt covers only its named

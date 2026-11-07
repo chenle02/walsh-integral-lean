@@ -37,7 +37,7 @@ claims:
   decl: WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
   kind: theorem
   summary: For real p≥2 and predictable input with finite mixed norm, the squared
-    Lᵖ Walsh norm is bounded by (p−1)·gaussianMoment(p)² times that mixed norm.
+    Lᵖ Walsh norm is bounded by p−1 times that mixed norm.
   file: WalshIntegral/MomentBound.lean
   status: reusable
   citation: null

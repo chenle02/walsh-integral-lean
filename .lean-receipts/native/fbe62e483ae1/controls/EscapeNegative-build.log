@@ -1,0 +1,5 @@
+tests/EscapeNegative.lean:8:8: warning: declaration uses `sorry`
+tests/EscapeNegative.lean:9:16: warning: declaration uses `sorry`
+tests/EscapeNegative.lean:10:0: warning: Definition `retainedFalse` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`

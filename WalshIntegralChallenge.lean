@@ -1,6 +1,8 @@
 module
 
 public import WalshIntegralChallenge.Reference.WalshIntegral.GaussianSeries
+public import WalshIntegralChallenge.Reference.WalshIntegral.GaussianStein
+public import WalshIntegralChallenge.Reference.WalshIntegral.GaussianStep
 public import WalshIntegralChallenge.Reference.WalshIntegral.Integral
 public import WalshIntegralChallenge.Reference.WalshIntegral.Modification
 public import WalshIntegralChallenge.Reference.WalshIntegral.MomentBound

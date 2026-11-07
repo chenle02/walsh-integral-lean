@@ -34,8 +34,7 @@ rows:
   - walsh-integral/walsh-real-p
   statement: For real p≥2, a predictable input with finite mixed norm belongs to the
     genuine L² integration domain. Its squared Lᵖ Walsh norm is bounded by bdgConst(p)
-    times mixedNormSq, where bdgConst(p)=(p−1)·gaussianMoment(p)². This constant grows
-    quadratically in p.
+    times mixedNormSq, where bdgConst(p)=p−1. This constant grows linearly in p.
 - title: Finite-variance convolutions admit predictable modifications
   claims:
   - walsh-integral/predictable-modification

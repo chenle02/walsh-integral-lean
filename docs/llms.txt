@@ -1,17 +1,18 @@
-# WalshIntegral — source API 0.8.0
+# WalshIntegral — source API 0.10.0
 
 Constructed space-time white noise, the Walsh L² integral, explicit real-p bounds and predictable convolution versions.
 
 Mathematical capsule:
 - White noise on the countable Gaussian product and its completion, with compatible natural filtration.
 - The unique predictable L² isometric extension agreeing with bounded random elementary integrands.
-- For real p ≥ 2 and finite mixed norm: the squared-norm coefficient (p − 1) · gaussianMoment(p)², with quadratic growth in p.
+- For real p ≥ 2 and finite mixed norm: the squared-norm coefficient bdgConst p = p − 1, with linear growth in p.
 - For regular deterministic causal kernels and finite variance at every output: a predictable version, equal almost surely at each output separately.
 - Added in 0.8.0 (verified at 35bc9935bea9): mean zero of the Walsh integral and of the totalized integral; predictable fields have F t-measurable time sections and every predictable L² class has an adapted representative.
+- Added in 0.10.0 (verified at fbe62e483ae1): the linear constant p − 1, from one-dimensional Gaussian integration by parts (WalshIntegral.GaussianStein) and the Gaussian slab step (WalshIntegral.GaussianStep); 152 inventoried public theorems.
 
 Not established:
 - A common exceptional set over every output, indistinguishability or sample-continuous paths.
-- The sharp linear-in-p squared-norm bound or a general Itô theory.
+- A general Itô theory.
 - An arbitrary probability-space realization or an SPDE well-posedness theorem.
 
 Verification authority: https://github.com/chenle02/walsh-integral-lean/blob/main/README.md#verification-at-a-glance

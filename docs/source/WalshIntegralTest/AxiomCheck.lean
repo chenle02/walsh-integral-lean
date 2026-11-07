@@ -2,6 +2,21 @@ module
 
 public import WalshIntegral
 
+#print axioms WalshIntegral.GaussianStein.hasDerivAt_gaussianPDFReal
+#print axioms WalshIntegral.GaussianStein.integrable_one_add_abs_pow
+#print axioms WalshIntegral.GaussianStein.integrable_pdf_mul_of_integrable
+#print axioms WalshIntegral.GaussianStein.integral_mul_eq_variance_mul_integral_deriv
+#print axioms WalshIntegral.GaussianStein.integral_mul_eq_variance_mul_integral_deriv_of_integrable
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_slab_sq_le
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_slab_sq_le_of_stein
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_sq_le
+#print axioms WalshIntegral.GaussianStep.eLpNorm_add_gaussian_sq_le_of_stein
+#print axioms WalshIntegral.GaussianStep.integral_indep_eq_integral_integral
+#print axioms WalshIntegral.GaussianStep.integral_map_linear_combination
+#print axioms WalshIntegral.GaussianStep.integral_weight_mul_eq_of_stein
+#print axioms WalshIntegral.GaussianStep.integral_weight_mul_gaussian_of_stein
+#print axioms WalshIntegral.GaussianStep.slab_gram_eq
+#print axioms WalshIntegral.GaussianStep.steinIdentity
 #print axioms WalshIntegral.Integral.Elementary.inDomain
 #print axioms WalshIntegral.Integral.InDomain.add
 #print axioms WalshIntegral.Integral.InDomain.memLp
@@ -44,6 +59,12 @@ public import WalshIntegral
 #print axioms WalshIntegral.Integral.walshT_of_not_inDomain
 #print axioms WalshIntegral.Integral.walshT_restrictTime
 #print axioms WalshIntegral.Integral.walshT_smul
+#print axioms WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_iter
+#print axioms WalshIntegral.IntegralIncrements.enorm_sub_sq_eq_prod
+#print axioms WalshIntegral.IntegralIncrements.walshT_sub_eLpNorm
+#print axioms WalshIntegral.LpConvergence.eLpNorm_two_le_of_moment_bound
+#print axioms WalshIntegral.LpConvergence.l2_tendsto_of_summable_differences
+#print axioms WalshIntegral.LpConvergence.tsum_eLpNorm_two_lt_top_of_moment_bound
 #print axioms WalshIntegral.Modification.ae_eq_limitField_of_error_le
 #print axioms WalshIntegral.Modification.borelSelectField_measurable
 #print axioms WalshIntegral.Modification.clipField_abs_le
@@ -62,8 +83,12 @@ public import WalshIntegral
 #print axioms WalshIntegral.Modification.truncationError_tendsto_zero
 #print axioms WalshIntegral.Modification.walshT_adapted
 #print axioms WalshIntegral.Modification.walshT_clipField_l2Continuous
+#print axioms WalshIntegral.MomentBound.bdgConst_eq
+#print axioms WalshIntegral.MomentBound.bdgConst_le_self
 #print axioms WalshIntegral.MomentBound.bdgConst_nonneg
+#print axioms WalshIntegral.MomentBound.eLpNorm_add_slab_sq_le
 #print axioms WalshIntegral.MomentBound.eLpNorm_elementarySumIntegral_sq_le
+#print axioms WalshIntegral.MomentBound.eLpNorm_slabVariance_le
 #print axioms WalshIntegral.MomentBound.eLpNorm_slab_sq_eq
 #print axioms WalshIntegral.MomentBound.eLpNorm_slab_sq_le
 #print axioms WalshIntegral.MomentBound.eLpNorm_walshT_sq_le
@@ -81,7 +106,18 @@ public import WalshIntegral
 #print axioms WalshIntegral.Predictable.predictableSigma_const_eq
 #print axioms WalshIntegral.Predictable.predictableSigma_le
 #print axioms WalshIntegral.Predictable.predictableSigma_mono
+#print axioms WalshIntegral.Rio.curvature_integral_le
+#print axioms WalshIntegral.Rio.eLpNorm_add_sq_le_of_deriv_le
+#print axioms WalshIntegral.Rio.eLpNorm_sq_eq_moment
 #print axioms WalshIntegral.Rio.eLpNorm_sum_sq_le
+#print axioms WalshIntegral.Rio.first_order_power_bound
+#print axioms WalshIntegral.Rio.hasDerivAt_abs_rpow_line_derivative
+#print axioms WalshIntegral.Rio.hasDerivAt_weight
+#print axioms WalshIntegral.Rio.hasDerivAt_weight_of_two_le
+#print axioms WalshIntegral.Rio.moment_derivatives
+#print axioms WalshIntegral.Rio.moment_hasDerivAt_of_two_le
+#print axioms WalshIntegral.Rio.regularized_first_order_bound
+#print axioms WalshIntegral.Rio.weight_integrable_mul
 #print axioms WalshIntegral.WhiteNoise.H_has_nat_hilbertBasis
 #print axioms WalshIntegral.WhiteNoise.H_nontrivial
 #print axioms WalshIntegral.WhiteNoise.IsWhiteNoise.covariance_eq_inner
